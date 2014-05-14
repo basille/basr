@@ -1,0 +1,80 @@
+\name{confint}
+\alias{confint}
+\alias{plot.confint}
+\title{Confidence Intervals for Model Parameters}
+\usage{
+confint(object, parm, level = 0.95, order = FALSE, groups, plot = FALSE,
+  ...)
+
+\method{plot}{confint}(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
+  main = attr(x, "model"), pch = 19, ...)
+}
+\arguments{
+  \item{order}{Logical. If \code{TRUE}, the results are
+  ordered by descending order on the coefficient value.}
+
+  \item{groups}{A \code{factor} in the sense that
+  \code{as.factor(f)} defines the groups, or a list of such
+  factors in which case their interaction is used for the
+  groups. See \code{\link[base]{split}}.}
+
+  \item{plot}{Whether to plot the results.}
+
+  \item{...}{Further arguments passed to \code{points}.}
+
+  \item{x}{A \code{confint} object.}
+
+  \item{mar}{The number of lines of margin, can be useful
+  if the coefficient names do not fit in the left margin.
+  See \code{\link[graphics]{par}} for more details.}
+
+  \item{col}{The color of each coefficient + CI; gray by
+  default. If \code{"groups"}, the color of each (sorted)
+  group; use a hcl palette by default.}
+}
+\value{
+A data frame providing the CI and coefficients.
+}
+\description{
+Modified version of the \code{\link[stats]{confint}}
+function, which displays the coefficients in addition to
+the CIs, and allows for more control on display parameters.
+A \code{plot} argument and function allow to graph the
+coefficients and their CIs.
+}
+\examples{
+## Example of linear model
+fit <- lm(100/mpg ~ disp + hp + wt + am, data = mtcars)
+## Standard 'confint' function
+stats::confint(fit)
+## Same results with modified function
+confint(fit)
+## Argument 'level'
+stats::confint(fit, level = .9)
+confint(fit, level = .9)
+## Argument 'order'
+confint(fit, order = TRUE)
+## Argument 'groups'
+confint(fit, groups = c(3, 1, 1, 1, 2))
+## Argument 'level', "'order' and 'groups' simultaneously
+confint(fit, level = .9, order = TRUE, groups = c(3, 1, 1, 1, 2))
+## Argument 'parm'
+stats::confint(fit, "am")
+confint(fit, "am")
+
+## Plot of the results
+plot(confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2)))
+confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE)
+confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE,
+    col = c("blue", "red", "green"), pch = 18, cex = 2)
+confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
+    plot = TRUE)
+}
+\author{
+Mathieu Basille \email{basille@ase-research.org}
+}
+\seealso{
+\code{\link[stats]{confint}} for more details on other
+parameters.
+}
+

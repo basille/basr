@@ -1,0 +1,13 @@
+Package: basr
+Version: 0.7.2
+Date: 2014-02-06
+Title: Basic, but hopefully useful, functions
+Description: This package provides a bunch of basic functions for a variety of
+    usage.
+Author: Mathieu Basille, contributions from Samuel Brown, Marc in the box,
+    Clement Calenge, Jean Lobry, Kevin Wright
+Maintainer: Mathieu Basille <basille@ase-research.org>
+Suggests:
+    devtools
+License: GPL (>= 3)
+URL: http://ase-research.org/basille/basr

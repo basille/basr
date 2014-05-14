@@ -1,0 +1,31 @@
+\name{writeFunction}
+\alias{writeFunction}
+\title{Function output}
+\usage{
+writeFunction(fun, file = NULL)
+}
+\arguments{
+  \item{fun}{A function.}
+
+  \item{file}{A character string naming a file. By default,
+  write the function in \code{<fun>.R} in the working
+  directory.}
+}
+\description{
+Prints a function to a file.
+}
+\examples{
+f1 <- function(x) {
+    ## Comment
+    print(x)
+}
+writeFunction(f1)
+rm(f1)
+source("f1.R")
+file.remove("f1.R")
+f1(3)
+}
+\author{
+Mathieu Basille \email{basille@ase-research.org}
+}
+

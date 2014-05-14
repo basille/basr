@@ -1,0 +1,4 @@
+* q: Allow 'savePkg = FALSE'
+
+* savePkg: load packages and search() order
+https://stat.ethz.ch/pipermail/r-sig-geo/2009-April/005457.html

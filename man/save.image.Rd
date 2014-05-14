@@ -1,0 +1,39 @@
+\name{save.image}
+\alias{save.image}
+\title{Save the current workspace}
+\usage{
+save.image(file = ".RData", version = NULL, ascii = FALSE,
+  compress = !ascii, safe = TRUE, hist = TRUE, h.file = ".Rhistory",
+  pkglist = TRUE, p.file = ".Rpackages")
+}
+\arguments{
+  \item{hist}{Logical. Whether to save or not the commands
+  history.}
+
+  \item{h.file}{The name of the file in which to save the
+  history, or from which to load it. The path is relative
+  to the current working directory.}
+
+  \item{pkglist}{Logical. Whether to save or not the list
+  of attached packages (default is \code{TRUE}).}
+
+  \item{p.file}{The name of the file in which to save the
+  list of attached packages, or from which to load it. The
+  path is relative to the current working directory.}
+}
+\description{
+A modified version of \code{\link[base]{save.image}} that
+allows to save the commands history and the list of
+attached packages. See \code{\link[base]{save.image}} for
+the function details.
+}
+\author{
+R Core Team, modified by Mathieu Basille
+\email{basille@ase-research.org}
+}
+\seealso{
+\code{\link[utils]{savehistory}} to save the commands
+history, and \code{\link{savepkglist}} to save the list of
+attached packages.
+}
+

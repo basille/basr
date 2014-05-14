@@ -1,0 +1,24 @@
+\name{q}
+\alias{q}
+\alias{quit}
+\title{Terminate an R Session}
+\usage{
+q(save = "default", status = 0, runLast = TRUE)
+
+quit(save = "default", status = 0, runLast = TRUE)
+}
+\description{
+A modified version of \code{\link[base]{quit}} or its alias
+\code{\link[base]{q}}. See \code{\link[base]{quit}} for the
+function details.
+}
+\details{
+If \code{save = "yes"}, the list of attached packages is
+automatically saved in a file \code{.Rpackages}. See
+\code{\link{savepkglist}} for more details.
+}
+\author{
+R Core Team, modified by Mathieu Basille
+\email{basille@ase-research.org}
+}
+

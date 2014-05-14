@@ -1,0 +1,26 @@
+\name{mv}
+\alias{mv}
+\title{Rename an R object.}
+\usage{
+mv(from, to)
+}
+\arguments{
+  \item{from}{The name of an R object, with or without
+  quotes.}
+
+  \item{to}{The new name, with or without quotes.}
+}
+\description{
+Rename an R object.
+}
+\examples{
+bla <- 2
+ls()
+mv(bla, bli)
+bli
+ls()
+}
+\author{
+Jean Lobry
+}
+

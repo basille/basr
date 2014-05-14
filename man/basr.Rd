@@ -1,0 +1,19 @@
+\docType{package}
+\name{basr}
+\alias{basr}
+\alias{basr-package}
+\title{Utility functions}
+\description{
+basr package
+}
+\details{
+This package provides a bunch of basic, but hopefully
+useful, functions for a variety of usage. For a list of
+documented functions, use \code{library(help = "basr")}
+}
+\author{
+Mathieu Basille \email{basille@ase-research.org},
+contributions from Samuel Brown, Marc in the box, Jean
+Lobry, Kevin Wright
+}
+
