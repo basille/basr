@@ -1,7 +1,7 @@
 basr
 ====
 
-This is the development area for the package `hab`, a bunch of basic
+This is the development area for the package `basr`, a bunch of basic
 functions for a variety of usage.
 
 See [the home page for the released versions](http://ase-research.org/basille/basr/).
