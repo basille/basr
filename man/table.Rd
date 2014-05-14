@@ -1,0 +1,29 @@
+\name{table}
+\alias{table}
+\title{Modified table function to handle NAs}
+\usage{
+table(..., exclude = if (useNA == "no") c(NA, NaN), useNA = c("ifany", "no",
+  "always"), dnn = list.names(...), deparse.level = 1)
+}
+\arguments{
+  \item{useNA}{Whether to include \code{NA} values in the
+  table. Default is now \code{ifany}.}
+}
+\description{
+A slight modification of the \code{\link[base]{table}}
+function, to include \code{NA} values in the table by
+default. See \code{\link[base]{table}} for details of the
+function.
+}
+\examples{
+d <- factor(rep(c("A", "B", "C"), 10), levels = c("A", "B", "C",
+    "D", "E"))
+is.na(d) <- 3:4
+d
+table(d)
+}
+\author{
+R Core Team, modified by Mathieu Basille
+\email{basille@ase-research.org}
+}
+

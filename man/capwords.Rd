@@ -1,0 +1,33 @@
+\name{capwords}
+\alias{capwords}
+\title{Capitalizing}
+\usage{
+capwords(s, strict = FALSE)
+}
+\arguments{
+  \item{s}{A character vector, or an object that can be
+  coerced to character by \code{as.character}.}
+
+  \item{strict}{Logical: other letters than the first are
+  converted to lower case}
+}
+\value{
+A character vector of the same length and with the same
+attributes as \code{x} (after possible coercion).
+}
+\description{
+Capitalizing - every first letter of a word is changed to
+upper case.
+}
+\examples{
+capwords(c("using AIC for model selection"))
+## ->  [1] "Using AIC For Model Selection"
+capwords(c("using AIC", "for MODEL selection"), strict = TRUE)
+## ->  [1] "Using Aic"  "For Model Selection"
+##                ^^^        ^^^^^
+##               'bad'       'good'
+}
+\author{
+From the help page of \code{\link[base]{chartr}}
+}
+

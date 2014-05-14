@@ -1,0 +1,37 @@
+\name{nselect}
+\alias{nselect}
+\title{Subsetting tables given occurrences}
+\usage{
+nselect(x, col, n, droplevels = FALSE)
+}
+\arguments{
+  \item{x}{A data frame or a matrix to be subsetted.}
+
+  \item{col}{The column on which the occurrences are
+  counted; can be the name or the number of the column.}
+
+  \item{n}{The minimum number of occurrences for which to
+  keep the data.}
+
+  \item{droplevels}{Logical. If yes, unused levels from
+  factors in the data frame are dropped.}
+}
+\value{
+A data frame.
+}
+\description{
+Select a subset of a table with at least \code{n}
+occurrences of a category.
+}
+\examples{
+set.seed(1)
+bla <- data.frame(value = rnorm(100), group = sample(letters[1:4],
+    size = 100, replace = TRUE, prob = (1:4) * 10))
+table(bla$group)
+bli <- nselect(bla, 2, 25, droplevels = TRUE)
+table(bli$group)
+}
+\author{
+Mathieu Basille \email{basille@ase-research.org}
+}
+

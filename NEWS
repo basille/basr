@@ -1,0 +1,136 @@
+basr 0.7.2
+==========
+
+ENHANCEMENT
+
+* `togray`/`togrey`: Argument `inverse` implemented
+
+
+basr 0.7.1
+==========
+
+BUG FIXES
+
+* `extrange`: Argument `na.rm` implemented
+
+* Various corrections in the documentation
+
+
+basr 0.7
+========
+
+NEW FEATURE
+
+* `togray`/`togrey`: Convert continuous variable to grey levels
+
+
+basr 0.6.1
+==========
+
+ENHANCEMENT
+
+* `dynamitePlot`: more sensible defaults, new arguments `sym` and
+  `head`, argument `arr.lwd` renamed to `lwd`
+
+
+basr 0.6
+========
+
+NEW FEATURE
+
+* `confint`: Confidence Intervals for Model Parameters
+
+
+basr 0.5.3
+==========
+
+FEATURE REMOVED
+
+* `pandoc`: Use now `knitr:::pandoc`
+
+
+basr 0.5.2
+==========
+
+BUG FIXES
+
+* `pandoc`: The default css is now http://ase-research.org/R/rmd.css
+
+
+basr 0.5.1
+==========
+
+NEW FEATURES
+
+* `pandoc`: New argument `format` for the output format
+
+
+basr 0.5
+========
+
+NEW FUNCTION
+
+* `pandoc`: Convert using `Pandoc`
+
+
+basr 0.4
+========
+
+NEW FUNCTION
+
+* `extrange`: Extended range
+
+
+basr 0.3
+========
+
+NEW FUNCTION
+
+* `cv`: coefficient of variation
+
+
+basr 0.2
+========
+
+BUG FIXES
+
+* `savepkglist`: throws an error if there is no attached package
+
+* `save.image`: handles errors in `savehistory` and `savepkglist`
+
+
+
+basr 0.1
+========
+
+NEW FUNCTIONS
+
+* `capwords`: capitalizing
+
+* `dynamitePlot`: creates dynamite plots
+
+* `getcolors`: choosing colors visually
+
+* `loadpkglist`: load or save the list of attached packages
+
+* `manual`: generate package reference manual
+
+* `mv`: rename an R object
+
+* `nselect`: subsetting tables given occurrences
+
+* `q`: terminate an R session
+
+* `quit`: terminate an R session
+
+* `save.image`: save the current workspace
+
+* `savepkglist`: load or save the list of attached packages
+
+* `se`: standard errors
+
+* `table`: modified table function to handle NAs
+
+* `values`: change the values of a vector
+
+* `writeFunction`: function output

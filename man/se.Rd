@@ -1,0 +1,40 @@
+\name{se}
+\alias{se}
+\title{Standard errors}
+\usage{
+se(x, na.rm = FALSE)
+}
+\arguments{
+  \item{x}{A numeric vector or an R object which is
+  coercible to one by \code{as.vector}.}
+
+  \item{na.rm}{Logical.  Should missing values be removed?}
+}
+\description{
+This function computes the standard error (i.e. \code{sd /
+sqrt(n)}) of the values in \code{x}.  If \code{na.rm} is
+\code{TRUE} then missing values are removed before
+computation proceeds.
+}
+\section{Original URL}{
+  \url{http://cran.r-project.org/doc/manuals/R-intro.html}
+}
+\examples{
+bla <- rnorm(1000, sd = 100)
+sd(bla)
+sqrt(var(bla)/length(bla))
+se(bla)
+
+is.na(bla) <- 200:300
+sd(bla, na.rm = TRUE)
+se(bla, na.rm = TRUE)
+}
+\author{
+From the \code{Writing R Extensions} manual, modified by
+Mathieu Basille \email{basille@ase-research.org}
+}
+\seealso{
+\code{\link[stats]{var}} and \code{\link[stats]{sd}} for
+the variance and standard deviation.
+}
+
