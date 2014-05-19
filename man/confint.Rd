@@ -6,8 +6,8 @@
 confint(object, parm, level = 0.95, order = FALSE, groups, plot = FALSE,
   ...)
 
-\method{plot}{confint}(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
-  main = attr(x, "model"), pch = 19, ...)
+plot.confint(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL, main = attr(x,
+  "model"), pch = 19, ...)
 }
 \arguments{
   \item{order}{Logical. If \code{TRUE}, the results are
