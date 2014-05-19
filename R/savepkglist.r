@@ -27,9 +27,9 @@
 ##' \code{basr:::.loadpkglist()}
 ##'
 ##' Essentially, the function appends the list of packages at the end of
-##' the \code{defaultPackages} option (see \code{\link[options]{}} for this
-##' option; see also \code{\link[base]{Startup}} for more details about the
-##' initialization at start of an R session).
+##' the \code{defaultPackages} option (see \code{\link[base]{options}} for
+##' this option; see also \code{\link[base]{Startup}} for more details
+##' about the initialization at start of an R session).
 ##' @author Mathieu Basille \email{basille@@ase-research.org}
 ##' @export
 ##' @examples
