@@ -1,3 +1,15 @@
+basr 0.7.4
+==========
+
+NEW FEATURE
+
+* `reclass`: New arguments `factor` and `...`.
+
+ENHANCEMENT
+
+* `values` renamed to `reclass` to avoid confusion with `raster`.
+
+
 basr 0.7.3
 ==========
 
