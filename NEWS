@@ -1,3 +1,12 @@
+basr 0.7.5
+==========
+
+NEW FEATURE
+
+* `plot.confint`: Now colorize CIs non-overlapping with zero + new argument
+  `add.signif` to add an asterisk for these CIs.
+
+
 basr 0.7.4
 ==========
 

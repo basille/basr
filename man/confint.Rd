@@ -8,7 +8,7 @@ confint(object, parm, level = 0.95, order = FALSE, groups, plot = FALSE,
   ...)
 
 \method{plot}{confint}(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
-  main = attr(x, "model"), pch = 19, ...)
+  main = attr(x, "model"), pch = 19, add.signif = FALSE, ...)
 }
 \arguments{
 \item{order}{Logical. If \code{TRUE}, the results are ordered by
@@ -23,7 +23,7 @@ in which case their interaction is used for the groups. See
 
 \item{...}{Further arguments passed to \code{points}.}
 
-\item{x}{A \code{confint} object.}
+\item{x}{A \code{data.frame} of class \code{confint}.}
 
 \item{mar}{The number of lines of margin, can be useful if the
 coefficient names do not fit in the left margin. See
@@ -32,6 +32,16 @@ coefficient names do not fit in the left margin. See
 \item{col}{The color of each coefficient + CI; gray by default. If
 \code{"groups"}, the color of each (sorted) group; use a hcl
 palette by default.}
+
+\item{main}{The title of the plot.}
+
+\item{pch}{The symbol to be used for the points. See
+\code{\link[graphics]{par}} for more details.}
+
+\item{add.signif}{Logical, whether to add an asterik for variables with
+CIs non-overlapping with zero.}
+
+\item{...}{Further arguments passed to \code{points}.}
 }
 \value{
 A data frame providing the CI and coefficients.
@@ -61,14 +71,14 @@ confint(fit, level = .9, order = TRUE, groups = c(3, 1, 1, 1, 2))
 ## Argument 'parm'
 stats::confint(fit, "am")
 confint(fit, "am")
-
+##'
 ## Plot of the results
 plot(confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2)))
 confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE)
 confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE,
     col = c("blue", "red", "green"), pch = 18, cex = 2)
 confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
-    plot = TRUE)
+    plot = TRUE, add.signif = TRUE)
 }
 \author{
 Mathieu Basille \email{basille@ase-research.org}

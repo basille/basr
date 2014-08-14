@@ -38,14 +38,14 @@
 ##' ## Argument 'parm'
 ##' stats::confint(fit, "am")
 ##' confint(fit, "am")
-##'
+##' ##'
 ##' ## Plot of the results
 ##' plot(confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2)))
 ##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE)
 ##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE,
 ##'     col = c("blue", "red", "green"), pch = 18, cex = 2)
 ##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
-##'     plot = TRUE)
+##'     plot = TRUE, add.signif = TRUE)
 confint <- function(object, parm, level = 0.95, order = FALSE,
     groups, plot = FALSE, ...) {
     ## Computing the CI using 'stats::confint'
@@ -100,17 +100,24 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
         plot(ci, ...)
     return(ci)
 }
-##' @param x A \code{confint} object.
+
+##' @param x A \code{data.frame} of class \code{confint}.
 ##' @param mar The number of lines of margin, can be useful if the
 ##' coefficient names do not fit in the left margin. See
 ##' \code{\link[graphics]{par}} for more details.
 ##' @param col The color of each coefficient + CI; gray by default. If
 ##' \code{"groups"}, the color of each (sorted) group; use a hcl
 ##' palette by default.
+##' @param main The title of the plot.
+##' @param pch The symbol to be used for the points. See
+##' \code{\link[graphics]{par}} for more details.
+##' @param add.signif Logical, whether to add an asterik for variables with
+##' CIs non-overlapping with zero.
+##' @param ... Further arguments passed to \code{points}.
 ##' @rdname confint
 ##' @export
 plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
-    main = attr(x, "model"), pch = 19, ...)
+    main = attr(x, "model"), pch = 19, add.signif = FALSE, ...)
 {
     ## Check that 'x' is of class "confint"
     if (!inherits(x, "confint"))
@@ -132,20 +139,27 @@ plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
         col <- gray(0.3)
     ## Set 'par("mar")'
     par(mar = mar)
-    ## Call a plot.default on 'ci'
+    ## Call a plot.default on 'ci' (adjust the y-limits to make it look
+    ## more regular)
     plot.default(ci[, 3], 1:nrow(ci), xlim = range(ci), axes = FALSE,
         xlab = paste("Confidence intervals, level = ", attr(ci,
             "level") * 100, "%", sep = ""), ylab = NA, main = main,
-        type = "n")
+        type = "n", ylim = c(.7, nrow(ci) + .3))
     ## Add a grid
     grid()
     ## Add a vertical line at x = 0
     abline(v = 0)
-    ## Add the confidence intervals
+    ## Add the confidence intervals (colored if does not overlap with zero)
     for (i in 1:nrow(ci)) lines(x = c(ci[i, 1], ci[i, 2]), y = c(i,
-        i))
+        i), col = ifelse(ci[i, 1] < 0 & ci[i, 2] > 0, "black",
+        col[i]))
     ## Add the points
     points(ci[, 3], 1:nrow(ci), col = col, pch = pch, ...)
+    ## Add significance
+    if (add.signif)
+        points(ci[!(ci[, 1] < 0 & ci[, 2] > 0), 3] + (max(ci) -
+            min(ci))/30, (1:nrow(ci))[!(ci[, 1] < 0 & ci[, 2] >
+            0)] + .2, pch = 8)
     ## Add the axes
     axis(2, at = 1:nrow(ci), labels = FALSE)
     ## Add the row.names of the 'confint' call
@@ -160,6 +174,7 @@ plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
     ## Add a bounding box
     box()
 }
+
 ## See: http://christophergandrud.blogspot.ca/2012/09/graphically-comparing-confidence.html
 ## and: https://github.com/christophergandrud/GreenBook/blob/master/Analysis/BasicAnalysisCoefPlots.R
 ### Example with ggplot2:
