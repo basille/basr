@@ -3,22 +3,24 @@
 \alias{reclass}
 \title{Reclassify the values of a vector.}
 \usage{
-reclass(x, from, to, factor = FALSE, ...)
+reclass(x, from, to = NULL, factor = FALSE, ...)
 }
 \arguments{
 \item{x}{A character or numeric vector.}
 
-\item{from}{A vector describing the values to change from.}
+\item{from}{A vector describing the values to change from, or a matrix
+of reclassification with two columns (from, to).}
 
-\item{to}{A vector describing the values to change to.}
+\item{to}{A vector describing the values to change to, or nothing if
+\code{from} is a matrix.}
 
-\item{factor}{Logical, whether to return a factor (\code{default =
-FALSE}).}
+\item{factor}{Logical, whether to return a factor (default is
+\code{FALSE}).}
 
 \item{...}{Additional arguments passed to \code{factor}.}
 }
 \value{
-A vector.
+A vector with the same length as \code{x}.
 }
 \description{
 Reclassify given values of a vector by new values. Note that all values
@@ -28,9 +30,17 @@ need not to be documented, only the ones that need to be modified.
 (bla <- rep(1:5, 3))
 reclass(bla, c(3, 4), c(7, 3))
 reclass(bla, c(3, 4), c("a", "b"))
+
+## Conversion as a factor
 reclass(bla, c(3, 4), c("a", "b"), factor = TRUE)
 (bli <- rep(letters[1:5], 3))
 reclass(bli, c("b", "d"), c(1, 2))
+
+## With a matrix of reclassification
+(mat <- matrix(c("b", "d", 1, 2), ncol = 2))
+reclass(bli, mat)
+
+## Fast computation time on large vectors
 blu <- rpois(1e6, 10)
 system.time(reclass(blu, c(3, 4), c(7, 3)))
 }

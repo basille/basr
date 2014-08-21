@@ -1,3 +1,11 @@
+basr 0.7.6
+==========
+
+NEW FEATURE
+
+* `reclass`: `from` can be a matrix of reclassification.
+
+
 basr 0.7.5
 ==========
 

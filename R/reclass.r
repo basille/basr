@@ -5,31 +5,49 @@
 ##'
 ##' @title Reclassify the values of a vector.
 ##' @param x A character or numeric vector.
-##' @param from A vector describing the values to change from.
-##' @param to A vector describing the values to change to.
-##' @param factor Logical, whether to return a factor (\code{default =
-##' FALSE}).
+##' @param from A vector describing the values to change from, or a matrix
+##' of reclassification with two columns (from, to).
+##' @param to A vector describing the values to change to, or nothing if
+##' \code{from} is a matrix.
+##' @param factor Logical, whether to return a factor (default is
+##' \code{FALSE}).
 ##' @param ... Additional arguments passed to \code{factor}.
-##' @return A vector.
+##' @return A vector with the same length as \code{x}.
 ##' @author Mathieu Basille \email{basille@@ase-research.org}
 ##' @export
 ##' @examples
 ##' (bla <- rep(1:5, 3))
 ##' reclass(bla, c(3, 4), c(7, 3))
 ##' reclass(bla, c(3, 4), c("a", "b"))
+##'
+##' ## Conversion as a factor
 ##' reclass(bla, c(3, 4), c("a", "b"), factor = TRUE)
 ##' (bli <- rep(letters[1:5], 3))
 ##' reclass(bli, c("b", "d"), c(1, 2))
+##'
+##' ## With a matrix of reclassification
+##' (mat <- matrix(c("b", "d", 1, 2), ncol = 2))
+##' reclass(bli, mat)
+##'
+##' ## Fast computation time on large vectors
 ##' blu <- rpois(1e6, 10)
 ##' system.time(reclass(blu, c(3, 4), c(7, 3)))
-reclass <- function(x, from, to, factor = FALSE, ...)
+reclass <- function(x, from, to = NULL, factor = FALSE, ...)
 {
     ## Check that x is a vector
     if (!is.vector(x))
-        stop("x must be a vector (numeric or character)")
-    ## Check that from and to have same length
-    if (length(from) != length(to))
-        stop("from and to must have the same length")
+        stop("`x` must be a vector (numeric or character).")
+    ## If to is not provided, to is the second column of the matrix, while
+    ## from is the first
+    if (is.null(to)) {
+        if (ncol(from) != 2)
+            stop("`from` must have two columns.")
+        to <- from[, 2]
+        from <- from[, 1]
+    }
+    ## If to provided, check that from and to have same length
+    else if (length(from) != length(to))
+        stop("`from` and `to` must have the same length.")
     ## Reclassify values
     for (i in 1:length(from)) x[x == from[i]] <- to[i]
     ## If factor requested, return a factor
