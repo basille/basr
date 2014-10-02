@@ -1,3 +1,11 @@
+basr 0.8
+========
+
+NEW FEATURE
+
+* `memUse`: Show memory usage of saved objects.
+
+
 basr 0.7.6
 ==========
 

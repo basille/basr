@@ -101,6 +101,8 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
     return(ci)
 }
 
+## plot.confint
+##
 ##' @param x A \code{data.frame} of class \code{confint}.
 ##' @param mar The number of lines of margin, can be useful if the
 ##' coefficient names do not fit in the left margin. See
