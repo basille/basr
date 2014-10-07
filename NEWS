@@ -1,3 +1,12 @@
+basr 0.8.1
+==========
+
+ENHANCEMENT
+
+* `memUse`: Return 0 if no object is present in the specified
+  environment.
+
+
 basr 0.8
 ========
 

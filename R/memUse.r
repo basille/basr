@@ -8,7 +8,8 @@
 ##' @param pattern An optional regular expression. See
 ##' \code{\link{ls}}.
 ##' @return A data frame of classe \code{memUse} providing object
-##' names, class and memory usage.
+##' names, class and memory usage; or \code{0} if no object is present
+##' in the specified environment.
 ##' @author Michael Hallquist, modified by Mathieu Basille
 ##' \email{basille@@ase-research.org}
 ##' @section Original URL:
@@ -28,6 +29,11 @@
 memUse <- function(pos = 1, pattern) {
     ## List saved objects
     objectList <- ls(pos = pos, pattern = pattern)
+    ## Return 0 with a warning if there are no objects
+    if (length(objectList) == 0) {
+        warning("No object in the specified environment.")
+        return(0)
+    }
     ## Check object sizes in bytes
     objectBytes <- sapply(objectList, function(x) object.size(eval(parse(text = x))))
     ## Use of 'format' with 'units = "auto"' for human-readable

@@ -7,7 +7,8 @@
 memUse(pos = 1, pattern)
 
 \method{print}{memUse}(x, sort = c("size", "alphabetical"),
-  decreasing = ifelse(sort == "size", TRUE, FALSE), n = 10, bytes = FALSE)
+  decreasing = ifelse(sort == "size", TRUE, FALSE), n = 10, bytes = FALSE,
+  ...)
 }
 \arguments{
 \item{pos}{Which environment to use to list the saved objects (as
@@ -31,7 +32,8 @@ display.}
 }
 \value{
 A data frame of classe \code{memUse} providing object
-names, class and memory usage.
+names, class and memory usage; or \code{0} if no object is present
+in the specified environment.
 }
 \description{
 Show memory usage of saved objects.
