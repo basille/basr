@@ -1,3 +1,11 @@
+basr 0.9
+========
+
+NEW FEATURE
+
+* `colNA`: Number of NAs by column.
+
+
 basr 0.8.1
 ==========
 
