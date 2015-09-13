@@ -1,4 +1,4 @@
-## summary.IC
+## summaryIC
 ##
 ##' Summarizes IC differences to identify plausible models (models
 ##' with highest empirical support).
@@ -25,9 +25,9 @@
 ##' AIC(lm1, lm2)
 ##'
 ##' ## Summary of AIC and BIC:
-##' summary.IC(AIC(lm1, lm2))
-##' summary.IC(BIC(lm1, lm2))
-summary.IC <- function(x, delta = 2) {
+##' summaryIC(AIC(lm1, lm2))
+##' summaryIC(BIC(lm1, lm2))
+summaryIC <- function(x, delta = 2) {
     if (!inherits(x, "data.frame"))
         stop("Object of class 'data.frame' expected.")
     if (!(any(names(x) %in% c("AIC", "BIC"))))
