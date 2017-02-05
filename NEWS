@@ -1,3 +1,12 @@
+basr 0.10
+=========
+
+NEW FEATURE
+
+* `nsubset`: Subset according to frequency of a column (WARNING:
+  replaces `nselect`!).
+
+
 basr 0.9
 ========
 
