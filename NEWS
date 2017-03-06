@@ -1,3 +1,12 @@
+basr 0.10.1
+===========
+
+BUG FIX
+
+* `reclass`: Now vectorized, fixes the problem of colliding values of
+  'x' and 'from'.
+
+
 basr 0.10
 =========
 

@@ -48,8 +48,14 @@ reclass <- function(x, from, to = NULL, factor = FALSE, ...)
     ## If to provided, check that from and to have same length
     else if (length(from) != length(to))
         stop("`from` and `to` must have the same length.")
-    ## Reclassify values
-    for (i in 1:length(from)) x[x == from[i]] <- to[i]
+    ## Reclassify values, return NA if not in values of 'from'
+    x <- ifelse(x %in% from,
+        unlist(sapply(x, function(i) {
+            ## Handles cases when x == NA
+            if (is.na(i))
+                NA
+            else to[from == i]
+        })), NA)
     ## If factor requested, return a factor
     if (factor)
         return(factor(x, ...))
