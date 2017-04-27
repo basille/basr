@@ -19,7 +19,7 @@
 ##' history, and \code{\link{savepkglist}} to save the list of
 ##' attached packages.
 ##' @author R Core Team, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @export
 save.image <- function(file = ".RData", version = NULL, ascii = FALSE,
     compress = !ascii, safe = TRUE, hist = TRUE, h.file = ".Rhistory",

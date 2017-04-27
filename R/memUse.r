@@ -11,7 +11,7 @@
 ##' names, class and memory usage; or \code{0} if no object is present
 ##' in the specified environment.
 ##' @author Michael Hallquist, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @section Original URL:
 ##' \url{http://stackoverflow.com/a/9839949}. See also the complete
 ##' Stack Overflow thread:

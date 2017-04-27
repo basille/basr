@@ -6,7 +6,7 @@
 ##' @param fun A function.
 ##' @param file A character string naming a file. By default, write
 ##' the function in \code{<fun>.R} in the working directory.
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' f1 <- function(x) {

@@ -13,7 +13,7 @@
 ##' \code{FALSE}).
 ##' @param ... Additional arguments passed to \code{factor}.
 ##' @return A vector with the same length as \code{x}.
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' (bla <- rep(1:5, 3))

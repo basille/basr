@@ -10,7 +10,7 @@
 ##' @title Terminate an R Session
 ##' @aliases quit
 ##' @author R Core Team, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @export
 q <- function(save = "default", status = 0, runLast = TRUE)
 {

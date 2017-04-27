@@ -1,14 +1,14 @@
 Package: basr
-Version: 0.10.1
-Date: 2017-03-06
+Version: 0.11
+Date: 2017-04-27
 Title: Basic, but hopefully useful, functions
 Description: This package provides a bunch of basic functions for a variety of
     usage.
 Author: Mathieu Basille, contributions from Samuel Brown, Marc in the box,
     Clement Calenge, Michael Hallquist, Jean Lobry, Kevin Wright
-Maintainer: Mathieu Basille <basille@ase-research.org>
+Maintainer: Mathieu Basille <basille@ufl.edu>
 Suggests:
     devtools
 License: GPL (>= 3)
 URL: http://ase-research.org/basille/basr
-RoxygenNote: 6.0.1
+

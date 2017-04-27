@@ -5,7 +5,7 @@
 ##' @title Number of NAs by column
 ##' @param x A data frame.
 ##' @return A numeric vector
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' set.seed(123)

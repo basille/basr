@@ -8,7 +8,7 @@
 ##' @param x A numeric vector.
 ##' @param percent The proportion to be added to the range.
 ##' @param na.rm Logical, indicating if \code{NA}'s should be omitted.
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' extrange(0:10)

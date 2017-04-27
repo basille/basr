@@ -17,7 +17,7 @@
 ##' @return A data frame providing the CI and coefficients.
 ##' @seealso \code{\link[stats]{confint}} for more details on other
 ##' parameters.
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' ## Example of linear model

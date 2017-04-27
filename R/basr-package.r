@@ -7,7 +7,7 @@
 ##' @name basr
 ##' @title Utility functions
 ##' @docType package
-##' @author Mathieu Basille \email{basille@@ase-research.org},
+##' @author Mathieu Basille \email{basille@@ufl.edu},
 ##' contributions from Samuel Brown, Marc in the box, Jean Lobry,
 ##' Kevin Wright
 NULL

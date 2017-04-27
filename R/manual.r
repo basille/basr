@@ -11,7 +11,7 @@
 ##' @param preview preview generated PDF file
 ##' @param overwrite overwrite output file if it exists
 ##' @export
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE)
 {
     require(devtools)

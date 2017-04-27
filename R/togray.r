@@ -14,7 +14,7 @@
 ##' progressive grey levels.
 ##' @return A vector of colors of the same length as \code{x}.
 ##' @author From Clement Calenge, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' bla <- runif(10000)

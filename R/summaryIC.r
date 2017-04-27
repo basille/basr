@@ -1,7 +1,7 @@
 ## summaryIC
 ##
-##' Summarizes IC differences to identify plausible models (models
-##' with highest empirical support).
+##' Summarizes IC differences and weights to identify plausible models
+##' (models with highest empirical support).
 ##'
 ##' @title Summary of AIC/BIC
 ##' @param x A data frame with one row per model, and one column
@@ -11,10 +11,11 @@
 ##' @param delta The difference threshold to identify models with
 ##'     similar support.
 ##' @return The input data frame with additional columns \code{delta}
-##'     giving IC differences with the best model, and \code{best}
+##'     giving IC differences with the best model, \code{best}
 ##'     identifying the best model(s) (\code{*} for the absolute best
-##'     model, \code{+} for models within the threshold).
-##' @author Mathieu Basille \email{basille@@ase-research.org}
+##'     model, \code{+} for models within the threshold), and
+##'     \code{omega} giving AIC weights.
+##' @author Mathieu Basille \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' ## Prepare two models:
@@ -30,10 +31,16 @@
 summaryIC <- function(x, delta = 2) {
     if (!inherits(x, "data.frame"))
         stop("Object of class 'data.frame' expected.")
+    ## Works for AIC or BIC
     if (!(any(names(x) %in% c("AIC", "BIC"))))
         stop("x should contain a column AIC or BIC.")
+    ## Identify *IC column
     ic <- which(names(x) %in% c("AIC", "BIC"))
+    ## Compute difference
     deltax <- x[, ic] - min(x[, ic])
+    ## Compute weights
+    omega <- exp(-.5*deltax)/sum(exp(-.5*deltax))
+    ## Identify best model and models that are within a threshold
     best <- ifelse(deltax == 0, "*", ifelse(deltax <= delta, "+", ""))
-    return(data.frame(x, delta = deltax, best))
+    return(data.frame(x, delta = deltax, omega, best))
 }

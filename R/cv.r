@@ -17,7 +17,7 @@
 ##' variation. in the first element and the confidence interval in the
 ##' second.
 ##' @author From Kevin Wright, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @section Original URL:
 ##' \url{http://tolstoy.newcastle.edu.au/R/e2/help/07/06/19043.html}
 ##' @references Vangel, M. G. (1996) Confidence intervals for a normal

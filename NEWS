@@ -1,3 +1,11 @@
+basr 0.11
+=========
+
+NEW FEATURE
+
+* `summaryIC`: Now provide *IC weights in an additional column.
+
+
 basr 0.10.1
 ===========
 
@@ -23,7 +31,7 @@ NEW FEATURE
 
 * `colNA`: Number of NAs by column.
 
-* `summary.IC`: Summary of AIC/BIC.
+* `summaryIC`: Summary of AIC/BIC.
 
 
 basr 0.8.1

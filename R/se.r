@@ -12,7 +12,7 @@
 ##' @seealso \code{\link[stats]{var}} and \code{\link[stats]{sd}} for
 ##' the variance and standard deviation.
 ##' @author From the \code{Writing R Extensions} manual, modified by
-##' Mathieu Basille \email{basille@@ase-research.org}
+##' Mathieu Basille \email{basille@@ufl.edu}
 ##' @section Original URL:
 ##' \url{http://cran.r-project.org/doc/manuals/R-intro.html}
 ##' @export

@@ -8,7 +8,7 @@
 ##' @param useNA Whether to include \code{NA} values in the table.
 ##' Default is now \code{ifany}.
 ##' @author R Core Team, modified by Mathieu Basille
-##' \email{basille@@ase-research.org}
+##' \email{basille@@ufl.edu}
 ##' @export
 ##' @examples
 ##' d <- factor(rep(c("A", "B", "C"), 10), levels = c("A", "B", "C",
