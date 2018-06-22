@@ -14,7 +14,7 @@ functions for a variety of usage. For a list of documented
 functions, use \code{library(help = "basr")}
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org},
+Mathieu Basille \email{basille@ufl.edu},
 contributions from Samuel Brown, Marc in the box, Jean Lobry,
 Kevin Wright
 }

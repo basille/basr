@@ -21,5 +21,5 @@ set.seed(123)
 colNA(df)
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

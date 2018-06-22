@@ -58,5 +58,5 @@ memUse()$bytes
 }
 \author{
 Michael Hallquist, modified by Mathieu Basille
-\email{basille@ase-research.org}
+\email{basille@ufl.edu}
 }

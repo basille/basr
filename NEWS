@@ -1,3 +1,11 @@
+basr 0.12
+=========
+
+NEW FEATURE
+
+* `ncut`: Cut into classes of equal size
+
+
 basr 0.11
 =========
 

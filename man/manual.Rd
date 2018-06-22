@@ -22,5 +22,5 @@ Generate package reference manual. This function requires the
 \code{devtools} package.
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

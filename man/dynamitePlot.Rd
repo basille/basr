@@ -68,5 +68,5 @@ dynamitePlot(values, errors, names.arg = names, significance = sig,
 }
 \author{
 Samuel Brown, modified by Mathieu Basille
-\email{basille@ase-research.org}
+\email{basille@ufl.edu}
 }

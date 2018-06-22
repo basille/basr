@@ -86,5 +86,5 @@ confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
 parameters.
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

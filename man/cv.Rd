@@ -48,5 +48,5 @@ coefficient of variation. The American Statistician, 50: 21-26
 }
 \author{
 From Kevin Wright, modified by Mathieu Basille
-\email{basille@ase-research.org}
+\email{basille@ufl.edu}
 }

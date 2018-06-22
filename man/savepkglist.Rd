@@ -57,5 +57,5 @@ about the initialization at start of an R session).
 \dontrun{loadpkglist()}
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

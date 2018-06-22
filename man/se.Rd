@@ -39,5 +39,5 @@ the variance and standard deviation.
 }
 \author{
 From the \code{Writing R Extensions} manual, modified by
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

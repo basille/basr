@@ -35,5 +35,5 @@ attached packages.
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\email{basille@ase-research.org}
+\email{basille@ufl.edu}
 }

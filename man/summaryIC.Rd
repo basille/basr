@@ -17,13 +17,14 @@ similar support.}
 }
 \value{
 The input data frame with additional columns \code{delta}
-    giving IC differences with the best model, and \code{best}
+    giving IC differences with the best model, \code{best}
     identifying the best model(s) (\code{*} for the absolute best
-    model, \code{+} for models within the threshold).
+    model, \code{+} for models within the threshold), and
+    \code{omega} giving AIC weights.
 }
 \description{
-Summarizes IC differences to identify plausible models (models
-with highest empirical support).
+Summarizes IC differences and weights to identify plausible models
+(models with highest empirical support).
 }
 \examples{
 ## Prepare two models:
@@ -38,5 +39,5 @@ summaryIC(AIC(lm1, lm2))
 summaryIC(BIC(lm1, lm2))
 }
 \author{
-Mathieu Basille \email{basille@ase-research.org}
+Mathieu Basille \email{basille@ufl.edu}
 }

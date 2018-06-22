@@ -41,5 +41,5 @@ plot(bla, col = togray(bla, 0, 1, alpha = 0.5), pch = 20)
 }
 \author{
 From Clement Calenge, modified by Mathieu Basille
-\email{basille@ase-research.org}
+\email{basille@ufl.edu}
 }
