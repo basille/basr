@@ -37,8 +37,8 @@ compression, and character strings ‘"gzip"’, ‘"bzip2"’, ‘"xz"’ or
 ‘"zstd"’ specify the type of compression.  Ignored when file is a
 connection and for workspace format version 1.}
 
-\item{safe}{Logical.  If ‘TRUE’, a temporary file is used for creating the
-saved workspace.  The temporary file is renamed to file if the save
+\item{safe}{Logical. If ‘TRUE’, a temporary file is used for creating the
+saved workspace. The temporary file is renamed to file if the save
 succeeds.  This preserves an existing workspace file if the save fails,
 but at the cost of using extra disk space during the save.}
 
@@ -65,5 +65,5 @@ commands history and the list of attached packages. See
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\email{mathieu@basille.org}
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

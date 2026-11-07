@@ -14,7 +14,7 @@
 ##'     identifying the best model(s) (\code{*} for the absolute best
 ##'     model, \code{+} for models within the threshold), and
 ##'     \code{omega} giving AIC weights.
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' ## Prepare two models:

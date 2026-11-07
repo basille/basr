@@ -2,14 +2,14 @@
 ##'
 ##' Cut a numeric vector into k classes of (roughly) equal size.
 ##'
-##' @param x numeric vector to cut.
-##' @param k the number of classes.
+##' @param x Numeric vector to cut.
+##' @param k The number of classes.
 ##' @param labels Labels for the levels of the resulting category. By default
 ##'     (\code{FALSE}), labels are constructed using simple integer codes; if
 ##'     \code{NULL}, labels are build using \code{"(a,b]"} interval
 ##'     notation. Alternatively, a custom vector of length \code{k} can be used.
 ##' @returns A vector of k classes.
-##' @author Mathieu Basille \email{mathieu@@basille.org} and Emiel van Loon
+##' @author Mathieu Basille <\email{mathieu@@basille.org}> and Emiel van Loon
 ##' @export
 ##' @examples
 ##' bla <- rnorm(100)

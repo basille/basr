@@ -2,7 +2,6 @@
 % Please edit documentation in R/q.R
 \name{q}
 \alias{q}
-\alias{quit}
 \title{Terminate an R Session (with packages saved)}
 \usage{
 q(save = "default", status = 0, runLast = TRUE)
@@ -28,5 +27,5 @@ in a file \code{.Rpackages}. See \code{\link{savepkglist}} for more details.
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\email{mathieu@basille.org}
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

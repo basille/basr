@@ -7,22 +7,22 @@
 nsubset(x, col, n, sign = c(">=", "<=", ">", "<", "=="), select, drop = FALSE)
 }
 \arguments{
-\item{x}{object to be subsetted (e.g. \code{data.frame}, \code{matrix},
+\item{x}{Object to be subsetted (e.g. \code{data.frame}, \code{matrix},
 \code{Spatial*DataFrame}, etc.).}
 
-\item{col}{name of the column which stores the grouping factor (without
+\item{col}{Name of the column which stores the grouping factor (without
 quotes).}
 
-\item{n}{the reference number for the frequency of the grouping factor (must
+\item{n}{The reference number for the frequency of the grouping factor (must
 be a numeric of length 1).}
 
-\item{sign}{any comparison sign (\code{>=} by default, \code{<=}, \code{>},
+\item{sign}{Any comparison sign (\code{>=} by default, \code{<=}, \code{>},
 \code{<}, or \code{==}).}
 
-\item{select}{expression, indicating columns to select (either name(s)
+\item{select}{Expression, indicating columns to select (either name(s)
 without quote or numeric indicating the column number(s)).}
 
-\item{drop}{passed on to '[' indexing operator.}
+\item{drop}{Passed on to '[' indexing operator.}
 }
 \value{
 A subset of the object (of the same class).
@@ -42,5 +42,5 @@ head(blo)
 length(blo)
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

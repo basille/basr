@@ -21,15 +21,14 @@
 ##' @note To automatically load a \code{.Rpackages} list at startup, add this in
 ##'     your \code{.Rprofile}:
 ##'
-##' \code{### Load packages at the start of R if the package list exists}
-##'
-##' \code{basr:::.loadpkglist()}
+##' \preformatted{### Load packages at the start of R if the package list exists
+##' basr:::.loadpkglist()}
 ##'
 ##' Essentially, the function appends the list of packages at the end of the
 ##' \code{defaultPackages} option (see \code{\link[base]{options}} for this
 ##' option; see also \code{\link[base]{Startup}} for more details about the
 ##' initialization at start of an R session).
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' \dontrun{savepkglist(file = "list.Rpackages")}
@@ -70,7 +69,6 @@ loadpkglist <- function(file = ".Rpackages") {
 }
 
 
-##' @rdname savepkglist
 .loadpkglist <- function() {
     if (file.exists(".Rpackages"))
         options(defaultPackages = unique(c(getOption("defaultPackages"),

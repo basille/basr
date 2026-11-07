@@ -2,7 +2,7 @@
 % Please edit documentation in R/install_selected.R
 \name{install_selected}
 \alias{install_selected}
-\title{Install a list of selected packages by theme.}
+\title{Install a list of selected packages by theme}
 \usage{
 install_selected(
   spatial,
@@ -46,195 +46,233 @@ moveco, tidyverse, tidymodels, plotting, data, stats, utils).
 }
 \details{
 Here is the full list of packages:
+}
+\section{Spatial}{
+
 \itemize{
-\item Spatial:
-autoimage        # Multiple Heat Maps for Projected Coordinates
-concaveman       # A Very Fast 2D Concave Hull Algorithm
-elevatr          # Access Elevation Data from Various APIs
-geodata          # Download Geographic Data
-ggspatial        # Spatial Data Framework for ggplot2
-greenR (GitHub)  # Green Index Quantification, Analysis and Visualization
-gstat            # Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation
-landscapemetrics # Landscape Metrics for Categorical Map Patterns
-leaflet          # Create Interactive Web Maps with the JavaScript 'Leaflet' Library
-lwgeom           # Bindings to Selected 'liblwgeom' Functions for Simple Features
-mapsf            # Thematic Cartography
-mapview          # Interactive Viewing of Spatial Data in R
-raster           # Geographic Data Analysis and Modeling
-rasterVis        # Visualization Methods for Raster Data
-RColorBrewer     # ColorBrewer Palettes
-rayshader        # Create Maps and Visualize Data in 2D and 3D
-rnaturalearth    # World Map Data from Natural Earth
-rnaturalearthdata # World Vector Map Data from Natural Earth Used in 'rnaturalearth'
-sf               # Simple Features for R
-sp               # Classes and Methods for Spatial Data
-spData           # Datasets for spatial analysis
-spacetime        # Classes and Methods for Spatio-Temporal Data
-spatstat         # Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
-spdep            # Spatial Dependence: Weighting Schemes, Statistics and Models
-splancs          # Spatial and Space-Time Point Pattern Analysis
-stars            # Spatiotemporal Arrays, Raster and Vector Data Cubes
-terra            # Spatial Data Analysis
-tidyterra        # 'tidyverse' Methods and 'ggplot2' Utils for 'terra' Objects
-tmap             # Thematic Maps
-\item Moveco:
-adehabitatHS     # Analysis of Habitat Selection by Animals
-amt              # Animal Movement Tools
-biomod2          # Ensemble Platform for Species Distribution Modeling
-ctmm             # Continuous-Time Movement Modeling
-dismo            # Species Distribution Modeling
-ecospat          # Spatial Ecology Miscellaneous Methods
-basille/hab      # Habitat and movement functions
-move             # Visualizing and Analyzing Animal Track Data
-picardis/nestR   # Estimation of Bird Nesting from Tracking Data
-rpostgis         # R Interface to a 'PostGIS' Database
-sftrack          # Modern Classes for Tracking and Movement Data
-\item Tidyverse:
-dplyr: A Grammar of Data Manipulation
-forcats: Tools for Working with Categorical Variables (Factors)
-ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics
-lubridate: Make Dealing with Dates a Little Easier
-purrr: Functional Programming Tools
-readr: Read Tabular Data
-stringr: Simple, Consistent Wrappers for Common String Operations
-tibble: Simple Data Frames
-tidyr: Easily Tidy Data with 'spread()' and 'gather()' Functions
-DBI: R Database Interface
-googledrive: An Interface to Google Drive
-googlesheets4: Access Google Sheets using the Sheets API V4
-haven: Import and Export 'SPSS', 'Stata' and 'SAS' Files
-httr: Tools for Working with URLs and HTTP
-jsonlite: A Robust, High Performance JSON Parser and Generator for R
-readxl: Read Excel Files
-rvest: Easily Harvest (Scrape) Web Pages
-xml2: Parse XML
-blob: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
-hms: Pretty Time of Day
-dbplyr: A 'dplyr' Back End for Databases
-dtplyr: Data Table Back-End for 'dplyr'
-duckplyr: A drop-in replacement for dplyr, powered by DuckDB for speed.
-glue: Interpreted String Literals
-magrittr: A Forward-Pipe Operator for R
-\item Tidymodels: see https://www.tidymodels.org/packages/
-\item Plotting extra:
-adegraphics       # An S4 Lattice-Based Package for the Representation of Multivariate Data
-Cairo             # R graphics device using cairo graphics library for creating high-quality bitmap (PNG, JPEG, TIFF), vector (PDF, SVG, PostScript) and display (X11 and Win32) output
-colorBlindness    # Safe Color Set for Color Blindness
-colorRamps        # Builds color tables
-cowplot           # Streamlined Plot Theme and Plot Annotations for 'ggplot2'
-explor            # Interactive Interfaces for Results Exploration
-extrafont         # Tools for using fonts
-geomtextpath      # Curved Text in 'ggplot2'
-ggalluvial        # Alluvial Diagrams in 'ggplot2'
-ggalt (GitHub)    # Extra Coordinate Systems, Geoms, Statistical Transformations, Scales & Fonts for 'ggplot2' [requires proj4]
-gganimate         # A Grammar of Animated Graphics
-ggbeeswarm        # Categorical Scatter (Violin Point) Plots
-ggdark (GitHub)   # Dark Mode for 'ggplot2' Themes
-ggExtra           # Add Marginal Histograms to 'ggplot2', and More 'ggplot2' Enhancements
-ggforce           # Accelerating 'ggplot2'
-ggfortify         # Data Visualization Tools for Statistical Analysis Results
-gghighlight       # Highlight Lines and Points in 'ggplot2'
-ggpomological (GitHub) # Pomological plot themes for ggplot2
-ggraph            # An Implementation of Grammar of Graphics for Graphs and Networks
-ggrepel           # Repulsive Text and Label Geoms for 'ggplot2'
-ggrough (GitHub)  # Converts ggplot2 plots to sketchy charts using rough.js
-ggshadow          # Shadow and Glow Geoms for 'ggplot2'
-ggsunburst (GitHub) # Sunburst diagrams in ggplot2
-ggtext            # Improved text rendering support for ggplot2
-ggthemes          # Extra Themes, Scales and Geoms for 'ggplot2'
-ggthemr (GitHub)  # ggplot2 themes (for posters/presentations)
-ggwordcloud       # A Word Cloud Geom for 'ggplot2'
-Giftmap (GitHub)  # Create Decorative Town Maps (map posters)
-gridExtra         # Miscellaneous Functions for "Grid" Graphics
-hexbin            # Hexagonal Binning Routines
-hrbrthemes        # Additional Themes, Theme Components and Utilities for 'ggplot2'
-factoextra        # Extract and Visualize the Results of Multivariate Data Analyses
-patchwork         # The Composer of Plots
-plotly            # Create Interactive Web Graphics via 'plotly.js'
-rphylopic         # Get Silhouettes of Organisms from 'Phylopic'
-scales            # Scale Functions for Visualization
-scatterpie        # Scatter Pie Plot
-tweenr            # Interpolate Data for Smooth Animations
-viridis           # Default Color Maps from 'matplotlib'
-wordcloud         # Word Clouds
-xkcd              # Plotting ggplot2 Graphics in an XKCD Style
-\item Data management
-anytime           # Anything to 'POSIXct' or 'Date' Converter
-constants         # Reference on Constants, Units and Uncertainty
-errors            # Error Propagation for R Vectors
-fancycut          # A Fancy Version of 'base::cut'
-foreign           # Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, ...
-janitor           # Simple Tools for Examining and Cleaning Dirty Data
-padr              # Quickly Get Datetime Data Ready for Analysis
-pointblank        # Data Validation and Organization of Metadata for Local and Remote Tables
-summarytools      # Tools to Quickly and Neatly Summarize Data
-tibbletime        # Time Aware Tibbles
-units             # Measurement Units for R Vectors
-\item Stats
-ade4              # Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences
-broom             # Convert Statistical Analysis Objects into Tidy Data Frames
-CircStats         # Circular Statistics, from "Topics in circular Statistics" (2001)
-coxme             # Mixed Effects Cox Models
-lme4              # Linear Mixed-Effects Models using 'Eigen' and S4
-lsmeans           # Least-Squares Means
-MuMIn             # Multi-Model Inference
-popbio            # Construction and Analysis of Matrix Population Models
-randomForest      # Breiman and Cutler's Random Forests for Classification and Regression
-RMark             # R Code for Mark Analysis
-visreg            # Visualization of Regression Models
-\item Utils
-blogdown          # Create Blogs and Websites with R Markdown
-bookdown          # Authoring Books and Technical Documents with R Markdown
-calendR           # Ready to Print Monthly and Yearly Calendars Made with 'ggplot2'
-charlatan         # Make Fake Data
-conflicted        # An Alternative Conflict Resolution Strategy
-cowsay            # Messages, Warnings, Strings with Ascii Animals
-ctv               # CRAN Task Views
-default           # Change the Default Arguments in R Functions
-devtools          # Tools to Make Developing R Packages Easier
-diffr             # Display Differences Between Two Files using Codediff Library
-distill           # 'R Markdown' Format for Scientific and Technical Writing
-equatiomatic      # Transform Models into 'LaTeX' Equations
-formatR           # Format R Code Automatically
-formattable       # Create 'Formattable' Data Structures
-fortunes          # R Fortunes
-Hmisc             # Harrell Miscellaneous
-httpgd            # A 'HTTP' Server Graphics Device
-ids               # Generate Random Identifiers
-kableExtra        # Construct Complex Table with 'kable' and Pipe Syntax
-knitr             # A General-Purpose Package for Dynamic Report Generation in R
-latex2exp         # Use LaTeX Expressions in Plots
-liftr             # Containerize R Markdown Documents for Continuous Reproducibility
-limer (GitHub)    # A LimeSurvey R client
-lintr             # Static R Code Analysis
-magick            # Advanced Graphics and Image-Processing in R
-mailR             # A Utility to Send Emails from R
-memer (GitHub)    # Creating memes with R and magick
-nomnoml           # Sassy 'UML' Diagrams
-packagefinder (GitHub) # Comfortable Search for R Packages on CRAN
-palmerpenguins    # Palmer Archipelago (Antarctica) Penguin Data
-pkgdown           # Make Static HTML Documentation for a Package
-printr            # Automatically Print R Objects to Appropriate Formats According to the 'knitr' Output Format
-processx          # Execute and Control System Processes
-remotes           # R Package Installation from Remote Repositories, Including 'GitHub'
-renv              # Project Environments
-rmarkdown         # Dynamic Documents for R
-rmote (GitHub)    # Running R on a remote server
-rorcid            # Interface to the 'Orcid.org' 'API'
-roxygen2          # In-Source Documentation for R
-rticles           # Article Formats for R Markdown
-scholar           # Analyse Citation Data from Google Scholar
-sessioninfo       # R Session Information
-shiny             # Web Application Framework for R
-styler            # Non-Invasive Pretty Printing of R Code
-sudokuAlt         # Tools for Making and Spoiling Sudoku Games
-tigris            # Download TIGER/Line shapefiles from the United States Census Bureau and load into R as 'SpatialDataFrame' or 'sf' objects
-tint              # 'tint' is not 'Tufte'
-tkrplot           # TK Rplot
-vitae             # Curriculum Vitae for R Markdown
-waldo             # Find Differences Between R Objects
+\item autoimage: Multiple Heat Maps for Projected Coordinates
+\item concaveman: A Very Fast 2D Concave Hull Algorithm
+\item elevatr: Access Elevation Data from Various APIs
+\item geodata: Download Geographic Data
+\item ggspatial: Spatial Data Framework for ggplot2
+\item greenR (GitHub): Green Index Quantification, Analysis and Visualization
+\item gstat: Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation
+\item landscapemetrics: Landscape Metrics for Categorical Map Patterns
+\item leaflet: Create Interactive Web Maps with the JavaScript 'Leaflet' Library
+\item lwgeom: Bindings to Selected 'liblwgeom' Functions for Simple Features
+\item mapsf: Thematic Cartography
+\item mapview: Interactive Viewing of Spatial Data in R
+\item raster: Geographic Data Analysis and Modeling
+\item rasterVis: Visualization Methods for Raster Data
+\item RColorBrewer: ColorBrewer Palettes
+\item rayshader: Create Maps and Visualize Data in 2D and 3D
+\item rnaturalearth: World Map Data from Natural Earth
+\item rnaturalearthdata: World Vector Map Data from Natural Earth Used in 'rnaturalearth'
+\item sf: Simple Features for R
+\item sp: Classes and Methods for Spatial Data
+\item spData: Datasets for spatial analysis
+\item spacetime: Classes and Methods for Spatio-Temporal Data
+\item spatstat: Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
+\item spdep: Spatial Dependence: Weighting Schemes, Statistics and Models
+\item splancs: Spatial and Space-Time Point Pattern Analysis
+\item stars: Spatiotemporal Arrays, Raster and Vector Data Cubes
+\item terra: Spatial Data Analysis
+\item tidyterra: tidyverse' Methods and 'ggplot2' Utils for 'terra' Objects
+\item tmap: Thematic Maps
 }
 }
+
+\section{Moveco}{
+
+\itemize{
+\item adehabitatHS: Analysis of Habitat Selection by Animals
+\item amt: Animal Movement Tools
+\item biomod2: Ensemble Platform for Species Distribution Modeling
+\item ctmm: Continuous-Time Movement Modeling
+\item dismo: Species Distribution Modeling
+\item ecospat: Spatial Ecology Miscellaneous Methods
+\item basille/hab: Habitat and movement functions
+\item move: Visualizing and Analyzing Animal Track Data
+\item picardis/nestR: Estimation of Bird Nesting from Tracking Data
+\item rpostgis: R Interface to a 'PostGIS' Database
+\item sftrack: Modern Classes for Tracking and Movement Data
+}
+}
+
+\section{Tidyverse}{
+
+\itemize{
+\item dplyr: A Grammar of Data Manipulation
+\item forcats: Tools for Working with Categorical Variables (Factors)
+\item ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics
+\item lubridate: Make Dealing with Dates a Little Easier
+\item purrr: Functional Programming Tools
+\item readr: Read Tabular Data
+\item stringr: Simple, Consistent Wrappers for Common String Operations
+\item tibble: Simple Data Frames
+\item tidyr: Easily Tidy Data with 'spread()' and 'gather()' Functions
+\item DBI: R Database Interface
+\item googledrive: An Interface to Google Drive
+\item googlesheets4: Access Google Sheets using the Sheets API V4
+\item haven: Import and Export 'SPSS', 'Stata' and 'SAS' Files
+\item httr: Tools for Working with URLs and HTTP
+\item jsonlite: A Robust, High Performance JSON Parser and Generator for R
+\item readxl: Read Excel Files
+\item rvest: Easily Harvest (Scrape) Web Pages
+\item xml2: Parse XML
+\item blob: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
+\item hms: Pretty Time of Day
+\item dbplyr: A 'dplyr' Back End for Databases
+\item dtplyr: Data Table Back-End for 'dplyr'
+\item duckplyr: A drop-in replacement for dplyr, powered by DuckDB for speed.
+\item glue: Interpreted String Literals
+\item magrittr: A Forward-Pipe Operator for R
+}
+}
+
+\section{Tidymodels}{
+
+
+See \url{https://www.tidymodels.org/packages/}
+}
+
+\section{Plotting extra}{
+
+\itemize{
+\item adegraphics: An S4 Lattice-Based Package for the Representation of Multivariate Data
+\item Cairo: R graphics device using cairo graphics library for creating high-quality bitmap (PNG, JPEG, TIFF), vector (PDF, SVG, PostScript) and display (X11 and Win32) output
+\item colorBlindness: Safe Color Set for Color Blindness
+\item colorRamps: Builds color tables
+\item cowplot: Streamlined Plot Theme and Plot Annotations for 'ggplot2'
+\item explor: Interactive Interfaces for Results Exploration
+\item extrafont: Tools for using fonts
+\item geomtextpath: Curved Text in 'ggplot2'
+\item ggalluvial: Alluvial Diagrams in 'ggplot2'
+\item ggalt (GitHub): Extra Coordinate Systems, Geoms, Statistical Transformations, Scales & Fonts for 'ggplot2' [requires proj4]
+\item gganimate: A Grammar of Animated Graphics
+\item ggbeeswarm: Categorical Scatter (Violin Point) Plots
+\item ggdark (GitHub): Dark Mode for 'ggplot2' Themes
+\item ggExtra: Add Marginal Histograms to 'ggplot2', and More 'ggplot2' Enhancements
+\item ggforce: Accelerating 'ggplot2'
+\item ggfortify: Data Visualization Tools for Statistical Analysis Results
+\item gghighlight: Highlight Lines and Points in 'ggplot2'
+\item ggpomological (GitHub): Pomological plot themes for ggplot2
+\item ggraph: An Implementation of Grammar of Graphics for Graphs and Networks
+\item ggrepel: Repulsive Text and Label Geoms for 'ggplot2'
+\item ggrough (GitHub): Converts ggplot2 plots to sketchy charts using rough.js
+\item ggshadow: Shadow and Glow Geoms for 'ggplot2'
+\item ggsunburst (GitHub): Sunburst diagrams in ggplot2
+\item ggtext: Improved text rendering support for ggplot2
+\item ggthemes: Extra Themes, Scales and Geoms for 'ggplot2'
+\item ggthemr (GitHub): ggplot2 themes (for posters/presentations)
+\item ggwordcloud: A Word Cloud Geom for 'ggplot2'
+\item Giftmap (GitHub): Create Decorative Town Maps (map posters)
+\item gridExtra: Miscellaneous Functions for "Grid" Graphics
+\item hexbin: Hexagonal Binning Routines
+\item hrbrthemes: Additional Themes, Theme Components and Utilities for 'ggplot2'
+\item factoextra: Extract and Visualize the Results of Multivariate Data Analyses
+\item patchwork: The Composer of Plots
+\item plotly: Create Interactive Web Graphics via 'plotly.js'
+\item rphylopic: Get Silhouettes of Organisms from 'Phylopic'
+\item scales: Scale Functions for Visualization
+\item scatterpie: Scatter Pie Plot
+\item tweenr: Interpolate Data for Smooth Animations
+\item viridis: Default Color Maps from 'matplotlib'
+\item wordcloud: Word Clouds
+\item xkcd: Plotting ggplot2 Graphics in an XKCD Style
+}
+}
+
+\section{Data management}{
+
+\itemize{
+\item anytime: Anything to 'POSIXct' or 'Date' Converter
+\item constants: Reference on Constants, Units and Uncertainty
+\item errors: Error Propagation for R Vectors
+\item fancycut: A Fancy Version of 'base::cut'
+\item foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase, ...
+\item janitor: Simple Tools for Examining and Cleaning Dirty Data
+\item padr: Quickly Get Datetime Data Ready for Analysis
+\item pointblank: Data Validation and Organization of Metadata for Local and Remote Tables
+\item summarytools: Tools to Quickly and Neatly Summarize Data
+\item tibbletime: Time Aware Tibbles
+\item units: Measurement Units for R Vectors
+}
+}
+
+\section{Stats}{
+
+\itemize{
+\item ade4: Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences
+\item broom: Convert Statistical Analysis Objects into Tidy Data Frames
+\item CircStats: Circular Statistics, from "Topics in circular Statistics" (2001)
+\item coxme: Mixed Effects Cox Models
+\item lme4: Linear Mixed-Effects Models using 'Eigen' and S4
+\item lsmeans: Least-Squares Means
+\item MuMIn: Multi-Model Inference
+\item popbio: Construction and Analysis of Matrix Population Models
+\item randomForest: Breiman and Cutler's Random Forests for Classification and Regression
+\item RMark: R Code for Mark Analysis
+\item visreg: Visualization of Regression Models
+}
+}
+
+\section{Utils}{
+
+\itemize{
+\item blogdown: Create Blogs and Websites with R Markdown
+\item bookdown: Authoring Books and Technical Documents with R Markdown
+\item calendR: Ready to Print Monthly and Yearly Calendars Made with 'ggplot2'
+\item charlatan: Make Fake Data
+\item conflicted: An Alternative Conflict Resolution Strategy
+\item cowsay: Messages, Warnings, Strings with Ascii Animals
+\item ctv: CRAN Task Views
+\item default: Change the Default Arguments in R Functions
+\item devtools: Tools to Make Developing R Packages Easier
+\item diffr: Display Differences Between Two Files using Codediff Library
+\item distill: R Markdown' Format for Scientific and Technical Writing
+\item equatiomatic: Transform Models into 'LaTeX' Equations
+\item formatR: Format R Code Automatically
+\item formattable: Create 'Formattable' Data Structures
+\item fortunes: R Fortunes
+\item Hmisc: Harrell Miscellaneous
+\item httpgd: A 'HTTP' Server Graphics Device
+\item ids: Generate Random Identifiers
+\item kableExtra: Construct Complex Table with 'kable' and Pipe Syntax
+\item knitr: A General-Purpose Package for Dynamic Report Generation in R
+\item latex2exp: Use LaTeX Expressions in Plots
+\item liftr: Containerize R Markdown Documents for Continuous Reproducibility
+\item limer (GitHub): A LimeSurvey R client
+\item lintr: Static R Code Analysis
+\item magick: Advanced Graphics and Image-Processing in R
+\item mailR: A Utility to Send Emails from R
+\item memer (GitHub): Creating memes with R and magick
+\item nomnoml: Sassy 'UML' Diagrams
+\item packagefinder (GitHub): Comfortable Search for R Packages on CRAN
+\item palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data
+\item pkgdown: Make Static HTML Documentation for a Package
+\item printr: Automatically Print R Objects to Appropriate Formats According to the 'knitr' Output Format
+\item processx: Execute and Control System Processes
+\item remotes: R Package Installation from Remote Repositories, Including 'GitHub'
+\item renv: Project Environments
+\item rmarkdown: Dynamic Documents for R
+\item rmote (GitHub): Running R on a remote server
+\item rorcid: Interface to the 'Orcid.org' 'API'
+\item roxygen2: In-Source Documentation for R
+\item rticles: Article Formats for R Markdown
+\item scholar: Analyse Citation Data from Google Scholar
+\item sessioninfo: R Session Information
+\item shiny: Web Application Framework for R
+\item styler: Non-Invasive Pretty Printing of R Code
+\item sudokuAlt: Tools for Making and Spoiling Sudoku Games
+\item tigris: Download TIGER/Line shapefiles from the United States Census Bureau and load into R as 'SpatialDataFrame' or 'sf' objects
+\item tint: tint' is not 'Tufte'
+\item tkrplot: TK Rplot
+\item vitae: Curriculum Vitae for R Markdown
+\item waldo: Find Differences Between R Objects
+}
+}
+
 \author{
-Mathieu Basille
+Mathieu Basille <\email{mathieu@basille.org}
 }

@@ -20,8 +20,8 @@
 ##'     compression, and character strings ‘"gzip"’, ‘"bzip2"’, ‘"xz"’ or
 ##'     ‘"zstd"’ specify the type of compression.  Ignored when file is a
 ##'     connection and for workspace format version 1.
-##' @param safe Logical.  If ‘TRUE’, a temporary file is used for creating the
-##'     saved workspace.  The temporary file is renamed to file if the save
+##' @param safe Logical. If ‘TRUE’, a temporary file is used for creating the
+##'     saved workspace. The temporary file is renamed to file if the save
 ##'     succeeds.  This preserves an existing workspace file if the save fails,
 ##'     but at the cost of using extra disk space during the save.
 ##' @param hist Logical. Whether to save or not the commands history.
@@ -35,7 +35,7 @@
 ##' @seealso \code{\link[utils]{savehistory}} to save the commands history, and
 ##'     \code{\link{savepkglist}} to save the list of attached packages.
 ##' @author R Core Team, modified by Mathieu Basille
-##'     \email{mathieu@@basille.org}
+##'     <\email{mathieu@@basille.org}>
 ##' @export
 ##' @importFrom utils savehistory
 save.image <- function(file = ".RData", version = NULL, ascii = FALSE,

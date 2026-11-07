@@ -18,7 +18,7 @@
 ##' @param plot Whether to plot the results.
 ##' @param ... Further arguments passed to \code{points}.
 ##' @returns A data frame providing the CI and coefficients.
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' ## Example of linear model
@@ -103,8 +103,6 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
     return(ci)
 }
 
-## plot.confint
-##
 ##' @param x A \code{data.frame} of class \code{confint}.
 ##' @param mar The number of lines of margin, can be useful if the
 ##' coefficient names do not fit in the left margin. See
@@ -123,8 +121,7 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
 ##' @importFrom graphics abline axis box grid lines mtext par plot.default points
 ##' @importFrom grDevices gray hcl
 plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
-    main = attr(x, "model"), pch = 19, add.signif = FALSE, ...)
-{
+    main = attr(x, "model"), pch = 19, add.signif = FALSE, ...) {
     ## Check that 'x' is of class "confint"
     if (!inherits(x, "confint"))
         stop("x should be of class \"confint\"")

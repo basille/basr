@@ -2,19 +2,19 @@
 ##'
 ##' Subset an object based on the frequency of a column (factor or not).
 ##'
-##' @param x object to be subsetted (e.g. \code{data.frame}, \code{matrix},
+##' @param x Object to be subsetted (e.g. \code{data.frame}, \code{matrix},
 ##'     \code{Spatial*DataFrame}, etc.).
-##' @param col name of the column which stores the grouping factor (without
+##' @param col Name of the column which stores the grouping factor (without
 ##'     quotes).
-##' @param n the reference number for the frequency of the grouping factor (must
+##' @param n The reference number for the frequency of the grouping factor (must
 ##'     be a numeric of length 1).
-##' @param sign any comparison sign (\code{>=} by default, \code{<=}, \code{>},
+##' @param sign Any comparison sign (\code{>=} by default, \code{<=}, \code{>},
 ##'     \code{<}, or \code{==}).
-##' @param select expression, indicating columns to select (either name(s)
+##' @param select Expression, indicating columns to select (either name(s)
 ##'     without quote or numeric indicating the column number(s)).
-##' @param drop passed on to '[' indexing operator.
+##' @param drop Passed on to '[' indexing operator.
 ##' @returns A subset of the object (of the same class).
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' set.seed(1)

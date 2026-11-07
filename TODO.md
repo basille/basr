@@ -1,3 +1,10 @@
+* Synonymous: q/quit & togray/togrey
+
+* reclass: Add 'keep = TRUE/FALSE' to keep unspecified values (otherwise gives
+  NA as is the case)
+
+* writeFunction: try to extract function name for default file name
+
 * q: Allow 'savePkg = FALSE'
 
 * q: Redefine q/quit from base, see:
@@ -6,12 +13,11 @@ https://stackoverflow.com/questions/8743390/how-do-i-override-a-non-visible-func
 
 * table: redefine defaults...
 
-
-
 * Rounding that preserve sum
 
-## From josliber: https://stackoverflow.com/a/32544987
-## Improved by Mikhail: https://stackoverflow.com/a/35930285
+From josliber: https://stackoverflow.com/a/32544987
+Improved by Mikhail: https://stackoverflow.com/a/35930285
+
 round_sum <- function(x, digits = 0) {
     ## Check that digits is a positive integer
     if (digits%%1 != 0 | digits < 0) 
@@ -36,13 +42,6 @@ sum(c(0.336, 0.336, 0.335))
 round_sum(c(0.336, 0.336, 0.335), 2)
 sum(round(c(0.336, 0.336, 0.335), 2))
 sum(round_sum(c(0.336, 0.336, 0.335), 2))
-
-
-
-
-
-
-
 
 * geometric/harmonic means
 See http://economistatlarge.com/r-guide/arithmetic-harmonic-geometric-means-r
@@ -91,8 +90,6 @@ geom_mean <- function(x, na.rm = TRUE, zero.propagate = FALSE) {
         exp(sum(log(x[x > 0]), na.rm = na.rm)/length(x))
     }
 }
-
-
 
 * nselect
 
@@ -207,6 +204,8 @@ nselect.ltraj <- function(x, n, by = c("loc", "burst"),
     }
 }
 
+* multiple
+
 multiple <- function(x, unique = FALSE, na.rm = FALSE)
 {
     ## Check that x is a vector
@@ -228,6 +227,8 @@ unique(nselect(toto, 2))
 multiple(toto, unique = TRUE)
 unique(nselect(toto, 2, comp = "<"))
 
+* counts
+
 counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
     useNA = c("no", "ifany", "always"), ...)
 {
@@ -239,11 +240,9 @@ counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
 (toto <- rep(letters[1:10], times = rep(4:1, times = 1:4)))
 counts(toto)
 
+* Scale a matrix globally (not by column)
 
-
-
-### Scale a matrix globally (not by column)
-### (note: cannot be scale.matrix because scale.default does not have 'bycol' argument
+(note: cannot be scale.matrix because scale.default does not have 'bycol' argument
 
 scale.mat <- function(mat, center = TRUE, scale = TRUE, bycol = FALSE)
 {

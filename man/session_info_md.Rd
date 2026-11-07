@@ -29,10 +29,10 @@ Displays session information adapted for Markdown output.
 \details{
 The function can be used with something like this in a RMarkdown file:
 
-\code{```{r r-session, echo = FALSE, results = "asis", cache = FALSE}
+\preformatted{```{r r-session, echo = FALSE, results = "asis", cache = FALSE}
 session_info_md(language = "FR", unnumbered = TRUE)
 ```}
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

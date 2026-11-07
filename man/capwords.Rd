@@ -3,7 +3,7 @@
 \name{capwords}
 \alias{capwords}
 \title{Capitalizing - every first letter of a word is changed to upper
-case.}
+case}
 \usage{
 capwords(s, strict = FALSE)
 }

@@ -2,14 +2,14 @@
 ##'
 ##' Generate package reference manual.
 ##'
-##' @param pkg package description, can be path or package name.  See
-##'     \code{\link[devtools]{as.package}} for more information
-##' @param path path in which to produce package.  If \code{NULL}, defaults to
+##' @param pkg Package description, can be path or package name.  See
+##'     \code{\link[devtools]{as.package}} for more information.
+##' @param path Path in which to produce package.  If \code{NULL}, defaults to
 ##'     the root directory of the package.
-##' @param preview preview generated PDF file
-##' @param overwrite overwrite output file if it exists
+##' @param preview Preview generated PDF file.
+##' @param overwrite Overwrite output file if it exists.
 ##' @export
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE)
 {
     pkg <- devtools::as.package(pkg)

@@ -11,7 +11,7 @@
 ##' @param factor Logical, whether to return a factor (default is \code{FALSE}).
 ##' @param ... Additional arguments passed to \code{factor}.
 ##' @returns A vector with the same length as \code{x}.
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' (bla <- rep(1:5, 3))

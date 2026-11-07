@@ -27,5 +27,5 @@ extrange(-10:10)
 extrange(rep(10, 3))
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

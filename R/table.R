@@ -18,7 +18,7 @@
 ##' @param deparse.level Controls how the default ‘dnn’ is constructed. See
 ##'     \code{\link[base]{table}} for details.
 ##' @author R Core Team, modified by Mathieu Basille
-##'     \email{mathieu@@basille.org}
+##'     <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' d <- factor(rep(c("A", "B", "C"), 10), levels = c("A", "B", "C",

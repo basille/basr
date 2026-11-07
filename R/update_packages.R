@@ -3,7 +3,7 @@
 #' Checks the list of user-installed packages (on CRAN, BioConductor or GitHub)
 #' and updates them where required.
 #'
-#' @author Mathieu Basille \email{mathieu@@basille.org}
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 #' @importFrom utils installed.packages packageDescription
 update_packages <- function()

@@ -12,16 +12,16 @@ init_httpgd(
 }
 \arguments{
 \item{width}{Initial plot width (pixels); defaults to
-\code{getOption("httpgd.width"} or 720 pixels if its not available.}
+\code{getOption("httpgd.width")} or 720 pixels if its not available.}
 
 \item{height}{Initial plot height (pixels); defaults to
-\code{getOption("httpgd.height"} or 720 pixels if its not available..}
+\code{getOption("httpgd.height")} or 720 pixels if its not available..}
 
-\item{asp}{If provided, forces height to be equal to width*asp.}
+\item{asp}{If provided, forces height to be equal to \code{width*asp}.}
 }
 \description{
 Init a web graphic device from httpgd.
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

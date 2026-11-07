@@ -25,7 +25,7 @@
 ##'     disadvantages of dynamite plots here:
 ##'     \url{http://emdbolker.wikidot.com/blog:dynamite}
 ##' @author Samuel Brown, modified by Mathieu Basille
-##'     \email{mathieu@@basille.org}
+##'     <\email{mathieu@@basille.org}>
 ##' @section Original URL:
 ##'     \url{http://the-praise-of-insects.blogspot.ca/2012/04/dynamite-plots-in-r.html}
 ##' @export

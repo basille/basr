@@ -4,7 +4,7 @@
 #'
 #' The function can be used with something like this in a RMarkdown file:
 #'
-#' \code{```{r r-session, echo = FALSE, results = "asis", cache = FALSE}
+#' \preformatted{```{r r-session, echo = FALSE, results = "asis", cache = FALSE}
 #' session_info_md(language = "FR", unnumbered = TRUE)
 #' ```}
 #'
@@ -15,7 +15,7 @@
 #'     Defaults to \code{"FALSE"}.
 #' @param sort_attached Logical; should attached packages be listed by
 #'     alphabetical order? Defaults to \code{"TRUE"}.
-#' @author Mathieu Basille \email{mathieu@@basille.org}
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 session_info_md <- function(language = c("EN", "FR"), header_level = 2,
     unnumbered = FALSE, sort_attached =  TRUE)

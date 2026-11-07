@@ -3,11 +3,11 @@
 #' Init a web graphic device from httpgd.
 #'
 #' @param width Initial plot width (pixels); defaults to
-#'     \code{getOption("httpgd.width"} or 720 pixels if its not available.
+#'     \code{getOption("httpgd.width")} or 720 pixels if its not available.
 #' @param height Initial plot height (pixels); defaults to
-#'     \code{getOption("httpgd.height"} or 720 pixels if its not available..
-#' @param asp If provided, forces height to be equal to width*asp.
-#' @author Mathieu Basille \email{mathieu@@basille.org}
+#'     \code{getOption("httpgd.height")} or 720 pixels if its not available..
+#' @param asp If provided, forces height to be equal to \code{width*asp}.
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 init_httpgd <- function(width = getOption("httpgd.width", 720),
     height = getOption("httpgd.height", 576), asp = NA)

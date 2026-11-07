@@ -7,19 +7,19 @@
 manual(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE)
 }
 \arguments{
-\item{pkg}{package description, can be path or package name.  See
-\code{\link[devtools]{as.package}} for more information}
+\item{pkg}{Package description, can be path or package name.  See
+\code{\link[devtools]{as.package}} for more information.}
 
-\item{path}{path in which to produce package.  If \code{NULL}, defaults to
+\item{path}{Path in which to produce package.  If \code{NULL}, defaults to
 the root directory of the package.}
 
-\item{preview}{preview generated PDF file}
+\item{preview}{Preview generated PDF file.}
 
-\item{overwrite}{overwrite output file if it exists}
+\item{overwrite}{Overwrite output file if it exists.}
 }
 \description{
 Generate package reference manual.
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

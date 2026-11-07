@@ -7,9 +7,9 @@
 kcut(x, k = 10, labels = FALSE)
 }
 \arguments{
-\item{x}{numeric vector to cut.}
+\item{x}{Numeric vector to cut.}
 
-\item{k}{the number of classes.}
+\item{k}{The number of classes.}
 
 \item{labels}{Labels for the levels of the resulting category. By default
 (\code{FALSE}), labels are constructed using simple integer codes; if
@@ -31,5 +31,5 @@ head(kcut(bla, labels = NULL))
 head(kcut(bla, labels = LETTERS[1:10]))
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org} and Emiel van Loon
+Mathieu Basille <\email{mathieu@basille.org}> and Emiel van Loon
 }

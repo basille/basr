@@ -1,4 +1,4 @@
-#' Prints a date in any locale.
+#' Prints a date in any locale
 #'
 #' Convenience function to print a date using user format and locale.
 #'
@@ -11,7 +11,7 @@
 #'     \code{\link[base]{Sys.setlocale}} (see \code{\link[base]{locales}} for
 #'     details); defaults to \code{"fr_FR.utf8"}.
 #' @returns A character string with the date in user format and locale.
-#' @author Mathieu Basille
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 date_locale <- function(x =  Sys.Date(), format = "%A %d %B %Y",
     locale = "fr_FR.utf8") {

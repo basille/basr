@@ -62,5 +62,5 @@ memUse()$bytes
 }
 \author{
 Michael Hallquist, modified by Mathieu Basille
-\email{mathieu@basille.org}
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

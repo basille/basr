@@ -14,7 +14,7 @@ se(x, na.rm = FALSE)
 \item{x}{A numeric vector or an R object which is coercible to one by
 \code{as.vector}.}
 
-\item{na.rm}{Logical.  Should missing values be removed?}
+\item{na.rm}{Logical. Should missing values be removed?}
 }
 \value{
 A numeric.
@@ -40,5 +40,5 @@ variance and standard deviation.
 }
 \author{
 From the \code{Writing R Extensions} manual, modified by Mathieu
-Basille \email{mathieu@basille.org}
+Basille <\email{mathieu@basille.org}>
 }

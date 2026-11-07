@@ -4,7 +4,7 @@
 ##'
 ##' @param x A data frame.
 ##' @returns A numeric vector.
-##' @author Mathieu Basille \email{mathieu@@basille.org}
+##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
 ##' @examples
 ##' set.seed(123)

@@ -6,11 +6,11 @@
 ##'
 ##' @param x A numeric vector or an R object which is coercible to one by
 ##'     \code{as.vector}.
-##' @param na.rm Logical.  Should missing values be removed?
+##' @param na.rm Logical. Should missing values be removed?
 ##' @seealso \code{\link[stats]{var}} and \code{\link[stats]{sd}} for the
 ##'     variance and standard deviation.
 ##' @author From the \code{Writing R Extensions} manual, modified by Mathieu
-##'     Basille \email{mathieu@@basille.org}
+##'     Basille <\email{mathieu@@basille.org}>
 ##' @source Original URL:
 ##'     \url{http://cran.r-project.org/doc/manuals/R-intro.html}
 ##' @returns A numeric.

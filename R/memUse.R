@@ -9,7 +9,7 @@
 ##'     and memory usage; or \code{0} if no object is present in the specified
 ##'     environment.
 ##' @author Michael Hallquist, modified by Mathieu Basille
-##'     \email{mathieu@@basille.org}
+##'     <\email{mathieu@@basille.org}>
 ##' @section Original URL: \url{http://stackoverflow.com/a/9839949}. See also
 ##'     the complete Stack Overflow thread:
 ##'     \url{https://stackoverflow.com/questions/1358003/tricks-to-manage-the-available-memory-in-an-r-session}

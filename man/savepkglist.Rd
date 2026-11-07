@@ -4,7 +4,6 @@
 \alias{savepkglist}
 \alias{attpkglist}
 \alias{loadpkglist}
-\alias{.loadpkglist}
 \title{Load or save the list of attached packages}
 \usage{
 savepkglist(file = ".Rpackages")
@@ -12,8 +11,6 @@ savepkglist(file = ".Rpackages")
 attpkglist()
 
 loadpkglist(file = ".Rpackages")
-
-.loadpkglist()
 }
 \arguments{
 \item{file}{The name of the file in which to save the list of attached
@@ -41,9 +38,8 @@ startup (see the Note below).
 To automatically load a \code{.Rpackages} list at startup, add this in
 your \code{.Rprofile}:
 
-\code{### Load packages at the start of R if the package list exists}
-
-\code{basr:::.loadpkglist()}
+\preformatted{### Load packages at the start of R if the package list exists
+basr:::.loadpkglist()}
 
 Essentially, the function appends the list of packages at the end of the
 \code{defaultPackages} option (see \code{\link[base]{options}} for this
@@ -56,5 +52,5 @@ initialization at start of an R session).
 \dontrun{loadpkglist()}
 }
 \author{
-Mathieu Basille \email{mathieu@basille.org}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

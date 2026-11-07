@@ -2,7 +2,7 @@
 % Please edit documentation in R/date_locale.R
 \name{date_locale}
 \alias{date_locale}
-\title{Prints a date in any locale.}
+\title{Prints a date in any locale}
 \usage{
 date_locale(x = Sys.Date(), format = "\%A \%d \%B \%Y", locale = "fr_FR.utf8")
 }
@@ -25,5 +25,5 @@ A character string with the date in user format and locale.
 Convenience function to print a date using user format and locale.
 }
 \author{
-Mathieu Basille
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }
