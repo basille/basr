@@ -1,24 +1,23 @@
-## getcolors
-##
-##' Allows for the selection of \code{n} colors by using a simplified color swatch.
+##' Choosing colors visually
 ##'
-##' \code{getcolors} allows selection with a mouse using the
-##' \code{locator} function. Following selection, a second plot opens
-##' showing how these colors look next to each other and on a
-##' background gradient of black to white. The function uses an RGB
-##' color model: Red increases on the y-axis, Green increases on the
-##' x-axis, and Blue is a repeated sequence of levels across the
-##' x-axis.
-##' @title Choosing colors visually
+##' Allows for the selection of \code{n} colors by using a simplified color
+##' swatch.
+##'
+##' \code{getcolors} allows selection with a mouse using the \code{locator}
+##' function. Following selection, a second plot opens showing how these colors
+##' look next to each other and on a background gradient of black to white. The
+##' function uses an RGB color model: Red increases on the y-axis, Green
+##' increases on the x-axis, and Blue is a repeated sequence of levels across
+##' the x-axis.
+##'
 ##' @param n The number of colors to choose
-##' @return A character vector with elements of 7 or 9 characters,
-##' \code{"#"} followed by the red, blue, green and optionally alpha
-##' values in hexadecimal (after rescaling to \code{0 ... 255}).  The
-##' optional alpha values range from \code{0} (fully transparent) to
-##' \code{255} (opaque).
+##' @returns A character vector with elements of 7 or 9 characters, \code{"#"}
+##'     followed by the red, blue, green and optionally alpha values in
+##'     hexadecimal (after rescaling to \code{0 ... 255}).  The optional alpha
+##'     values range from \code{0} (fully transparent) to \code{255} (opaque).
 ##' @author Marc in the box
 ##' @section Original URL:
-##' \url{http://menugget.blogspot.com/2013/01/choosing-colors-visually-with-getcolors.html}
+##'     \url{http://menugget.blogspot.com/2013/01/choosing-colors-visually-with-getcolors.html}
 ##' @export
 ##' @examples
 ##' \dontrun{
@@ -39,6 +38,8 @@
 ##' lines(x, y4, col = cols[4], lwd = 3)
 ##' legend("topleft", legend = paste("y", 1:4, sep = ""), col = cols,
 ##'     lwd = 3)}
+##' @importFrom graphics axis box image layout lines locator mtext par polygon
+##' @importFrom grDevices colorRampPalette dev.new rgb
 getcolors <- function(n)
 {
     N <- 6
@@ -51,7 +52,7 @@ getcolors <- function(n)
     G <- matrix(rep(rep(LEV, each = N), N), nrow = length(X),
         ncol = length(Y))
     B <- matrix(rep(LEV, N^2), nrow = length(X), ncol = length(Y))
-    x11(width = 6, height = 6)
+    dev.new(width = 6, height = 6)
     layout(matrix(1:2, nrow = 2, ncol = 1), widths = c(6), heights = c(1.5,
         4.5))
     op <- par(mar = c(1, 3, 2, 1))

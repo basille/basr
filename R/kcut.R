@@ -1,26 +1,25 @@
-## ncut
-##
+##' Cut into classes of equal size
+##'
 ##' Cut a numeric vector into k classes of (roughly) equal size.
 ##'
-##' @title Cut into classes of equal size
 ##' @param x numeric vector to cut.
 ##' @param k the number of classes.
-##' @param labels Labels for the levels of the resulting category. By
-##'     default (\code{FALSE}), labels are constructed using simple
-##'     integer codes; if \code{NULL}, labels are build using
-##'     \code{"(a,b]"} interval notation. Alternatively, a custom
-##'     vector of length \code{k} can be used.
-##' @return A vector of k classes.
-##' @author Mathieu Basille \email{basille@ufl.edu} and Emiel van Loon
+##' @param labels Labels for the levels of the resulting category. By default
+##'     (\code{FALSE}), labels are constructed using simple integer codes; if
+##'     \code{NULL}, labels are build using \code{"(a,b]"} interval
+##'     notation. Alternatively, a custom vector of length \code{k} can be used.
+##' @returns A vector of k classes.
+##' @author Mathieu Basille \email{mathieu@@basille.org} and Emiel van Loon
 ##' @export
 ##' @examples
 ##' bla <- rnorm(100)
 ##' summary(bla)
-##' bli <- ncut(bla)
+##' bli <- kcut(bla)
 ##' table(bli)
-##' head(ncut(bla, labels = NULL))
-##' head(ncut(bla, labels = LETTERS[1:10]))
-ncut <- function(x, k = 10, labels = FALSE) {
+##' head(kcut(bla, labels = NULL))
+##' head(kcut(bla, labels = LETTERS[1:10]))
+##' @importFrom stats quantile
+kcut <- function(x, k = 10, labels = FALSE) {
     ## Check that x is numeric
     if (!is.numeric(x))
         stop("'x' must be numeric.")

@@ -4,26 +4,64 @@ S3method(plot,confint)
 S3method(print,memUse)
 export(attpkglist)
 export(capwords)
-export(colNA)
+export(colNAs)
 export(confint)
 export(cv)
+export(date_locale)
 export(dynamitePlot)
 export(extrange)
 export(getcolors)
+export(init_httpgd)
+export(install_selected)
+export(kcut)
 export(loadpkglist)
 export(manual)
 export(memUse)
 export(mv)
-export(ncut)
 export(nsubset)
 export(q)
-export(quit)
 export(reclass)
 export(save.image)
 export(savepkglist)
 export(se)
+export(session_info_md)
 export(summaryIC)
 export(table)
 export(togray)
-export(togrey)
+export(update_packages)
 export(writeFunction)
+importFrom(grDevices,
+  colorRampPalette,
+  dev.new,
+  gray,
+  grey,
+  hcl,
+  rgb
+)
+importFrom(graphics,
+  abline,
+  axis,
+  box,
+  grid,
+  image,
+  layout,
+  lines,
+  locator,
+  mtext,
+  par,
+  plot.default,
+  points,
+  polygon
+)
+importFrom(stats,
+  coef,
+  quantile,
+  var
+)
+importFrom(utils,
+  head,
+  installed.packages,
+  object.size,
+  packageDescription,
+  savehistory
+)

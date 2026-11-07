@@ -1,12 +1,11 @@
-## writeFunction
-##
+##' Prints a function to a file
+##'
 ##' Prints a function to a file.
 ##'
-##' @title Function output
 ##' @param fun A function.
-##' @param file A character string naming a file. By default, write
-##' the function in \code{<fun>.R} in the working directory.
-##' @author Mathieu Basille \email{basille@@ufl.edu}
+##' @param file A character string naming a file. By default, write the function
+##'     in \code{<fun>.R} in the working directory.
+##' @author Mathieu Basille \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' f1 <- function(x) {

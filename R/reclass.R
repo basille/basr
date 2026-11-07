@@ -1,19 +1,17 @@
-## reclass
-##
-##' Reclassify given values of a vector by new values. Note that all values
-##' need not to be documented, only the ones that need to be modified.
+##' Reclassify the values of a vector
 ##'
-##' @title Reclassify the values of a vector.
+##' Reclassify given values of a vector by new values. Note that all values need
+##' not to be documented, only the ones that need to be modified.
+##'
 ##' @param x A character or numeric vector.
-##' @param from A vector describing the values to change from, or a matrix
-##' of reclassification with two columns (from, to).
+##' @param from A vector describing the values to change from, or a matrix of
+##'     reclassification with two columns (from, to).
 ##' @param to A vector describing the values to change to, or nothing if
-##' \code{from} is a matrix.
-##' @param factor Logical, whether to return a factor (default is
-##' \code{FALSE}).
+##'     \code{from} is a matrix.
+##' @param factor Logical, whether to return a factor (default is \code{FALSE}).
 ##' @param ... Additional arguments passed to \code{factor}.
-##' @return A vector with the same length as \code{x}.
-##' @author Mathieu Basille \email{basille@@ufl.edu}
+##' @returns A vector with the same length as \code{x}.
+##' @author Mathieu Basille \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' (bla <- rep(1:5, 3))

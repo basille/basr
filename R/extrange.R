@@ -1,14 +1,14 @@
-## extrange
-##
+##' Extended range
+##'
 ##' Returns the range extended by a given proportion.
 ##'
 ##' If the regular range returns a single value, the proportion is
 ##' computed on this value itself (and not on the range).
-##' @title Extended range
+##'
 ##' @param x A numeric vector.
 ##' @param percent The proportion to be added to the range.
 ##' @param na.rm Logical, indicating if \code{NA}'s should be omitted.
-##' @author Mathieu Basille \email{basille@@ufl.edu}
+##' @author Mathieu Basille \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' extrange(0:10)

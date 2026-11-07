@@ -239,3 +239,21 @@ counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
 (toto <- rep(letters[1:10], times = rep(4:1, times = 1:4)))
 counts(toto)
 
+
+
+
+### Scale a matrix globally (not by column)
+### (note: cannot be scale.matrix because scale.default does not have 'bycol' argument
+
+scale.mat <- function(mat, center = TRUE, scale = TRUE, bycol = FALSE)
+{
+    if (bycol) {
+        scale(mat, center = center, scale = scale)
+    } else {
+        matrix(scale(as.vector(mat), center = center, scale = scale),
+            nrow = nrow(mat), ncol = ncol(mat))
+    }
+}
+## (mm <- matrix(1:20, nrow = 4))
+## scale.mat(mm)
+## scale.mat(mm, bycol = TRUE)

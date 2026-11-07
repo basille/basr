@@ -1,14 +1,24 @@
-## table
-##
-##' A slight modification of the \code{\link[base]{table}} function,
-##' to include \code{NA} values in the table by default. See
-##' \code{\link[base]{table}} for details of the function.
+##' Modified table function to handle NAs
 ##'
-##' @title Modified table function to handle NAs
-##' @param useNA Whether to include \code{NA} values in the table.
-##' Default is now \code{ifany}.
+##' A slight modification of the \code{\link[base]{table}} function, to include
+##' \code{NA} values in the table by default. See \code{\link[base]{table}} for
+##' details of the function.
+##'
+##' @param ... One or more objects which can be interpreted as factors
+##'     (including numbers or character strings), or a list (such as a data
+##'     frame) whose components can be so interpreted. (For ‘as.table’,
+##'     arguments passed to specific methods; for ‘as.data.frame’, unused.)
+##' @param exclude Levels to remove for all factors in ‘...’.  If it does not
+##'     contain NA and ‘useNA’ is not specified, it implies ‘useNA = "ifany"’.
+##'     See ‘Details’ for its interpretation for non-factor arguments.
+##' @param useNA Whether to include \code{NA} values in the table.  Default is
+##'     now \code{ifany}.
+##' @param dnn The names to be given to the dimensions in the result (the
+##'     _dimnames names_).
+##' @param deparse.level Controls how the default ‘dnn’ is constructed. See
+##'     \code{\link[base]{table}} for details.
 ##' @author R Core Team, modified by Mathieu Basille
-##' \email{basille@@ufl.edu}
+##'     \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' d <- factor(rep(c("A", "B", "C"), 10), levels = c("A", "B", "C",

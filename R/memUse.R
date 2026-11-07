@@ -1,21 +1,18 @@
-## memUse
-##
+##' Memory usage of saved objects
+##'
 ##' Show memory usage of saved objects.
 ##'
-##' @title Memory usage of saved objects
-##' @param pos Which environment to use to list the saved objects (as
-##' a position in the search list). See \code{\link{ls}}.
-##' @param pattern An optional regular expression. See
-##' \code{\link{ls}}.
-##' @return A data frame of classe \code{memUse} providing object
-##' names, class and memory usage; or \code{0} if no object is present
-##' in the specified environment.
+##' @param pos Which environment to use to list the saved objects (as a position
+##'     in the search list). See \code{\link{ls}}.
+##' @param pattern An optional regular expression. See \code{\link{ls}}.
+##' @returns A data frame of classe \code{memUse} providing object names, class
+##'     and memory usage; or \code{0} if no object is present in the specified
+##'     environment.
 ##' @author Michael Hallquist, modified by Mathieu Basille
-##' \email{basille@@ufl.edu}
-##' @section Original URL:
-##' \url{http://stackoverflow.com/a/9839949}. See also the complete
-##' Stack Overflow thread:
-##' \url{https://stackoverflow.com/questions/1358003/tricks-to-manage-the-available-memory-in-an-r-session}
+##'     \email{mathieu@@basille.org}
+##' @section Original URL: \url{http://stackoverflow.com/a/9839949}. See also
+##'     the complete Stack Overflow thread:
+##'     \url{https://stackoverflow.com/questions/1358003/tricks-to-manage-the-available-memory-in-an-r-session}
 ##' @export
 ##' @examples
 ##' ## Create some data
@@ -26,6 +23,7 @@
 ##' ## Check memory usage (and raw numbers in bytes)
 ##' memUse()
 ##' memUse()$bytes
+##' @importFrom utils object.size
 memUse <- function(pos = 1, pattern) {
     ## List saved objects
     objectList <- ls(pos = pos, pattern = pattern)
@@ -53,18 +51,17 @@ memUse <- function(pos = 1, pattern) {
     return(memListing)
 }
 
-## print.memUse
-##
 ##' @param x An object of class \code{memUse}.
 ##' @param sort Whether to sort the object list by \code{size} or
-##' \code{alphabetical} order.
+##'     \code{alphabetical} order.
 ##' @param decreasing Logical.  Should the sort order be increasing or
-##' decreasing?
-##' @param n A single integer, giving the number of objects to
-##' display.
+##'     decreasing?
+##' @param n A single integer, giving the number of objects to display.
 ##' @param bytes Logical. Whether to display the raw size in bytes.
+##' @param ... Further arguments passed to or from other methods.
 ##' @rdname memUse
 ##' @export
+##' @importFrom utils head
 print.memUse <- function(x, sort = c("size", "alphabetical"),
     decreasing = ifelse(sort == "size", TRUE, FALSE), n = 10,
     bytes = FALSE, ...)
@@ -83,5 +80,5 @@ print.memUse <- function(x, sort = c("size", "alphabetical"),
     ## Reset class to "data.frame"
     class(xx) <- "data.frame"
     ## And print using 'head'
-    print(head(xx, n = n))
+    print(head(xx, n = n), ...)
 }

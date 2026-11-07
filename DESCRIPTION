@@ -1,15 +1,28 @@
 Package: basr
-Version: 0.12
-Date: 2018-06-22
 Title: Basic, but hopefully useful, functions
-Description: This package provides a bunch of basic functions for a
-    variety of usage.
-Author: Mathieu Basille, contributions from Samuel Brown, Marc in the
-    box, Clement Calenge, Michael Hallquist, Jean Lobry, Emiel van
-    Loon, Kevin Wright
-Maintainer: Mathieu Basille <basille@ufl.edu>
+Version: 1.0
+Date: 2026-11-03
+Authors@R: c(
+    person("Mathieu", "Basille", email = "mathieu@basille.org",
+        role = c("aut", "cre"),
+        comment = c(ORCID = "0000-0001-9366-7127")),
+    person("Samuel", "Brown", role = "ctb"),
+    person("Marc in the box", role = "ctb"),
+    person("Clement", "Calenge", role = "ctb"),
+    person("Michael", "Hallquist", role = "ctb"),
+    person("Jean", "Lobry", role = "ctb"),
+    person("Emiel", "van Loon", role = "ctb"),
+    person("Kevin", "Wright", role = "ctb"))
+Description: This package provides a collection of basic functions for a variety
+    of usage, mostly for my own convenience.
+URL: https://github.com/basille/basr
 Suggests:
-    devtools
-License: GPL (>= 3)
-URL: http://ase-research.org/basille/basr
-RoxygenNote: 6.0.1
+    devtools,
+    httpgd,
+    knitr,
+    pak,
+    sessioninfo
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)

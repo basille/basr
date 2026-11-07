@@ -1,23 +1,24 @@
-## confint
-##
-##' Modified version of the \code{\link[stats]{confint}} function,
-##' which displays the coefficients in addition to the CIs, and allows
-##' for more control on display parameters. A \code{plot} argument and
-##' function allow to graph the coefficients and their CIs.
+##' Confidence Intervals for Model Parameters
 ##'
-##' @title Confidence Intervals for Model Parameters
-##' @param order Logical. If \code{TRUE}, the results are ordered by
-##' descending order on the coefficient value.
-##' @param groups A \code{factor} in the sense that
-##' \code{as.factor(f)} defines the groups, or a list of such factors
-##' in which case their interaction is used for the groups. See
-##' \code{\link[base]{split}}.
+##' Modified version of the \code{\link[stats]{confint}} function, which
+##' displays the coefficients in addition to the CIs, and allows for more
+##' control on display parameters. A \code{plot} argument and function allow to
+##' graph the coefficients and their CIs.
+##'
+##' @param object A fitted model object.
+##' @param parm A specification of which parameters are to be given confidence
+##'     intervals, either a vector of numbers or a vector of names.  If missing,
+##'     all parameters are considered.
+##' @param level The confidence level required.
+##' @param order Logical. If \code{TRUE}, the results are ordered by descending
+##'     order on the coefficient value.
+##' @param groups A \code{factor} in the sense that \code{as.factor(f)} defines
+##'     the groups, or a list of such factors in which case their interaction is
+##'     used for the groups. See \code{\link[base]{split}}.
 ##' @param plot Whether to plot the results.
 ##' @param ... Further arguments passed to \code{points}.
-##' @return A data frame providing the CI and coefficients.
-##' @seealso \code{\link[stats]{confint}} for more details on other
-##' parameters.
-##' @author Mathieu Basille \email{basille@@ufl.edu}
+##' @returns A data frame providing the CI and coefficients.
+##' @author Mathieu Basille \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' ## Example of linear model
@@ -46,6 +47,7 @@
 ##'     col = c("blue", "red", "green"), pch = 18, cex = 2)
 ##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
 ##'     plot = TRUE, add.signif = TRUE)
+##' @importFrom stats coef
 confint <- function(object, parm, level = 0.95, order = FALSE,
     groups, plot = FALSE, ...) {
     ## Computing the CI using 'stats::confint'
@@ -118,6 +120,8 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
 ##' @param ... Further arguments passed to \code{points}.
 ##' @rdname confint
 ##' @export
+##' @importFrom graphics abline axis box grid lines mtext par plot.default points
+##' @importFrom grDevices gray hcl
 plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
     main = attr(x, "model"), pch = 19, add.signif = FALSE, ...)
 {

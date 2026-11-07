@@ -1,8 +1,7 @@
-## mv
-##
+##' Rename an R object
+##'
 ##' Rename an R object.
 ##'
-##' @title Rename an R object.
 ##' @param from The name of an R object, with or without quotes.
 ##' @param to The new name, with or without quotes.
 ##' @author Jean Lobry

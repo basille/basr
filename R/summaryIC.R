@@ -1,21 +1,20 @@
-## summaryIC
-##
-##' Summarizes IC differences and weights to identify plausible models
-##' (models with highest empirical support).
+##' Summary of AIC/BIC
 ##'
-##' @title Summary of AIC/BIC
+##' Summarizes IC differences and weights to identify plausible models (models
+##' with highest empirical support).
+##'
 ##' @param x A data frame with one row per model, and one column
 ##'     giving an information-theoretic index (AIC or BIC), such as
 ##'     returned by \code{\link[stats]{AIC}} or
 ##'     \code{\link[stats]{BIC}} with several models.
 ##' @param delta The difference threshold to identify models with
 ##'     similar support.
-##' @return The input data frame with additional columns \code{delta}
+##' @returns The input data frame with additional columns \code{delta}
 ##'     giving IC differences with the best model, \code{best}
 ##'     identifying the best model(s) (\code{*} for the absolute best
 ##'     model, \code{+} for models within the threshold), and
 ##'     \code{omega} giving AIC weights.
-##' @author Mathieu Basille \email{basille@@ufl.edu}
+##' @author Mathieu Basille \email{mathieu@@basille.org}
 ##' @export
 ##' @examples
 ##' ## Prepare two models:
