@@ -28,6 +28,7 @@
 ##'     <\email{mathieu@@basille.org}>
 ##' @section Original URL:
 ##'     \url{http://the-praise-of-insects.blogspot.ca/2012/04/dynamite-plots-in-r.html}
+##' @importFrom graphics arrows barplot par text
 ##' @export
 ##' @examples
 ##' values <- c(1, 2, 5, 4)
@@ -42,24 +43,23 @@
 ##'     lwd = 2, head = 0, col = c(grey(0.5), "white"), border = c(NA,
 ##'         "black"))
 dynamitePlot <- function(height, error, names.arg = NULL, significance = NA,
-    ylim = c(0, maxLim), sym = FALSE, head = 0.7, lwd = graphics::par("lwd"),
-    cex.sig = 1.2, ...)
-{
+  ylim = c(0, maxLim), sym = FALSE, head = 0.7, lwd = par("lwd"),
+  cex.sig = 1.2, ...) {
     ## Define maxLim as max(height + error)*1.1
     maxLim <- 1.1 * max(mapply(sum, height, error))
     ## Plot and store the barplot
-    bp <- graphics::barplot(height, names.arg = names.arg, ylim = ylim,
+    bp <- barplot(height, names.arg = names.arg, ylim = ylim,
         ...)
     ## head as an approximate proportion of the bar width
     head <- 2 / length(height) * head
     ## Upper heads
-    graphics::arrows(x0 = bp, y0 = height, y1 = height + error, angle = 90,
+    arrows(x0 = bp, y0 = height, y1 = height + error, angle = 90,
         lwd = lwd, length = head)
     ## Lower heads, if required
     if (sym)
-        graphics::arrows(x0 = bp, y0 = height, y1 = height - error, angle = 90,
+        arrows(x0 = bp, y0 = height, y1 = height - error, angle = 90,
             lwd = lwd, length = head)
     ## Add significance group for each bar
-    graphics::text(x = bp, y = height + error + 0.05 * (mean(height + error)),
+    text(x = bp, y = height + error + 0.05 * (mean(height + error)),
         labels = significance, cex = cex.sig)
 }

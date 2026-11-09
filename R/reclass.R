@@ -30,8 +30,7 @@
 ##' ## Fast computation time on large vectors
 ##' blu <- rpois(1e6, 10)
 ##' system.time(reclass(blu, c(3, 4), c(7, 3)))
-reclass <- function(x, from, to = NULL, factor = FALSE, ...)
-{
+reclass <- function(x, from, to = NULL, factor = FALSE, ...) {
     ## Check that x is a vector
     if (!is.vector(x))
         stop("`x` must be a vector (numeric or character).")

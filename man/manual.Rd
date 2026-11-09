@@ -20,6 +20,9 @@ the root directory of the package.}
 \description{
 Generate package reference manual.
 }
+\note{
+Requires package \pkg{devtools}.
+}
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

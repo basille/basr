@@ -8,10 +8,10 @@
 ##'     the root directory of the package.
 ##' @param preview Preview generated PDF file.
 ##' @param overwrite Overwrite output file if it exists.
+##' @note Requires package \pkg{devtools}.
 ##' @export
 ##' @author Mathieu Basille <\email{mathieu@@basille.org}>
-manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE)
-{
+manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE) {
     pkg <- devtools::as.package(pkg)
     if (is.null(path))
         path <- paste(dirname(pkg$path), noquote(pkg$package),

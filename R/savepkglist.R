@@ -36,28 +36,27 @@ savepkglist <- function(file = ".Rpackages") {
     packages <- attpkglist()
     if (is.null(packages))
         cat("no attached package to save")
-    else cat(paste(packages, "\n", sep = ""), file = file, sep = "")
+    else cat(paste(packages, "
+", sep = ""), file = file, sep = "")
 }
-
 
 ##' @rdname savepkglist
 ##' @export
+##' @importFrom utils packageDescription
 ##' @examples
 ##' \dontrun{attpkglist()}
-attpkglist <- function()
-{
+attpkglist <- function() {
     package <- grep("^package:", search(), value = TRUE)
     keep <- sapply(package, function(x) x == "package:base" ||
         !is.null(attr(as.environment(x), "path")))
     package <- sub("^package:", "", package[keep])
-    pkgDesc <- lapply(package, utils::packageDescription)
+    pkgDesc <- lapply(package, packageDescription)
     basePkgs <- sapply(pkgDesc, function(x) !is.null(x$Priority) &&
         x$Priority == "base")
     if (any(!basePkgs))
         return(package[!basePkgs])
     else return(NULL)
 }
-
 
 ##' @rdname savepkglist
 ##' @export
@@ -67,7 +66,6 @@ loadpkglist <- function(file = ".Rpackages") {
     lapply(readLines(file), require, character.only = TRUE)
     return(invisible())
 }
-
 
 .loadpkglist <- function() {
     if (file.exists(".Rpackages"))

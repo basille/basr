@@ -93,5 +93,5 @@ confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
     plot = TRUE, add.signif = TRUE)
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }

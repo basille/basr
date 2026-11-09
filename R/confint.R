@@ -49,7 +49,7 @@
 ##'     plot = TRUE, add.signif = TRUE)
 ##' @importFrom stats coef
 confint <- function(object, parm, level = 0.95, order = FALSE,
-    groups, plot = FALSE, ...) {
+  groups, plot = FALSE, ...) {
     ## Computing the CI using 'stats::confint'
     ci <- stats::confint(object = object, parm = parm, level = level,
         ...)
@@ -74,11 +74,11 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
             ## For each element, sort according to 'coef', and adjust
             ## the rownames; bind all element outputs together
             ci <- do.call("rbind", lapply(names(sci),
-              function(x) {
-                  tmp <- sci[[x]][order(sci[[x]]$coef, decreasing = TRUE), ]
-                  rownames(tmp) <- paste(x, rownames(tmp), sep = ".")
-                  return(tmp)
-              }))
+                function(x) {
+                    tmp <- sci[[x]][order(sci[[x]]$coef, decreasing = TRUE), ]
+                    rownames(tmp) <- paste(x, rownames(tmp), sep = ".")
+                    return(tmp)
+                }))
         }
         ## ... and no 'order'
         else {
@@ -121,7 +121,7 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
 ##' @importFrom graphics abline axis box grid lines mtext par plot.default points
 ##' @importFrom grDevices gray hcl
 plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
-    main = attr(x, "model"), pch = 19, add.signif = FALSE, ...) {
+  main = attr(x, "model"), pch = 19, add.signif = FALSE, ...) {
     ## Check that 'x' is of class "confint"
     if (!inherits(x, "confint"))
         stop("x should be of class \"confint\"")
@@ -161,7 +161,7 @@ plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
     ## Add significance
     if (add.signif)
         points(ci[!(ci[, 1] < 0 & ci[, 2] > 0), 3] + (max(ci) -
-            min(ci))/30, (1:nrow(ci))[!(ci[, 1] < 0 & ci[, 2] >
+            min(ci)) / 30, (1:nrow(ci))[!(ci[, 1] < 0 & ci[, 2] >
             0)] + .2, pch = 8)
     ## Add the axes
     axis(2, at = 1:nrow(ci), labels = FALSE)

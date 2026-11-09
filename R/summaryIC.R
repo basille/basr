@@ -38,7 +38,7 @@ summaryIC <- function(x, delta = 2) {
     ## Compute difference
     deltax <- x[, ic] - min(x[, ic])
     ## Compute weights
-    omega <- exp(-.5*deltax)/sum(exp(-.5*deltax))
+    omega <- exp(-.5 * deltax) / sum(exp(-.5 * deltax))
     ## Identify best model and models that are within a threshold
     best <- ifelse(deltax == 0, "*", ifelse(deltax <= delta, "+", ""))
     return(data.frame(x, delta = deltax, omega, best))

@@ -40,7 +40,9 @@ importFrom(grDevices,
 )
 importFrom(graphics,
   abline,
+  arrows,
   axis,
+  barplot,
   box,
   grid,
   image,
@@ -51,7 +53,8 @@ importFrom(graphics,
   par,
   plot.default,
   points,
-  polygon
+  polygon,
+  text
 )
 importFrom(stats,
   coef,

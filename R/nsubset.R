@@ -26,9 +26,8 @@
 ##' blo <- nsubset(bla, group, 25, sign = ">", select = 1, drop = TRUE)
 ##' head(blo)
 ##' length(blo)
-nsubset <- function (x, col, n, sign = c(">=", "<=", ">", "<",
-    "=="), select, drop = FALSE)
-{
+nsubset <- function(x, col, n, sign = c(">=", "<=", ">", "<",
+                        "=="), select, drop = FALSE) {
     ## Check that the 'col' argument is a name, not a numeric or a
     ## character
     if (class(substitute(col)) %in% c("numeric", "character"))
@@ -46,7 +45,7 @@ nsubset <- function (x, col, n, sign = c(">=", "<=", ">", "<",
         ">" = substitute(subset(x, table(col)[col] > n, select, drop)),
         "<" = substitute(subset(x, table(col)[col] < n, select, drop)),
         "==" = substitute(subset(x, table(col)[col] == n, select, drop))
-        )
+    )
     ## Evaluate the call, let 'subset' do the work, and return the
     ## outcome
     eval(nsubset, parent.frame())

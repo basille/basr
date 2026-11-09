@@ -17,8 +17,7 @@
 ##' source("f1.R")
 ##' file.remove("f1.R")
 ##' f1(3)
-writeFunction <- function(fun, file = NULL)
-{
+writeFunction <- function(fun, file = NULL) {
     if (!is.function(fun))
         stop("fun should be a function")
     name <- deparse(substitute(fun))

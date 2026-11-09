@@ -1,4 +1,4 @@
-# basr 1.0
+# basr 1.0.0
 
 Major cleanup for v1.0, with new functions and documentation. 
 

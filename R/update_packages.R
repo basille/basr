@@ -3,11 +3,11 @@
 #' Checks the list of user-installed packages (on CRAN, BioConductor or GitHub)
 #' and updates them where required.
 #'
+#' @note Requires package \pkg{pak}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 #' @importFrom utils installed.packages packageDescription
-update_packages <- function()
-{
+update_packages <- function() {
     ## `pak` is required
     if (!requireNamespace("pak", quietly = TRUE)) {
         stop(
@@ -17,25 +17,35 @@ update_packages <- function()
     }
     ## All user installed packages
     pkg.list <- installed.packages(lib.loc = grep("home",
-        .libPaths(), value = TRUE))[,"Package"]
+        .libPaths(), value = TRUE))[, "Package"]
     ## Their descriptions
     pkg.desc <- lapply(installed.packages(lib.loc = grep("home",
-        .libPaths(), value = TRUE))[,"Package"], function(ll) {
+        .libPaths(), value = TRUE))[, "Package"], function(ll) {
         packageDescription(ll)
     })
     ## Extraction of package full names, accounting for GitHub
     pkg.repo <- data.frame(
         package = unlist(lapply(pkg.desc, function(ll) ll$Package)),
         repository = unlist(lapply(pkg.desc, function(ll)
-            if (is.null(ll$Repository)) { NA } else ll$Repository)),
+            if (is.null(ll$Repository)) {
+                NA
+            } else ll$Repository)),
         source_on_github = unlist(lapply(pkg.desc, function(ll)
-            if (is.null(ll$RemoteType)) { NA } else ll$RemoteType)),
+            if (is.null(ll$RemoteType)) {
+                NA
+            } else ll$RemoteType)),
         github_username = unlist(lapply(pkg.desc, function(ll)
-            if (is.null(ll$GithubUsername)) { NA } else ll$GithubUsername)),
+            if (is.null(ll$GithubUsername)) {
+                NA
+            } else ll$GithubUsername)),
         github_pkgname = unlist(lapply(pkg.desc, function(ll)
-            if (is.null(ll$GithubRepo)) { NA } else ll$GithubRepo)),
+            if (is.null(ll$GithubRepo)) {
+                NA
+            } else ll$GithubRepo)),
         github_repo = unlist(lapply(pkg.desc, function(ll)
-            if (is.null(ll$RemotePkgRef)) { NA } else ll$RemotePkgRef)))
+            if (is.null(ll$RemotePkgRef)) {
+                NA
+            } else ll$RemotePkgRef)))
     pkg.repo$repository <- ifelse(is.na(pkg.repo$repository) &
         pkg.repo$source_on_github == "github", "GitHub", pkg.repo$repository)
     pkg.repo$full_name <- ifelse(pkg.repo$repository == "GitHub",

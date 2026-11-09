@@ -14,7 +14,7 @@
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 date_locale <- function(x =  Sys.Date(), format = "%A %d %B %Y",
-    locale = "fr_FR.utf8") {
+  locale = "fr_FR.utf8") {
     current_locale <- Sys.getlocale("LC_TIME")
     ## When function exits, restore original locale
     on.exit(Sys.setlocale("LC_TIME", current_locale))

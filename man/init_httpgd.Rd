@@ -22,6 +22,9 @@ init_httpgd(
 \description{
 Init a web graphic device from httpgd.
 }
+\note{
+Requires package \pkg{httpgd}.
+}
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

@@ -47,6 +47,9 @@ moveco, tidyverse, tidymodels, plotting, data, stats, utils).
 \details{
 Here is the full list of packages:
 }
+\note{
+Requires package \pkg{pak}.
+}
 \section{Spatial}{
 
 \itemize{

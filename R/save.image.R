@@ -39,8 +39,8 @@
 ##' @export
 ##' @importFrom utils savehistory
 save.image <- function(file = ".RData", version = NULL, ascii = FALSE,
-    compress = !ascii, safe = TRUE, hist = TRUE, h.file = ".Rhistory",
-    pkglist = TRUE, p.file = ".Rpackages") {
+  compress = !ascii, safe = TRUE, hist = TRUE, h.file = ".Rhistory",
+  pkglist = TRUE, p.file = ".Rpackages") {
     if (!is.character(file) || file == "")
         stop("'file' must be non-empty string")
     opts <- getOption("save.image.defaults")
@@ -61,8 +61,7 @@ save.image <- function(file = ".RData", version = NULL, ascii = FALSE,
             i <- i + 1
             outfile <- paste0(file, "Tmp", i)
         }
-    }
-    else outfile <- file
+    } else outfile <- file
     on.exit(file.remove(outfile))
     save(list = ls(envir = .GlobalEnv, all.names = TRUE), file = outfile,
         version = version, ascii = ascii, compress = compress,

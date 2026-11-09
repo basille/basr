@@ -33,6 +33,9 @@ The function can be used with something like this in a RMarkdown file:
 session_info_md(language = "FR", unnumbered = TRUE)
 ```}
 }
+\note{
+Requires packages \pkg{sessioninfo} and \pkg{knitr}.
+}
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

@@ -224,12 +224,12 @@
 #'     \code{TRUE}).
 #' @param utils Logical, whether to install `utils` packages (defaults to
 #'     \code{TRUE}).
+#' @note Requires package \pkg{pak}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}
 #' @export
 #' @importFrom utils installed.packages
 install_selected <- function(spatial, moveco, tidyverse, tidymodels,
-    plotting, data, stats, utils)
-{
+  plotting, data, stats, utils) {
     ## `pak` is required
     if (!requireNamespace("pak", quietly = TRUE)) {
         stop(
@@ -440,14 +440,16 @@ install_selected <- function(spatial, moveco, tidyverse, tidymodels,
     packages.list$package <- ifelse(grepl("/", packages.list$full_name),
         sapply(packages.list$full_name, function(ll) {
             strsplit(ll, "/")[[1]][2]
-            }), packages.list$full_name)
+        }), packages.list$full_name)
     ## Installation of new packages (i.e. not previously installed):
     packages.list$installed <- packages.list$package %in%
-        installed.packages()[,"Package"]
+        installed.packages()[, "Package"]
     if (sum(packages.list$installed) != nrow(packages.list)) {
-        message(paste0("Installing packages (with dependencies):\n  ",
+        message(paste0("Installing packages (with dependencies):
+  ",
             paste(packages.list$package[!packages.list$installed],
-                collapse = "\n  ")))
+                collapse = "
+  ")))
         pak::pkg_install(packages.list$full_name[!packages.list$installed])
     } else message("No new package to install.")
 }

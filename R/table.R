@@ -27,9 +27,8 @@
 ##' d
 ##' table(d)
 table <- function(..., exclude = if (useNA == "no") c(NA, NaN),
-    useNA = c("ifany", "no", "always"), dnn = list.names(...),
-    deparse.level = 1)
-{
+  useNA = c("ifany", "no", "always"), dnn = list.names(...),
+  deparse.level = 1) {
     list.names <- function(...) {
         l <- as.list(substitute(list(...)))[-1L]
         nm <- names(l)
@@ -38,7 +37,7 @@ table <- function(..., exclude = if (useNA == "no") c(NA, NaN),
         else nm == ""
         dep <- vapply(l[fixup], function(x) switch(deparse.level +
             1, "", if (is.symbol(x)) as.character(x) else "",
-            deparse(x, nlines = 1)[1L]), "")
+        deparse(x, nlines = 1)[1L]), "")
         if (is.null(nm))
             dep
         else {
@@ -74,18 +73,17 @@ table <- function(..., exclude = if (useNA == "no") c(NA, NaN),
                 a
             else {
                 if (is.null(exclude) && useNA != "no")
-                  addNA(a, ifany = (useNA == "ifany"))
+                    addNA(a, ifany = (useNA == "ifany"))
                 else {
-                  if (useNA != "no")
-                    a <- addNA(a, ifany = (useNA == "ifany"))
-                  ll <- levels(a)
-                  a <- factor(a, levels = ll[!(ll %in% exclude)],
-                    exclude = if (useNA == "no")
-                      NA)
+                    if (useNA != "no")
+                        a <- addNA(a, ifany = (useNA == "ifany"))
+                    ll <- levels(a)
+                    a <- factor(a, levels = ll[!(ll %in% exclude)],
+                        exclude = if (useNA == "no")
+                            NA)
                 }
             }
-        }
-        else {
+        } else {
             a <- factor(a, exclude = exclude)
             if (useNA != "no")
                 addNA(a, ifany = (useNA == "ifany"))

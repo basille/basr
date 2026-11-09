@@ -12,7 +12,7 @@ dynamitePlot(
   ylim = c(0, maxLim),
   sym = FALSE,
   head = 0.7,
-  lwd = graphics::par("lwd"),
+  lwd = par("lwd"),
   cex.sig = 1.2,
   ...
 )

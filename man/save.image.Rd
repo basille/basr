@@ -65,5 +65,5 @@ commands history and the list of attached packages. See
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\if{html}{\out{<\email{mathieu@basille.org}>}}
+<\email{mathieu@basille.org}>
 }

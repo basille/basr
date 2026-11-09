@@ -15,11 +15,11 @@
 #'     Defaults to \code{"FALSE"}.
 #' @param sort_attached Logical; should attached packages be listed by
 #'     alphabetical order? Defaults to \code{"TRUE"}.
+#' @note Requires packages \pkg{sessioninfo} and \pkg{knitr}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
 session_info_md <- function(language = c("EN", "FR"), header_level = 2,
-    unnumbered = FALSE, sort_attached =  TRUE)
-{
+  unnumbered = FALSE, sort_attached =  TRUE) {
     ## `sessioninfo` is required
     if (!requireNamespace("sessioninfo", quietly = TRUE)) {
         stop(
@@ -68,15 +68,18 @@ session_info_md <- function(language = c("EN", "FR"), header_level = 2,
             date_name <- "Date"
             lib_name <- "lib"
             source_name <- "Source"
-        })
-    cat(paste0(header_main, " ", session_header, header_numb, "\n\n"))
-    sess <-sessioninfo::session_info()
+    })
+    cat(paste0(header_main, " ", session_header, header_numb, "
+
+"))
+    sess <- sessioninfo::session_info()
     cat(paste0(header_second, " ", platform_header, header_numb))
-    platform <- data.frame(setting = names(sess$platform ),
+    platform <- data.frame(setting = names(sess$platform),
         value = unlist(sess$platform))
     print(knitr::kable(platform, row.names = FALSE,
         col.names = c(setting_name, value_name)))
-    cat(paste0("\n", header_second, " ", packages_header, header_numb))
+    cat(paste0("
+", header_second, " ", packages_header, header_numb))
     flib <- function(x) ifelse(is.na(x), "?", as.integer(x))
     packages <- data.frame(package = sess$packages$package,
         attached = ifelse(sess$packages$attached, "*", ""),
@@ -84,7 +87,7 @@ session_info_md <- function(language = c("EN", "FR"), header_level = 2,
             sess$packages$ondiskversion, sess$packages$loadedversion),
         `date (UTC)` = sess$packages$date,
         lib = paste0("[", flib(sess$packages$library), "]"),
-        source = sub("([0-9a-f]{7})[0-9a-f]{33}", "\\1", sess$packages$source),
+        source = sub("([0-9a-f]{7})[0-9a-f]{33}", "\1", sess$packages$source),
         stringsAsFactors = FALSE, check.names = FALSE)
     if (sort_attached)
         packages <- packages[order(packages$attached, packages$package,
@@ -92,9 +95,14 @@ session_info_md <- function(language = c("EN", "FR"), header_level = 2,
     print(knitr::kable(packages, row.names = FALSE, align = "lcrrrr",
         col.names = c(package_name, attached_name, version_name,
             date_name, lib_name, source_name)))
-    cat(paste0("\n**", library_header, "**\n\n"))
+    cat(paste0("
+**", library_header, "**
+
+"))
     cat(paste(sapply(seq_along(levels(sess$packages$library)), function(i) {
         paste0("* [", i, "] `", levels(sess$packages$library)[i], "`")
-    }), collapse = "\n"))
-    cat("\n")
+    }), collapse = "
+"))
+    cat("
+")
 }

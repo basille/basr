@@ -16,8 +16,7 @@
 ##' @author R Core Team, modified by Mathieu Basille
 ##'     <\email{mathieu@@basille.org}>
 ##' @export
-q <- function(save = "default", status = 0, runLast = TRUE)
-{
+q <- function(save = "default", status = 0, runLast = TRUE) {
     if (save == "yes")
         savepkglist()
     base::quit(save, status, runLast)

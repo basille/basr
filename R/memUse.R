@@ -63,15 +63,14 @@ memUse <- function(pos = 1, pattern) {
 ##' @export
 ##' @importFrom utils head
 print.memUse <- function(x, sort = c("size", "alphabetical"),
-    decreasing = ifelse(sort == "size", TRUE, FALSE), n = 10,
-    bytes = FALSE, ...)
-{
+  decreasing = ifelse(sort == "size", TRUE, FALSE), n = 10,
+  bytes = FALSE, ...) {
     ## Check arguments in 'sort'
     sort <- match.arg(sort)
     ## Sort alphabetically
     if (sort == "alphabetical")
         xx <- x[order(row.names(x), decreasing = decreasing),
-            ]
+        ]
     ## ... or by size
     else xx <- x[order(x$bytes, decreasing = decreasing), ]
     ## Remove the column 'bytes' for pretty printing

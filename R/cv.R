@@ -26,7 +26,7 @@
 ##' sd(xx)/mean(xx)
 ##' cv(xx, ci = TRUE)
 cv <- function(x, na.rm = FALSE, ci = FALSE, conf.level = 0.95, method = c("mckaymod",
-    "mckay", "naive")) {
+                   "mckay", "naive")) {
     if (na.rm)
         x <- stats::na.omit(x)
     if (any(x < 0))
@@ -34,29 +34,29 @@ cv <- function(x, na.rm = FALSE, ci = FALSE, conf.level = 0.95, method = c("mcka
     v <- length(x) - 1
     mu <- mean(x)
     sigma <- sqrt(stats::var(x))
-    k <- sigma/mu
+    k <- sigma / mu
     if (ci) {
         alpha <- 1 - conf.level
         if (k > 0.33)
             warning("Confidence interval may be approximate.")
         method <- match.arg(method)
-        t1 <- stats::qchisq(1 - alpha/2, v)/v
-        t2 <- stats::qchisq(alpha/2, v)/v
+        t1 <- stats::qchisq(1 - alpha / 2, v) / v
+        t2 <- stats::qchisq(alpha / 2, v) / v
         if (method == "naive") {
-            lower <- k/sqrt(t1)
-            upper <- k/sqrt(t2)
+            lower <- k / sqrt(t1)
+            upper <- k / sqrt(t2)
         }
         if (method == "mckay") {
             u1 <- v * t1
             u2 <- v * t2
-            lower <- k/sqrt((u1/(v + 1) - 1) * k^2 + u1/v)
-            upper <- k/sqrt((u2/(v + 1) - 1) * k^2 + u2/v)
+            lower <- k / sqrt((u1 / (v + 1) - 1) * k^2 + u1 / v)
+            upper <- k / sqrt((u2 / (v + 1) - 1) * k^2 + u2 / v)
         }
         if (method == "mckaymod") {
             u1 <- v * t1
             u2 <- v * t2
-            lower <- k/sqrt(((u1 + 2)/(v + 1) - 1) * k^2 + u1/v)
-            upper <- k/sqrt(((u2 + 2)/(v + 1) - 1) * k^2 + u2/v)
+            lower <- k / sqrt(((u1 + 2) / (v + 1) - 1) * k^2 + u1 / v)
+            upper <- k / sqrt(((u2 + 2) / (v + 1) - 1) * k^2 + u2 / v)
         }
         k <- list(k = k, ci = c(lower, upper))
         attr(k, "alpha") <- alpha

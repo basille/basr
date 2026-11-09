@@ -21,8 +21,7 @@
 ##' plot(bla, col = togrey(bla, 0, 1, alpha = 0.5), pch = 20)
 ##' @importFrom grDevices grey
 togrey <- function(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE,
-    sqrt = FALSE)
-{
+  sqrt = FALSE) {
     ## Check that min < max
     if (min >= max)
         stop("'min' needs to be smaller than 'max'")
@@ -34,7 +33,7 @@ togrey <- function(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE,
     if (!inverse)
         x <- -x
     ## Rescale x between min and max
-    rg <- (max - min) * (x - min(x))/diff(range(x)) + min
+    rg <- (max - min) * (x - min(x)) / diff(range(x)) + min
     ## Remove the corner case where 0.000<0 and 1.000>1...
     rg <- ifelse(rg < 0, 0, rg)
     rg <- ifelse(rg > 1, 1, rg)
@@ -42,7 +41,7 @@ togrey <- function(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE,
     if (sqrt) {
         rg <- sqrt(rg)
         ## Needs to be rescaled...
-        rg <- (max - min) * (rg - min(rg))/diff(range(rg)) +
+        rg <- (max - min) * (rg - min(rg)) / diff(range(rg)) +
             min
         ## Corner cases...
         rg <- ifelse(rg < 0, 0, rg)

@@ -10,6 +10,9 @@ update_packages()
 Checks the list of user-installed packages (on CRAN, BioConductor or GitHub)
 and updates them where required.
 }
+\note{
+Requires package \pkg{pak}.
+}
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

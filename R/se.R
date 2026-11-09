@@ -25,7 +25,6 @@
 ##' sd(bla, na.rm = TRUE)
 ##' se(bla, na.rm = TRUE)
 ##' @importFrom stats var
-se <- function(x, na.rm = FALSE)
-{
-    return(sqrt(var(x, na.rm = na.rm)/sum(!is.na(x))))
+se <- function(x, na.rm = FALSE) {
+    return(sqrt(var(x, na.rm = na.rm) / sum(!is.na(x))))
 }

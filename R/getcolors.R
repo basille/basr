@@ -40,8 +40,7 @@
 ##'     lwd = 3)}
 ##' @importFrom graphics axis box image layout lines locator mtext par polygon
 ##' @importFrom grDevices colorRampPalette dev.new rgb
-getcolors <- function(n)
-{
+getcolors <- function(n) {
     N <- 6
     X <- seq(N^2)
     Y <- seq(N)
@@ -78,7 +77,7 @@ getcolors <- function(n)
     pal <- colorRampPalette(c("black", "white"))
     image(x = 1:100, y = seq(n), z = matrix(rep(1:100, n), nrow = 100,
         ncol = n), col = pal(100), xlab = "", ylab = "", xaxt = "n",
-        yaxt = "n")
+    yaxt = "n")
     box()
     for (i in seq(n)) {
         lines(x = c(1, 100), y = c(i, i), col = COLS[i], lwd = 4)

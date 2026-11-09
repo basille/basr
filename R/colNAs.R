@@ -15,3 +15,4 @@ colNAs <- function(x) {
         stop("Object of class 'data.frame' expected.")
     colSums(is.na(x))
 }
+
