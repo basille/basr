@@ -54,5 +54,5 @@ savepkglist(file = "list.Rpackages")}
 \dontrun{loadpkglist()}
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

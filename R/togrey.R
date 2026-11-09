@@ -50,3 +50,7 @@ togrey <- function(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE,
     ## Return the conversion to grey levels
     return(grey(rg, alpha = alpha))
 }
+
+#' @rdname togrey
+#' @export
+togray <- togrey

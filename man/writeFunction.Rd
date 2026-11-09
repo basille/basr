@@ -16,6 +16,7 @@ in \code{<fun>.R} in the working directory.}
 Prints a function to a file.
 }
 \examples{
+\dontrun{
 f1 <- function(x) {
     ## Comment
     print(x)
@@ -24,7 +25,7 @@ writeFunction(f1)
 rm(f1)
 source("f1.R")
 file.remove("f1.R")
-f1(3)
+f1(3)}
 }
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}

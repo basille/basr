@@ -1,17 +1,5 @@
-* Synonymous: q/quit & togray/togrey
-
 * reclass: Add 'keep = TRUE/FALSE' to keep unspecified values (otherwise gives
   NA as is the case)
-
-* writeFunction: try to extract function name for default file name
-
-* q: Allow 'savePkg = FALSE'
-
-* q: Redefine q/quit from base, see:
-https://stat.ethz.ch/pipermail/r-help/2008-August/171321.html
-https://stackoverflow.com/questions/8743390/how-do-i-override-a-non-visible-function-in-the-package-namespace
-
-* table: redefine defaults...
 
 * Rounding that preserve sum
 

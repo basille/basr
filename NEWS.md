@@ -1,4 +1,12 @@
-# basr 1.0.0
+# basr 1.0.1
+
+## Minor changes
+
+- `togray` is now synonymous of `togrey`.
+- `quit` is now synonymous of `q`.
+- `q` has an explicit `savePackageList` argument, which is `TRUE` by default.
+
+# basr 1.0.0
 
 Major cleanup for v1.0, with new functions and documentation. 
 
@@ -18,7 +26,7 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.12
 
-## New feature
+## New feature
 
 - `ncut`: Cut into classes of equal size
 
@@ -97,7 +105,7 @@ Major cleanup for v1.0, with new functions and documentation.
 - `loadpkglist`: Fixed search order problem (see new function
   `.loadpkglist`)
 
-# basr 0.7.2
+# basr 0.7.2
 
 ## Enhancement
 
@@ -165,7 +173,7 @@ Major cleanup for v1.0, with new functions and documentation.
 
 - `cv`: coefficient of variation
 
-# basr 0.2
+# basr 0.2
 
 ## Bug fixes
 

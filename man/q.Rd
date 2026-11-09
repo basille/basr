@@ -2,14 +2,21 @@
 % Please edit documentation in R/q.R
 \name{q}
 \alias{q}
+\alias{quit}
 \title{Terminate an R Session (with packages list saved)}
 \usage{
-q(save = "default", status = 0, runLast = TRUE)
+q(save = "yes", savePackageList = TRUE, status = 0, runLast = TRUE)
+
+quit(save = "yes", savePackageList = TRUE, status = 0, runLast = TRUE)
 }
 \arguments{
-\item{save}{A character string indicating whether the environment
-(workspace) should be saved, one of ‘"no"’, ‘"yes"’, ‘"ask"’ or
-‘"default"’ (which is the default).}
+\item{save}{A character string indicating whether the environment (workspace)
+should be saved, one of \code{"no"} or \code{"yes"} (which is the
+default).}
+
+\item{savePackageList}{Logical, whether to save the list of loaded packages
+(defaults to \code{TRUE}). Switched to \code{FALSE} if \code{save =
+"no"}.}
 
 \item{status}{The (numerical) error status to be returned to the operating
 system, where relevant.  Conventionally ‘0’ indicates successful
@@ -18,12 +25,14 @@ completion.}
 \item{runLast}{Should ‘.Last()’ be executed?}
 }
 \description{
-A modified version of \code{\link[base]{q}} that allows to save the list of
-attached packages. See \code{\link[base]{q}} for the function details.
+A modified version of \code{\link[base]{q}}/\code{\link[base]{quit}} that
+allows to save the list of attached packages. See \code{\link[base]{quit}}
+for the function details.
 }
 \details{
-If \code{save = "yes"}, the list of attached packages is automatically saved
-in a file \code{.Rpackages}. See \code{\link{savepkglist}} for more details.
+If \code{savePackageList}, the list of attached packages is automatically
+saved in a file \code{.Rpackages}. See \code{\link{savepkglist}} for more
+details.
 }
 \examples{
 \dontrun{
@@ -31,6 +40,5 @@ in a file \code{.Rpackages}. See \code{\link{savepkglist}} for more details.
 q()}
 }
 \author{
-R Core Team, modified by Mathieu Basille
-\if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

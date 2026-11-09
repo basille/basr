@@ -12,7 +12,7 @@
 #' @export
 #' @returns NULL
 #' @examples
-##' \dontrun{
+#' \dontrun{
 #' ## Simply open a web graphic device and checks it in your browser:
 #' init_httpgd()
 #' plot(1:10)}

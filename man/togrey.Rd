@@ -2,9 +2,12 @@
 % Please edit documentation in R/togrey.R
 \name{togrey}
 \alias{togrey}
+\alias{togray}
 \title{Convert continuous variable to grey levels}
 \usage{
 togrey(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE, sqrt = FALSE)
+
+togray(x, min = 0.1, max = 0.9, alpha = NULL, inverse = FALSE, sqrt = FALSE)
 }
 \arguments{
 \item{x}{A numeric vector.}

@@ -1,6 +1,6 @@
 Package: basr
 Title: Basic, but Hopefully Useful, Functions
-Version: 1.0.0
+Version: 1.0.1
 Date: 2026-11-09
 Authors@R: c(
     person("Mathieu", "Basille", email = "mathieu@basille.org",
