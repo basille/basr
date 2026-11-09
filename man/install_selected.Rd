@@ -40,6 +40,10 @@ to \code{FALSE}).}
 \item{utils}{Logical, whether to install \code{utils} packages (defaults to
 \code{TRUE}).}
 }
+\value{
+(Invisibly) A data frame with information about the installed
+package(s).
+}
 \description{
 Install a list of selected packages (from CRAN and GitHub) by theme (spatial,
 moveco, tidyverse, tidymodels, plotting, data, stats, utils).
@@ -276,6 +280,15 @@ See \url{https://www.tidymodels.org/packages/}
 }
 }
 
+\examples{
+\dontrun{
+## Install all packages (except 'tidymodels'):
+install_selected()
+
+## Only install spatial packages:
+install_selected(spatial = TRUE, moveco = FALSE, tidyverse = FALSE, tidymodels = FALSE,
+    plotting = FALSE, data = FALSE, stats = FALSE, utils = FALSE)}
+}
 \author{
 Mathieu Basille <\email{mathieu@basille.org}
 }

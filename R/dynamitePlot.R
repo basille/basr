@@ -30,6 +30,7 @@
 ##'     \url{http://the-praise-of-insects.blogspot.ca/2012/04/dynamite-plots-in-r.html}
 ##' @importFrom graphics arrows barplot par text
 ##' @export
+##' @returns NULL
 ##' @examples
 ##' values <- c(1, 2, 5, 4)
 ##' errors <- c(0.25, 0.5, 0.33, 0.12)

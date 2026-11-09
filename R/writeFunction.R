@@ -7,6 +7,7 @@
 ##'     in \code{<fun>.R} in the working directory.
 ##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
+##' @returns NULL
 ##' @examples
 ##' f1 <- function(x) {
 ##'     ## Comment

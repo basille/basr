@@ -13,6 +13,12 @@
 #' @returns A character string with the date in user format and locale.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
+#' @examples
+#' ## Today written in French
+#' date_locale()
+#'
+#' ## Christmas 2000 written in French
+#' date_locale(as.Date("2000-12-25"))
 date_locale <- function(x =  Sys.Date(), format = "%A %d %B %Y",
   locale = "fr_FR.utf8") {
     current_locale <- Sys.getlocale("LC_TIME")

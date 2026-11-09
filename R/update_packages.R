@@ -6,6 +6,12 @@
 #' @note Requires package \pkg{pak}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
+#' @returns (Invisibly) A data frame with information about the updated
+#'     package(s).
+#' @examples
+##' \dontrun{
+#' ## Simply update all user packages:
+#' update_packages()}
 #' @importFrom utils installed.packages packageDescription
 update_packages <- function() {
     ## `pak` is required

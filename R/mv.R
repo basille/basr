@@ -6,6 +6,7 @@
 ##' @param to The new name, with or without quotes.
 ##' @author Jean Lobry
 ##' @export
+##' @returns NULL
 ##' @examples
 ##' bla <- 2
 ##' ls()

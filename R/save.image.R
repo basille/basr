@@ -37,6 +37,12 @@
 ##' @author R Core Team, modified by Mathieu Basille
 ##'     <\email{mathieu@@basille.org}>
 ##' @export
+##' @returns NULL
+##' @examples
+##' \dontrun{
+##' ## Save the current workspace in file '.RData' together with the history in
+##' ## '.Rhistory' and the package list in '.Rpackages':
+##' save.image()}
 ##' @importFrom utils savehistory
 save.image <- function(file = ".RData", version = NULL, ascii = FALSE,
   compress = !ascii, safe = TRUE, hist = TRUE, h.file = ".Rhistory",

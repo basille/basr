@@ -45,7 +45,7 @@ environment.
 Show memory usage of saved objects.
 }
 \section{Original URL}{
- \url{http://stackoverflow.com/a/9839949}. See also
+ \url{https://stackoverflow.com/a/9839949}. See also
 the complete Stack Overflow thread:
 \url{https://stackoverflow.com/questions/1358003/tricks-to-manage-the-available-memory-in-an-r-session}
 }

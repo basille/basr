@@ -5,7 +5,7 @@
 \title{Standard errors}
 \source{
 Original URL:
-\url{http://cran.r-project.org/doc/manuals/R-intro.html}
+\url{https://cran.r-project.org/doc/manuals/R-intro.html}
 }
 \usage{
 se(x, na.rm = FALSE)
@@ -39,6 +39,6 @@ se(bla, na.rm = TRUE)
 variance and standard deviation.
 }
 \author{
-From the \code{Writing R Extensions} manual, modified by Mathieu
-Basille <\email{mathieu@basille.org}>
+From the manual "An Introduction to R", modified by Mathieu Basille
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

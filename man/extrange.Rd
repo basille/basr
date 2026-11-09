@@ -13,6 +13,10 @@ extrange(x, percent = 0.1, na.rm = FALSE)
 
 \item{na.rm}{Logical, indicating if \code{NA}'s should be omitted.}
 }
+\value{
+A vector containing the minimum and maximum values of the extended
+range.
+}
 \description{
 Returns the range extended by a given proportion.
 }
@@ -27,5 +31,5 @@ extrange(-10:10)
 extrange(rep(10, 3))
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }

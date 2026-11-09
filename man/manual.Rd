@@ -17,11 +17,19 @@ the root directory of the package.}
 
 \item{overwrite}{Overwrite output file if it exists.}
 }
+\value{
+The output of the system command used to generate the manual.
+}
 \description{
 Generate package reference manual.
 }
 \note{
 Requires package \pkg{devtools}.
+}
+\examples{
+\dontrun{
+## Generate reference manual for the package in the current folder:
+manual()}
 }
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}

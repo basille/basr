@@ -47,10 +47,12 @@ option; see also \code{\link[base]{Startup}} for more details about the
 initialization at start of an R session).
 }
 \examples{
-\dontrun{savepkglist(file = "list.Rpackages")}
+\dontrun{
+## Save the list of packages in file 'list.Rpackages':
+savepkglist(file = "list.Rpackages")}
 \dontrun{attpkglist()}
 \dontrun{loadpkglist()}
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }

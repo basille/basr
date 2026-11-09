@@ -1,10 +1,10 @@
 Package: basr
-Title: Basic, but hopefully useful, functions
+Title: Basic, but Hopefully Useful, Functions
 Version: 1.0.0
 Date: 2026-11-09
 Authors@R: c(
     person("Mathieu", "Basille", email = "mathieu@basille.org",
-        role = c("aut", "cre"),
+        role = c("aut", "cre", "cph"),
         comment = c(ORCID = "0000-0001-9366-7127")),
     person("Samuel", "Brown", role = "ctb"),
     person("Marc in the box", role = "ctb"),
@@ -13,8 +13,9 @@ Authors@R: c(
     person("Jean", "Lobry", role = "ctb"),
     person("Emiel", "van Loon", role = "ctb"),
     person("Kevin", "Wright", role = "ctb"))
-Description: This package provides a collection of basic functions for a variety
-    of usage, mostly for my own convenience.
+Description: Collection of basic functions for a variety of usage (data,
+    statistics, graphs, package management, utils), mostly for my own
+    convenience.
 URL: https://github.com/basille/basr
 Suggests:
     devtools,

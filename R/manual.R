@@ -10,6 +10,11 @@
 ##' @param overwrite Overwrite output file if it exists.
 ##' @note Requires package \pkg{devtools}.
 ##' @export
+##' @returns The output of the system command used to generate the manual.
+##' @examples
+##' \dontrun{
+##' ## Generate reference manual for the package in the current folder:
+##' manual()}
 ##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE) {
     pkg <- devtools::as.package(pkg)

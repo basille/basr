@@ -9,10 +9,10 @@
 ##' @param na.rm Logical. Should missing values be removed?
 ##' @seealso \code{\link[stats]{var}} and \code{\link[stats]{sd}} for the
 ##'     variance and standard deviation.
-##' @author From the \code{Writing R Extensions} manual, modified by Mathieu
-##'     Basille <\email{mathieu@@basille.org}>
+##' @author From the manual "An Introduction to R", modified by Mathieu Basille
+##'     <\email{mathieu@@basille.org}>
 ##' @source Original URL:
-##'     \url{http://cran.r-project.org/doc/manuals/R-intro.html}
+##'     \url{https://cran.r-project.org/doc/manuals/R-intro.html}
 ##' @returns A numeric.
 ##' @export
 ##' @examples

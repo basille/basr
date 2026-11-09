@@ -227,6 +227,16 @@
 #' @note Requires package \pkg{pak}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}
 #' @export
+#' @returns (Invisibly) A data frame with information about the installed
+#'     package(s).
+#' @examples
+##' \dontrun{
+#' ## Install all packages (except 'tidymodels'):
+#' install_selected()
+#'
+#' ## Only install spatial packages:
+#' install_selected(spatial = TRUE, moveco = FALSE, tidyverse = FALSE, tidymodels = FALSE,
+#'     plotting = FALSE, data = FALSE, stats = FALSE, utils = FALSE)}
 #' @importFrom utils installed.packages
 install_selected <- function(spatial, moveco, tidyverse, tidymodels,
   plotting, data, stats, utils) {

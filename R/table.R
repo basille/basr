@@ -19,6 +19,8 @@
 ##'     \code{\link[base]{table}} for details.
 ##' @author R Core Team, modified by Mathieu Basille
 ##'     <\email{mathieu@@basille.org}>
+##' @returns A _contingency table_, an object of class ‘"table"’, an array of
+##'     integer values.
 ##' @export
 ##' @examples
 ##' d <- factor(rep(c("A", "B", "C"), 10), levels = c("A", "B", "C",

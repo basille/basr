@@ -31,6 +31,10 @@ now \code{ifany}.}
 \item{deparse.level}{Controls how the default ‘dnn’ is constructed. See
 \code{\link[base]{table}} for details.}
 }
+\value{
+A \emph{contingency table}, an object of class ‘"table"’, an array of
+integer values.
+}
 \description{
 A slight modification of the \code{\link[base]{table}} function, to include
 \code{NA} values in the table by default. See \code{\link[base]{table}} for

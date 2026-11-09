@@ -10,6 +10,8 @@
 ##' @param na.rm Logical, indicating if \code{NA}'s should be omitted.
 ##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
+##' @returns A vector containing the minimum and maximum values of the extended
+##'     range.
 ##' @examples
 ##' extrange(0:10)
 ##' extrange(0:10, percent = .5)

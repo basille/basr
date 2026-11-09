@@ -24,6 +24,13 @@ A character string with the date in user format and locale.
 \description{
 Convenience function to print a date using user format and locale.
 }
+\examples{
+## Today written in French
+date_locale()
+
+## Christmas 2000 written in French
+date_locale(as.Date("2000-12-25"))
+}
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }

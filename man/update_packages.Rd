@@ -6,12 +6,21 @@
 \usage{
 update_packages()
 }
+\value{
+(Invisibly) A data frame with information about the updated
+package(s).
+}
 \description{
 Checks the list of user-installed packages (on CRAN, BioConductor or GitHub)
 and updates them where required.
 }
 \note{
 Requires package \pkg{pak}.
+}
+\examples{
+\dontrun{
+## Simply update all user packages:
+update_packages()}
 }
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}

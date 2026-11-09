@@ -15,8 +15,8 @@
 ##'     the first element and the confidence interval in the second.
 ##' @author From Kevin Wright, modified by Mathieu Basille
 ##'     \email{mathieu@@basille.org}
-##' @section Original URL:
-##'     \url{http://tolstoy.newcastle.edu.au/R/e2/help/07/06/19043.html}
+##' @section Original URL (not available anymore):
+##'     \code{http://tolstoy.newcastle.edu.au/R/e2/help/07/06/19043.html}
 ##' @references Vangel, M. G. (1996) Confidence intervals for a normal
 ##'     coefficient of variation. The American Statistician, 50: 21-26
 ##' @export

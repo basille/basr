@@ -34,9 +34,9 @@ Computes the coefficient of variation (i.e. \code{sd / mean}) of the values
 in \code{x}.  If \code{ci} is \code{TRUE} then confidence intervals are also
 computed.
 }
-\section{Original URL}{
+\section{Original URL (not available anymore)}{
 
-\url{http://tolstoy.newcastle.edu.au/R/e2/help/07/06/19043.html}
+\code{http://tolstoy.newcastle.edu.au/R/e2/help/07/06/19043.html}
 }
 
 \examples{

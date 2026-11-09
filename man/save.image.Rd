@@ -59,11 +59,17 @@ A modified version of \code{\link[base]{save.image}} that allows to save the
 commands history and the list of attached packages. See
 \code{\link[base]{save.image}} for the function details.
 }
+\examples{
+\dontrun{
+## Save the current workspace in file '.RData' together with the history in
+## '.Rhistory' and the package list in '.Rpackages':
+save.image()}
+}
 \seealso{
 \code{\link[utils]{savehistory}} to save the commands history, and
 \code{\link{savepkglist}} to save the list of attached packages.
 }
 \author{
 R Core Team, modified by Mathieu Basille
-<\email{mathieu@basille.org}>
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

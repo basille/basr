@@ -2,7 +2,7 @@
 % Please edit documentation in R/session_info_md.R
 \name{session_info_md}
 \alias{session_info_md}
-\title{sessionInfo() adapted for Markdown output}
+\title{sessionInfo() formatted for Markdown}
 \usage{
 session_info_md(
   language = c("EN", "FR"),
@@ -23,8 +23,11 @@ Defaults to \code{"FALSE"}.}
 \item{sort_attached}{Logical; should attached packages be listed by
 alphabetical order? Defaults to \code{"TRUE"}.}
 }
+\value{
+Session information formatted for Markdown.
+}
 \description{
-Displays session information adapted for Markdown output.
+Displays session information formatted for Markdown.
 }
 \details{
 The function can be used with something like this in a RMarkdown file:
@@ -35,6 +38,10 @@ session_info_md(language = "FR", unnumbered = TRUE)
 }
 \note{
 Requires packages \pkg{sessioninfo} and \pkg{knitr}.
+}
+\examples{
+## Show session information formatted for Markdown in French:
+session_info_md(language = "FR")
 }
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}

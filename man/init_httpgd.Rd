@@ -25,6 +25,12 @@ Init a web graphic device from httpgd.
 \note{
 Requires package \pkg{httpgd}.
 }
+\examples{
+\dontrun{
+## Simply open a web graphic device and checks it in your browser:
+init_httpgd()
+plot(1:10)}
+}
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

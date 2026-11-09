@@ -2,7 +2,7 @@
 % Please edit documentation in R/q.R
 \name{q}
 \alias{q}
-\title{Terminate an R Session (with packages saved)}
+\title{Terminate an R Session (with packages list saved)}
 \usage{
 q(save = "default", status = 0, runLast = TRUE)
 }
@@ -24,6 +24,11 @@ attached packages. See \code{\link[base]{q}} for the function details.
 \details{
 If \code{save = "yes"}, the list of attached packages is automatically saved
 in a file \code{.Rpackages}. See \code{\link{savepkglist}} for more details.
+}
+\examples{
+\dontrun{
+## Quit with package list saved:
+q()}
 }
 \author{
 R Core Team, modified by Mathieu Basille

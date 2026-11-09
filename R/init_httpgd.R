@@ -10,6 +10,12 @@
 #' @note Requires package \pkg{httpgd}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 #' @export
+#' @returns NULL
+#' @examples
+##' \dontrun{
+#' ## Simply open a web graphic device and checks it in your browser:
+#' init_httpgd()
+#' plot(1:10)}
 init_httpgd <- function(width = getOption("httpgd.width", 720),
   height = getOption("httpgd.height", 576), asp = NA) {
     ## `httpgd` is required

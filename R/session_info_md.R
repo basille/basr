@@ -1,6 +1,6 @@
-#' sessionInfo() adapted for Markdown output
+#' sessionInfo() formatted for Markdown
 #'
-#' Displays session information adapted for Markdown output.
+#' Displays session information formatted for Markdown.
 #'
 #' The function can be used with something like this in a RMarkdown file:
 #'
@@ -17,6 +17,10 @@
 #'     alphabetical order? Defaults to \code{"TRUE"}.
 #' @note Requires packages \pkg{sessioninfo} and \pkg{knitr}.
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
+#' @returns Session information formatted for Markdown.
+#' @examples
+#' ## Show session information formatted for Markdown in French:
+#' session_info_md(language = "FR")
 #' @export
 session_info_md <- function(language = c("EN", "FR"), header_level = 2,
   unnumbered = FALSE, sort_attached =  TRUE) {

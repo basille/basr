@@ -1,4 +1,4 @@
-##' Terminate an R Session (with packages saved)
+##' Terminate an R Session (with packages list saved)
 ##'
 ##' A modified version of \code{\link[base]{q}} that allows to save the list of
 ##' attached packages. See \code{\link[base]{q}} for the function details.
@@ -16,6 +16,11 @@
 ##' @author R Core Team, modified by Mathieu Basille
 ##'     <\email{mathieu@@basille.org}>
 ##' @export
+##' @returns NULL
+##' @examples
+##' \dontrun{
+##' ## Quit with package list saved:
+##' q()}
 q <- function(save = "default", status = 0, runLast = TRUE) {
     if (save == "yes")
         savepkglist()

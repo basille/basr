@@ -30,8 +30,11 @@
 ##' initialization at start of an R session).
 ##' @author Mathieu Basille <\email{mathieu@@basille.org}>
 ##' @export
+##' @returns NULL
 ##' @examples
-##' \dontrun{savepkglist(file = "list.Rpackages")}
+##' \dontrun{
+##' ## Save the list of packages in file 'list.Rpackages':
+##' savepkglist(file = "list.Rpackages")}
 savepkglist <- function(file = ".Rpackages") {
     packages <- attpkglist()
     if (is.null(packages))
