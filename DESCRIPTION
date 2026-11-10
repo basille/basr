@@ -1,7 +1,7 @@
 Package: basr
 Title: Basic, but Hopefully Useful, Functions
-Version: 1.0.1
-Date: 2026-11-09
+Version: 1.1.1
+Date: 2026-11-10
 Authors@R: c(
     person("Mathieu", "Basille", email = "mathieu@basille.org",
         role = c("aut", "cre", "cph"),

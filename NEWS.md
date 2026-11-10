@@ -2,9 +2,15 @@
 
 ## Minor changes
 
-- `togray` is now synonymous of `togrey`.
-- `quit` is now synonymous of `q`.
+- `reclass` has a `na.fill` argument that replaces all non-specified values by
+  NA, which is `FALSE` by default.
+- `togray` is synonymous of `togrey`.
+- `quit` is synonymous of `q`.
 - `q` has an explicit `savePackageList` argument, which is `TRUE` by default.
+
+## Bug fixes
+
+- `reclass` now properly handles NAs in from/to.
 
 # basr 1.0.0
 
