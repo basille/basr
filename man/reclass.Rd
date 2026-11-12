@@ -4,7 +4,7 @@
 \alias{reclass}
 \title{Reclassify the values of a vector}
 \usage{
-reclass(x, from, to = NULL, factor = FALSE, ...)
+reclass(x, from, to = NULL, na.fill = FALSE, factor = FALSE, ...)
 }
 \arguments{
 \item{x}{A character or numeric vector.}
@@ -15,7 +15,10 @@ reclassification with two columns (from, to).}
 \item{to}{A vector describing the values to change to, or nothing if
 \code{from} is a matrix.}
 
-\item{factor}{Logical, whether to return a factor (default is \code{FALSE}).}
+\item{na.fill}{Logical, whether to replace all values of \code{x} not
+specified in \code{from} by \code{NA}s (defaults to \code{FALSE}).}
+
+\item{factor}{Logical, whether to return a factor (defaults to \code{FALSE}).}
 
 \item{...}{Additional arguments passed to \code{factor}.}
 }
@@ -30,19 +33,28 @@ not to be documented, only the ones that need to be modified.
 (bla <- rep(1:5, 3))
 reclass(bla, c(3, 4), c(7, 3))
 reclass(bla, c(3, 4), c("a", "b"))
+reclass(bla, c(3, 4), c("a", "b"), na.fill = TRUE)
 
-## Conversion as a factor
+## Conversion as a factor:
 reclass(bla, c(3, 4), c("a", "b"), factor = TRUE)
 (bli <- rep(letters[1:5], 3))
 reclass(bli, c("b", "d"), c(1, 2))
 
-## With a matrix of reclassification
+## With a matrix of reclassification:
 (mat <- matrix(c("b", "d", 1, 2), ncol = 2))
 reclass(bli, mat)
 
-## Fast computation time on large vectors
+## Fast computation time on large vectors:
 blu <- rpois(1e6, 10)
 system.time(reclass(blu, c(3, 4), c(7, 3)))
+
+## Cases with NAs in x, from or to:
+bla[c(2, 4)] <- NA
+bla
+reclass(bla, c(3, 4), c("a", NA))
+reclass(bla, c(NA, 4), c("a", "b"))
+reclass(bla, c(NA, 4), c("a", NA))
+
 }
 \author{
 Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}

@@ -44,5 +44,5 @@ Requires packages \pkg{sessioninfo} and \pkg{knitr}.
 session_info_md(language = "FR")
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

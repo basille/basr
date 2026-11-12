@@ -1,5 +1,38 @@
-* reclass: Add 'keep = TRUE/FALSE' to keep unspecified values (otherwise gives
-  NA as is the case)
+* multiple
+
+multiple <- function(x, unique = FALSE, na.rm = FALSE)
+{
+    ## Check that x is a vector
+    if (!is.vector(x))
+        stop("x should be a vector.")
+    ## 'na.rm = TRUE' removes all NAs
+    if (na.rm)
+        x <- na.omit(x)
+    ## If 'unique', returns unique x that appears only once
+    if (unique)
+        return(x[!(x %in% x[duplicated(x)])])
+    ## Else return unique x that appears at least twice
+    unique(x[duplicated(x)])
+}
+(toto <- rep(1:4, times = 1:4))
+unique(toto)
+multiple(toto)
+unique(nselect(toto, 2))
+multiple(toto, unique = TRUE)
+unique(nselect(toto, 2, comp = "<"))
+
+* counts
+
+counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
+    useNA = c("no", "ifany", "always"), ...)
+{
+    ## Match 'useNA' arguments
+    useNA <- match.arg(useNA)
+    ## Simply count the frequency of each frequency
+    table(table(x, exclude = exclude, useNA = useNA, ...))
+}
+(toto <- rep(letters[1:10], times = rep(4:1, times = 1:4)))
+counts(toto)
 
 * Rounding that preserve sum
 
@@ -78,155 +111,6 @@ geom_mean <- function(x, na.rm = TRUE, zero.propagate = FALSE) {
         exp(sum(log(x[x > 0]), na.rm = na.rm)/length(x))
     }
 }
-
-* nselect
-
-nselect <- function(x, ...)
-{
-    UseMethod("nselect")
-}
-nselect.numeric <- function(x, n, comp = c(">=", ">", "<", "<="), na.rm = FALSE)
-{
-    ## Check that x is a numeric
-    if (!is.numeric(x))
-        stop("x should be a numeric vector.")
-    ## Check that n contains only positive integers
-    if (!all.equal(trunc(n), n) | any(n <= 0))
-        stop("n should be a positive integer.")
-    ## Match 'comp' arguments
-    comp <- match.arg(comp)
-    ## Frequency of each value
-    tx <- table(x)
-    ## Does each freq validate the comparison?
-    comp <- sapply(paste(tx, comp, n), function(t) eval(parse(text = t)))
-    ## If all FALSE, return NULL
-    if (all(comp == FALSE))
-        return()
-    ## Otherwise, extract only the TRUEs
-    x[x %in% names(tx[which(comp)])]
-}
-nselect.logical <- function(x, n, comp = c(">=", ">", "<", "<="), na.rm = FALSE)
-{
-    ## Check that x is a logical
-    if (!is.character(x))
-        stop("x should be a logical vector.")
-    ## Check that n contains only positive integers
-    if (!all.equal(trunc(n), n) | any(n <= 0))
-        stop("n should be a positive integer.")
-    ## Match 'comp' arguments
-    comp <- match.arg(comp)
-    ## Frequency of each value
-    tx <- table(x)
-    ## Does each freq validate the comparison?
-    comp <- sapply(paste(tx, comp, n), function(t) eval(parse(text = t)))
-    ## If all FALSE, return NULL
-    if (all(comp == FALSE))
-        return()
-    ## Otherwise, extract only the TRUEs
-    x[x %in% names(tx[which(comp)])]
-}
-nselect.character <- function(x, n, comp = c(">=", ">", "<", "<="), na.rm = FALSE)
-{
-    ## Check that x is a character
-    if (!is.character(x))
-        stop("x should be a character vector.")
-    ## Check that n contains only positive integers
-    if (!all.equal(trunc(n), n) | any(n <= 0))
-        stop("n should be a positive integer.")
-    ## Match 'comp' arguments
-    comp <- match.arg(comp)
-    ## Frequency of each value
-    tx <- table(x)
-    ## Does each freq validate the comparison?
-    comp <- sapply(paste(tx, comp, n), function(t) eval(parse(text = t)))
-    ## If all FALSE, return NULL
-    if (all(comp == FALSE))
-        return()
-    ## Otherwise, extract only the TRUEs
-    x[x %in% names(tx[which(comp)])]
-}
-
-nselect <- function(x, ...)
-{
-    UseMethod("nselect")
-}
-nselect.ltraj <- function(x, n, by = c("loc", "burst"),
-    comp = c(">=", ">", "<", "<="), na.rm = FALSE)
-{
-    ## Check that x is a ltraj
-    if (!inherits(x, "ltraj"))
-        stop("x should be an object of class ltraj.")
-    ## Check that n contains only positive integers
-    if (!all.equal(trunc(n), n) | any(n <= 0))
-        stop("n should be a positive integer.")
-    ## Match 'by' and 'comp' arguments
-    by <- match.arg(by)
-    comp <- match.arg(comp)
-    ## nselect by 'burst'
-    if (by == "burst") {
-        ## Frequency of each id
-        tx <- table(id(x))
-        ## Does each freq validate the comparison?
-        comp <- sapply(paste(tx, comp, n), function(t) eval(parse(text = t)))
-        ## If all FALSE, return NULL
-        if (all(comp == FALSE))
-            return()
-        ## Otherwise, extract only the TRUEs
-        tx <- names(tx)[comp]
-        x[id(x) %in% tx]
-    }
-    ## nselect by 'loc'
-    else if (by == "loc") {
-        ## Frequency of locs for each burst
-        nx <- sapply(x, nrow)
-        ## 'na.rm == TRUE' compares the number of non-NAs
-        if (na.rm == TRUE)
-            nx <- nx - sapply(x, function(i) sum(is.na(i[, 1])))
-        ## Does each freq validate the comparison?
-        comp <- sapply(paste(nx, comp, n), function(t) eval(parse(text = t)))
-        ## If all FALSE, return NULL
-        if (all(comp == FALSE))
-            return()
-        ## Otherwise, extract only the TRUEs
-        x[comp]
-    }
-}
-
-* multiple
-
-multiple <- function(x, unique = FALSE, na.rm = FALSE)
-{
-    ## Check that x is a vector
-    if (!is.vector(x))
-        stop("x should be a vector.")
-    ## 'na.rm = TRUE' removes all NAs
-    if (na.rm)
-        x <- na.omit(x)
-    ## If 'unique', returns unique x that appears only once
-    if (unique)
-        return(x[!(x %in% x[duplicated(x)])])
-    ## Else return unique x that appears at least twice
-    unique(x[duplicated(x)])
-}
-(toto <- rep(1:4, times = 1:4))
-unique(toto)
-multiple(toto)
-unique(nselect(toto, 2))
-multiple(toto, unique = TRUE)
-unique(nselect(toto, 2, comp = "<"))
-
-* counts
-
-counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
-    useNA = c("no", "ifany", "always"), ...)
-{
-    ## Match 'useNA' arguments
-    useNA <- match.arg(useNA)
-    ## Simply count the frequency of each frequency
-    table(table(x, exclude = exclude, useNA = useNA, ...))
-}
-(toto <- rep(letters[1:10], times = rep(4:1, times = 1:4)))
-counts(toto)
 
 * Scale a matrix globally (not by column)
 

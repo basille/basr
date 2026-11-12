@@ -39,5 +39,5 @@ summaryIC(AIC(lm1, lm2))
 summaryIC(BIC(lm1, lm2))
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

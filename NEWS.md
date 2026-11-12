@@ -1,4 +1,8 @@
-# basr 1.0.1
+# basr 1.1.0
+
+## New features
+
+- `nselect`: Select values based on their frequency.
 
 ## Minor changes
 
