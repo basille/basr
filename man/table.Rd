@@ -49,5 +49,5 @@ table(d)
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\if{html}{\out{<\email{mathieu@basille.org}>}}
+<\email{mathieu@basille.org}>
 }

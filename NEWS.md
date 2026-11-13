@@ -3,6 +3,7 @@
 ## New features
 
 - `nselect`: Select values based on their frequency.
+- `multiple`: Extract elements that appear multiple times.
 
 ## Minor changes
 

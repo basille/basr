@@ -1,26 +1,3 @@
-* multiple
-
-multiple <- function(x, unique = FALSE, na.rm = FALSE)
-{
-    ## Check that x is a vector
-    if (!is.vector(x))
-        stop("x should be a vector.")
-    ## 'na.rm = TRUE' removes all NAs
-    if (na.rm)
-        x <- na.omit(x)
-    ## If 'unique', returns unique x that appears only once
-    if (unique)
-        return(x[!(x %in% x[duplicated(x)])])
-    ## Else return unique x that appears at least twice
-    unique(x[duplicated(x)])
-}
-(toto <- rep(1:4, times = 1:4))
-unique(toto)
-multiple(toto)
-unique(nselect(toto, 2))
-multiple(toto, unique = TRUE)
-unique(nselect(toto, 2, comp = "<"))
-
 * counts
 
 counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),

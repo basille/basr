@@ -38,5 +38,5 @@ plot(bla, col = togrey(bla, 0, 1, alpha = 0.5), pch = 20)
 }
 \author{
 From Clement Calenge, modified by Mathieu Basille
-<\email{mathieu@basille.org}>
+\if{html}{\out{<\email{mathieu@basille.org}>}}
 }

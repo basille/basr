@@ -31,5 +31,5 @@ head(kcut(bla, labels = NULL))
 head(kcut(bla, labels = LETTERS[1:10]))
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}} and Emiel van Loon
+Mathieu Basille <\email{mathieu@basille.org}> and Emiel van Loon
 }

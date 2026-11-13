@@ -52,5 +52,5 @@ table(bla)
 system.time(table(nselect(bla, 1e7)))
 }
 \author{
-Mathieu Basille
+Mathieu Basille \href{mailto:mathieu@basille.org}{mathieu@basille.org}
 }

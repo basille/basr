@@ -14,7 +14,7 @@
 #' @param ... Further arguments passed to or from other methods.
 #' @return A vector (or a factor) of the same class as \code{x}.
 #' @export
-#' @author Mathieu Basille
+#' @author Mathieu Basille <mathieu@@basille.org>
 #' @examples
 #' ## Simples examples and NAs:
 #' bla <- rpois(100, 4)

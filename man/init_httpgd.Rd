@@ -32,5 +32,5 @@ init_httpgd()
 plot(1:10)}
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }
