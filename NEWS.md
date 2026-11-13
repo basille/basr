@@ -2,8 +2,9 @@
 
 ## New features
 
-- `nselect`: Select values based on their frequency.
 - `multiple`: Extract elements that appear multiple times.
+- `nselect`: Select values based on their frequency.
+- `round_sum`: Rounding that preserve sum.
 
 ## Minor changes
 

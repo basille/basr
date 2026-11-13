@@ -1,18 +1,20 @@
 Package: basr
 Title: Basic, but Hopefully Useful, Functions
 Version: 1.1.0
-Date: 2026-11-12
+Date: 2026-11-13
 Authors@R: c(
     person("Mathieu", "Basille", email = "mathieu@basille.org",
         role = c("aut", "cre", "cph"),
         comment = c(ORCID = "0000-0001-9366-7127")),
-    person("Samuel", "Brown", role = "ctb"),
-    person("Marc in the box", role = "ctb"),
     person("Clement", "Calenge", role = "ctb"),
-    person("Michael", "Hallquist", role = "ctb"),
-    person("Jean", "Lobry", role = "ctb"),
     person("Emiel", "van Loon", role = "ctb"),
-    person("Kevin", "Wright", role = "ctb"))
+    person("Jean", "Lobry", role = "ctb"),
+    person("josliber", role = "ctb"),
+    person("Kevin", "Wright", role = "ctb"),
+    person("Marc in the box", role = "ctb"),
+    person("Michael", "Hallquist", role = "ctb"),
+    person("Mikhail", role = "ctb"),
+    person("Samuel", "Brown", role = "ctb"))
 Description: Collection of basic functions for a variety of usage (data,
     statistics, graphs, package management, utils), mostly for my own
     convenience.

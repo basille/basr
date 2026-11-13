@@ -28,5 +28,5 @@ file.remove("f1.R")
 f1(3)}
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

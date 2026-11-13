@@ -1,48 +1,6 @@
-* counts
+## Geometric/harmonic means
 
-counts <- function(x, exclude = if (useNA == "no") c(NA, NaN),
-    useNA = c("no", "ifany", "always"), ...)
-{
-    ## Match 'useNA' arguments
-    useNA <- match.arg(useNA)
-    ## Simply count the frequency of each frequency
-    table(table(x, exclude = exclude, useNA = useNA, ...))
-}
-(toto <- rep(letters[1:10], times = rep(4:1, times = 1:4)))
-counts(toto)
-
-* Rounding that preserve sum
-
-From josliber: https://stackoverflow.com/a/32544987
-Improved by Mikhail: https://stackoverflow.com/a/35930285
-
-round_sum <- function(x, digits = 0) {
-    ## Check that digits is a positive integer
-    if (digits%%1 != 0 | digits < 0) 
-        stop("The number of digits must be a positive integer")
-    ## Move the decimal separator up k digits
-    up <- 10^digits
-    x <- x * up
-    ## Round down
-    y <- floor(x)
-    ## Select the indices of the elements with the k largest
-    ## fractional parts, where k is the amount that we need to
-    ## increase the sum to reach our target value
-    indices <- tail(order(x - y), round(sum(x)) - sum(y))
-    ## Increment the output value in each of these indices by 1
-    y[indices] <- y[indices] + 1
-    ## Move the decimal separator back in place
-    y/up
-}
-round_sum(c(0.333, 0.333, 0.334), 2)
-round(c(0.336, 0.336, 0.335), 2)
-sum(c(0.336, 0.336, 0.335))
-round_sum(c(0.336, 0.336, 0.335), 2)
-sum(round(c(0.336, 0.336, 0.335), 2))
-sum(round_sum(c(0.336, 0.336, 0.335), 2))
-
-* geometric/harmonic means
-See http://economistatlarge.com/r-guide/arithmetic-harmonic-geometric-means-r
+- See: http://economistatlarge.com/r-guide/arithmetic-harmonic-geometric-means-r
 
 mean.default <- function(x, trim = 0, na.rm = FALSE, type = c("arithmetic", "geometric", "harmonic"), ...) {
     type <- match.arg(type)
@@ -74,7 +32,9 @@ mean.default <- function(x, trim = 0, na.rm = FALSE, type = c("arithmetic", "geo
         n/sum(1/x)
     }
 }
-## See also:
+
+- See also:
+
 geom_mean <- function(x, na.rm = TRUE, zero.propagate = FALSE) {
     if (any(x < 0, na.rm = TRUE)) {
         return(NaN)
@@ -89,7 +49,7 @@ geom_mean <- function(x, na.rm = TRUE, zero.propagate = FALSE) {
     }
 }
 
-* Scale a matrix globally (not by column)
+## Scale a matrix globally (not by column)
 
 (note: cannot be scale.matrix because scale.default does not have 'bycol' argument
 
@@ -102,6 +62,7 @@ scale.mat <- function(mat, center = TRUE, scale = TRUE, bycol = FALSE)
             nrow = nrow(mat), ncol = ncol(mat))
     }
 }
-## (mm <- matrix(1:20, nrow = 4))
-## scale.mat(mm)
-## scale.mat(mm, bycol = TRUE)
+
+(mm <- matrix(1:20, nrow = 4))
+scale.mat(mm)
+scale.mat(mm, bycol = TRUE)

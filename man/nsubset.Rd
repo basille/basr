@@ -42,5 +42,5 @@ head(blo)
 length(blo)
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }
