@@ -7,20 +7,18 @@
 summaryIC(x, delta = 2)
 }
 \arguments{
-\item{x}{A data frame with one row per model, and one column
-giving an information-theoretic index (AIC or BIC), such as
-returned by \code{\link[stats]{AIC}} or
-\code{\link[stats]{BIC}} with several models.}
+\item{x}{A data frame with one row per model, and one column giving an
+information-theoretic index (AIC or BIC), such as returned by
+\code{\link[stats]{AIC}} or \code{\link[stats]{BIC}} with several models.}
 
-\item{delta}{The difference threshold to identify models with
-similar support.}
+\item{delta}{The difference threshold to identify models with similar
+support.}
 }
 \value{
-The input data frame with additional columns \code{delta}
-giving IC differences with the best model, \code{best}
-identifying the best model(s) (\code{*} for the absolute best
-model, \code{+} for models within the threshold), and
-\code{omega} giving AIC weights.
+The input data frame with additional columns \code{delta} giving IC
+differences with the best model, \code{best} identifying the best
+model(s) (\code{*} for the absolute best model, \code{+} for models
+within the threshold), and \code{omega} giving AIC weights.
 }
 \description{
 Summarizes IC differences and weights to identify plausible models (models

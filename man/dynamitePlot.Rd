@@ -27,12 +27,12 @@ bars which make up the plot.}
 bars.  If this argument is omitted, then the names are taken from the
 \code{names} attribute of \code{height}.}
 
-\item{significance}{A character vector giving the group significance for
-each value.}
+\item{significance}{A character vector giving the group significance for each
+value.}
 
 \item{ylim}{Limits for the y axis. By default, \code{ylim} uses \code{c(0,
-maxLim)}, where \code{maxLim} is the maximum height + error multiplied
-by a factor of 1.1.}
+maxLim)}, where \code{maxLim} is the maximum height + error multiplied by
+a factor of 1.1.}
 
 \item{sym}{Logical. Whether to draw lower error bars.}
 

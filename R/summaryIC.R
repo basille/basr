@@ -1,32 +1,30 @@
-##' Summary of AIC/BIC
-##'
-##' Summarizes IC differences and weights to identify plausible models (models
-##' with highest empirical support).
-##'
-##' @param x A data frame with one row per model, and one column
-##'     giving an information-theoretic index (AIC or BIC), such as
-##'     returned by \code{\link[stats]{AIC}} or
-##'     \code{\link[stats]{BIC}} with several models.
-##' @param delta The difference threshold to identify models with
-##'     similar support.
-##' @returns The input data frame with additional columns \code{delta}
-##'     giving IC differences with the best model, \code{best}
-##'     identifying the best model(s) (\code{*} for the absolute best
-##'     model, \code{+} for models within the threshold), and
-##'     \code{omega} giving AIC weights.
-##' @author Mathieu Basille <\email{mathieu@@basille.org}>
-##' @export
-##' @examples
-##' ## Prepare two models:
-##' lm1 <- lm(Fertility ~ . , data = swiss)
-##' lm2 <- update(lm1, . ~ . -Examination)
-##'
-##' ## Check AIC:
-##' AIC(lm1, lm2)
-##'
-##' ## Summary of AIC and BIC:
-##' summaryIC(AIC(lm1, lm2))
-##' summaryIC(BIC(lm1, lm2))
+#' Summary of AIC/BIC
+#'
+#' Summarizes IC differences and weights to identify plausible models (models
+#' with highest empirical support).
+#'
+#' @param x A data frame with one row per model, and one column giving an
+#'     information-theoretic index (AIC or BIC), such as returned by
+#'     \code{\link[stats]{AIC}} or \code{\link[stats]{BIC}} with several models.
+#' @param delta The difference threshold to identify models with similar
+#'     support.
+#' @returns The input data frame with additional columns \code{delta} giving IC
+#'     differences with the best model, \code{best} identifying the best
+#'     model(s) (\code{*} for the absolute best model, \code{+} for models
+#'     within the threshold), and \code{omega} giving AIC weights.
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
+#' @export
+#' @examples
+#' ## Prepare two models:
+#' lm1 <- lm(Fertility ~ . , data = swiss)
+#' lm2 <- update(lm1, . ~ . -Examination)
+#'
+#' ## Check AIC:
+#' AIC(lm1, lm2)
+#'
+#' ## Summary of AIC and BIC:
+#' summaryIC(AIC(lm1, lm2))
+#' summaryIC(BIC(lm1, lm2))
 summaryIC <- function(x, delta = 2) {
     if (!inherits(x, "data.frame"))
         stop("Object of class 'data.frame' expected.")

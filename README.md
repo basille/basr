@@ -31,7 +31,9 @@ Here is a complete list of documented functions:
 - `colNA()`: Number of NAs for each column of a data frame.
 - `extrange()`: Range extended by a given proportion.
 - `kcut()`: Cut into classes of equal size.
-- `nsubset()`: Subset according to frequency of a column.
+- `multiple`: Extract elements that appear multiple times.
+- `nsubset()`: Subset vectors, matrices and data frames based on value
+  frequency.
 - `reclass()`: Reclassify the values of a vector.
 - `table()`: Modified to handle NAs.
 
@@ -40,6 +42,7 @@ Here is a complete list of documented functions:
 - `confint()`: Modified to display coefficients and plot them together with CIs. 
 - `cv()`: Computes the coefficient of variation (i.e. sd/mean).
 - `se()`: Standard errors.
+- `round_sum`: Rounding that preserve sum.
 - `summaryIC()`: Summary of AIC/BIC.
 
 ### Graphs

@@ -24,8 +24,8 @@ swatch.
 function. Following selection, a second plot opens showing how these colors
 look next to each other and on a background gradient of black to white. The
 function uses an RGB color model: Red increases on the y-axis, Green
-increases on the x-axis, and Blue is a repeated sequence of levels across
-the x-axis.
+increases on the x-axis, and Blue is a repeated sequence of levels across the
+x-axis.
 }
 \section{Original URL}{
 

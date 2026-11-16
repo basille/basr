@@ -13,10 +13,10 @@ table(
 )
 }
 \arguments{
-\item{...}{One or more objects which can be interpreted as factors
-(including numbers or character strings), or a list (such as a data
-frame) whose components can be so interpreted. (For ‘as.table’,
-arguments passed to specific methods; for ‘as.data.frame’, unused.)}
+\item{...}{One or more objects which can be interpreted as factors (including
+numbers or character strings), or a list (such as a data frame) whose
+components can be so interpreted. (For ‘as.table’, arguments passed to
+specific methods; for ‘as.data.frame’, unused.)}
 
 \item{exclude}{Levels to remove for all factors in ‘...’.  If it does not
 contain NA and ‘useNA’ is not specified, it implies ‘useNA = "ifany"’.
@@ -49,5 +49,5 @@ table(d)
 }
 \author{
 R Core Team, modified by Mathieu Basille
-\if{html}{\out{<\email{mathieu@basille.org}>}}
+<\email{mathieu@basille.org}>
 }

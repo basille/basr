@@ -17,19 +17,19 @@ save.image(
 )
 }
 \arguments{
-\item{file}{A (writable binary-mode) connection or the name of the file
-where the data will be saved (when tilde expansion is done). Must be a
-file name for ‘save.image’ or ‘version = 1’.}
+\item{file}{A (writable binary-mode) connection or the name of the file where
+the data will be saved (when tilde expansion is done). Must be a file
+name for ‘save.image’ or ‘version = 1’.}
 
 \item{version}{The workspace format version to use.  NULL specifies the
-current default format (3).  Version 1 was the default from R 0.99.0 to
-R 1.3.1 and version 2 from R 1.4.0 to 3.5.0. Version 3 is supported from
-R 3.5.0.}
+current default format (3).  Version 1 was the default from R 0.99.0 to R
+1.3.1 and version 2 from R 1.4.0 to 3.5.0. Version 3 is supported from R
+3.5.0.}
 
 \item{ascii}{If ‘TRUE’, an ASCII representation of the data is written. The
 default value of ‘ascii’ is ‘FALSE’ which leads to a binary file being
-written.  If ‘NA’ and ‘version >= 2’, a different ASCII representation
-is used which writes double/complex numbers as binary fractions.}
+written.  If ‘NA’ and ‘version >= 2’, a different ASCII representation is
+used which writes double/complex numbers as binary fractions.}
 
 \item{compress}{Logical or character string specifying whether saving to a
 named file is to use compression.  ‘TRUE’ corresponds to ‘gzip’

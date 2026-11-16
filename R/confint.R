@@ -1,53 +1,53 @@
-##' Confidence Intervals for Model Parameters
-##'
-##' Modified version of the \code{\link[stats]{confint}} function, which
-##' displays the coefficients in addition to the CIs, and allows for more
-##' control on display parameters. A \code{plot} argument and function allow to
-##' graph the coefficients and their CIs.
-##'
-##' @param object A fitted model object.
-##' @param parm A specification of which parameters are to be given confidence
-##'     intervals, either a vector of numbers or a vector of names.  If missing,
-##'     all parameters are considered.
-##' @param level The confidence level required.
-##' @param order Logical. If \code{TRUE}, the results are ordered by descending
-##'     order on the coefficient value.
-##' @param groups A \code{factor} in the sense that \code{as.factor(f)} defines
-##'     the groups, or a list of such factors in which case their interaction is
-##'     used for the groups. See \code{\link[base]{split}}.
-##' @param plot Whether to plot the results.
-##' @param ... Further arguments passed to \code{points}.
-##' @returns A data frame providing the CI and coefficients.
-##' @author Mathieu Basille <\email{mathieu@@basille.org}>
-##' @export
-##' @examples
-##' ## Example of linear model
-##' fit <- lm(100/mpg ~ disp + hp + wt + am, data = mtcars)
-##' ## Standard 'confint' function
-##' stats::confint(fit)
-##' ## Same results with modified function
-##' confint(fit)
-##' ## Argument 'level'
-##' stats::confint(fit, level = .9)
-##' confint(fit, level = .9)
-##' ## Argument 'order'
-##' confint(fit, order = TRUE)
-##' ## Argument 'groups'
-##' confint(fit, groups = c(3, 1, 1, 1, 2))
-##' ## Argument 'level', "'order' and 'groups' simultaneously
-##' confint(fit, level = .9, order = TRUE, groups = c(3, 1, 1, 1, 2))
-##' ## Argument 'parm'
-##' stats::confint(fit, "am")
-##' confint(fit, "am")
-##' ##'
-##' ## Plot of the results
-##' plot(confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2)))
-##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE)
-##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE,
-##'     col = c("blue", "red", "green"), pch = 18, cex = 2)
-##' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
-##'     plot = TRUE, add.signif = TRUE)
-##' @importFrom stats coef
+#' Confidence Intervals for Model Parameters
+#'
+#' Modified version of the \code{\link[stats]{confint}} function, which displays
+#' the coefficients in addition to the CIs, and allows for more control on
+#' display parameters. A \code{plot} argument and function allow to graph the
+#' coefficients and their CIs.
+#'
+#' @param object A fitted model object.
+#' @param parm A specification of which parameters are to be given confidence
+#'     intervals, either a vector of numbers or a vector of names.  If missing,
+#'     all parameters are considered.
+#' @param level The confidence level required.
+#' @param order Logical. If \code{TRUE}, the results are ordered by descending
+#'     order on the coefficient value.
+#' @param groups A \code{factor} in the sense that \code{as.factor(f)} defines
+#'     the groups, or a list of such factors in which case their interaction is
+#'     used for the groups. See \code{\link[base]{split}}.
+#' @param plot Whether to plot the results.
+#' @param ... Further arguments passed to \code{points}.
+#' @returns A data frame providing the CI and coefficients.
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
+#' @export
+#' @examples
+#' ## Example of linear model
+#' fit <- lm(100/mpg ~ disp + hp + wt + am, data = mtcars)
+#' ## Standard 'confint' function
+#' stats::confint(fit)
+#' ## Same results with modified function
+#' confint(fit)
+#' ## Argument 'level'
+#' stats::confint(fit, level = .9)
+#' confint(fit, level = .9)
+#' ## Argument 'order'
+#' confint(fit, order = TRUE)
+#' ## Argument 'groups'
+#' confint(fit, groups = c(3, 1, 1, 1, 2))
+#' ## Argument 'level', "'order' and 'groups' simultaneously
+#' confint(fit, level = .9, order = TRUE, groups = c(3, 1, 1, 1, 2))
+#' ## Argument 'parm'
+#' stats::confint(fit, "am")
+#' confint(fit, "am")
+#' ##'
+#' ## Plot of the results
+#' plot(confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2)))
+#' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE)
+#' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), plot = TRUE,
+#'     col = c("blue", "red", "green"), pch = 18, cex = 2)
+#' confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
+#'     plot = TRUE, add.signif = TRUE)
+#' @importFrom stats coef
 confint <- function(object, parm, level = 0.95, order = FALSE,
   groups, plot = FALSE, ...) {
     ## Computing the CI using 'stats::confint'
@@ -103,23 +103,23 @@ confint <- function(object, parm, level = 0.95, order = FALSE,
     return(ci)
 }
 
-##' @param x A \code{data.frame} of class \code{confint}.
-##' @param mar The number of lines of margin, can be useful if the
-##' coefficient names do not fit in the left margin. See
-##' \code{\link[graphics]{par}} for more details.
-##' @param col The color of each coefficient + CI; gray by default. If
-##' \code{"groups"}, the color of each (sorted) group; use a hcl
-##' palette by default.
-##' @param main The title of the plot.
-##' @param pch The symbol to be used for the points. See
-##' \code{\link[graphics]{par}} for more details.
-##' @param add.signif Logical, whether to add an asterik for variables with
-##' CIs non-overlapping with zero.
-##' @param ... Further arguments passed to \code{points}.
-##' @rdname confint
-##' @export
-##' @importFrom graphics abline axis box grid lines mtext par plot.default points
-##' @importFrom grDevices gray hcl
+#' @param x A \code{data.frame} of class \code{confint}.
+#' @param mar The number of lines of margin, can be useful if the coefficient
+#'     names do not fit in the left margin. See \code{\link[graphics]{par}} for
+#'     more details.
+#' @param col The color of each coefficient + CI; gray by default. If
+#'     \code{"groups"}, the color of each (sorted) group; use a hcl palette by
+#'     default.
+#' @param main The title of the plot.
+#' @param pch The symbol to be used for the points. See
+#'     \code{\link[graphics]{par}} for more details.
+#' @param add.signif Logical, whether to add an asterik for variables with CIs
+#'     non-overlapping with zero.
+#' @param ... Further arguments passed to \code{points}.
+#' @rdname confint
+#' @export
+#' @importFrom graphics abline axis box grid lines mtext par plot.default points
+#' @importFrom grDevices gray hcl
 plot.confint <- function(x, mar = c(5, 7, 3, 1) + 0.1, col = NULL,
   main = attr(x, "model"), pch = 19, add.signif = FALSE, ...) {
     ## Check that 'x' is of class "confint"

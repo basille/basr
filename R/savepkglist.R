@@ -1,40 +1,40 @@
-##' Load or save the list of attached packages
-##'
-##' Display, save or load the list of attached packages.
-##'
-##' \code{attpkglist} simply lists all attached packages (i.e. not base
-##' packages).
-##'
-##' \code{savepkglist} saves the list of all attached packages in a file, with
-##' one package per line.
-##'
-##' \code{loadpkglist} loads a list of packages from a file. The file should
-##' contain one package name per line, without quotes, and no empty line. If the
-##' packages are not installed, the function sends a warning.
-##'
-##' \code{.loadpkglist} automatically loads the \code{.Rpackages} file at
-##' startup (see the Note below).
-##'
-##' @param file The name of the file in which to save the list of attached
-##'     packages, or from which to load it. The path is relative to the current
-##'     working directory.
-##' @note To automatically load a \code{.Rpackages} list at startup, add this in
-##'     your \code{.Rprofile}:
-##'
-##' \preformatted{### Load packages at the start of R if the package list exists
-##' basr:::.loadpkglist()}
-##'
-##' Essentially, the function appends the list of packages at the end of the
-##' \code{defaultPackages} option (see \code{\link[base]{options}} for this
-##' option; see also \code{\link[base]{Startup}} for more details about the
-##' initialization at start of an R session).
-##' @author Mathieu Basille <\email{mathieu@@basille.org}>
-##' @export
-##' @returns NULL
-##' @examples
-##' \dontrun{
-##' ## Save the list of packages in file 'list.Rpackages':
-##' savepkglist(file = "list.Rpackages")}
+#' Load or save the list of attached packages
+#'
+#' Display, save or load the list of attached packages.
+#'
+#' \code{attpkglist} simply lists all attached packages (i.e. not base
+#' packages).
+#'
+#' \code{savepkglist} saves the list of all attached packages in a file, with
+#' one package per line.
+#'
+#' \code{loadpkglist} loads a list of packages from a file. The file should
+#' contain one package name per line, without quotes, and no empty line. If the
+#' packages are not installed, the function sends a warning.
+#'
+#' \code{.loadpkglist} automatically loads the \code{.Rpackages} file at startup
+#' (see the Note below).
+#'
+#' @param file The name of the file in which to save the list of attached
+#'     packages, or from which to load it. The path is relative to the current
+#'     working directory.
+#' @note To automatically load a \code{.Rpackages} list at startup, add this in
+#'     your \code{.Rprofile}:
+#'
+#' \preformatted{### Load packages at the start of R if the package list exists
+#' basr:::.loadpkglist()}
+#'
+#' Essentially, the function appends the list of packages at the end of the
+#' \code{defaultPackages} option (see \code{\link[base]{options}} for this
+#' option; see also \code{\link[base]{Startup}} for more details about the
+#' initialization at start of an R session).
+#' @author Mathieu Basille <\email{mathieu@@basille.org}>
+#' @export
+#' @returns NULL
+#' @examples
+#' \dontrun{
+#' ## Save the list of packages in file 'list.Rpackages':
+#' savepkglist(file = "list.Rpackages")}
 savepkglist <- function(file = ".Rpackages") {
     packages <- attpkglist()
     if (is.null(packages))
@@ -43,11 +43,11 @@ savepkglist <- function(file = ".Rpackages") {
 ", sep = ""), file = file, sep = "")
 }
 
-##' @rdname savepkglist
-##' @export
-##' @importFrom utils packageDescription
-##' @examples
-##' \dontrun{attpkglist()}
+#' @rdname savepkglist
+#' @export
+#' @importFrom utils packageDescription
+#' @examples
+#' \dontrun{attpkglist()}
 attpkglist <- function() {
     package <- grep("^package:", search(), value = TRUE)
     keep <- sapply(package, function(x) x == "package:base" ||
@@ -61,10 +61,10 @@ attpkglist <- function() {
     else return(NULL)
 }
 
-##' @rdname savepkglist
-##' @export
-##' @examples
-##' \dontrun{loadpkglist()}
+#' @rdname savepkglist
+#' @export
+#' @examples
+#' \dontrun{loadpkglist()}
 loadpkglist <- function(file = ".Rpackages") {
     lapply(readLines(file), require, character.only = TRUE)
     return(invisible())

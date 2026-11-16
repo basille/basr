@@ -28,11 +28,11 @@ values that appear several times, i.e. that are actually duplicated.
 (toto <- rep(c(1:4, NA), times = 1:5))
 unique(toto)
 multiple(toto)
-unique(nselect(toto, 2)) # `nselect(x, 2)` keeps only values that occur at least twice
+unique(nsubset(toto, 2)) # `nsubset(x, 2)` keeps only values that occur at least twice
 
 ## Argument 'single'
 multiple(toto, single = TRUE)
-unique(nselect(toto, 2, comp = "<"))
+unique(nsubset(toto, 2, comp = "<"))
 
 ## Argument 'na.rm'
 unique(toto, na.rm = TRUE)

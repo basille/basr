@@ -2,45 +2,109 @@
 % Please edit documentation in R/nsubset.R
 \name{nsubset}
 \alias{nsubset}
-\title{Subset according to frequency of a column}
+\alias{nsubset.default}
+\alias{nsubset.data.frame}
+\alias{nsubset.matrix}
+\title{Subset vectors, matrices and data frames based on value frequency}
 \usage{
-nsubset(x, col, n, sign = c(">=", "<=", ">", "<", "=="), select, drop = FALSE)
+nsubset(x, ...)
+
+\method{nsubset}{default}(x, n, comp = c(">=", ">", "<", "<="), na.rm = TRUE, ...)
+
+\method{nsubset}{data.frame}(
+  x,
+  col,
+  n,
+  comp = c(">=", "<=", ">", "<", "=="),
+  na.rm = TRUE,
+  select,
+  drop = FALSE,
+  ...
+)
+
+\method{nsubset}{matrix}(
+  x,
+  col,
+  n,
+  comp = c(">=", "<=", ">", "<", "=="),
+  na.rm = TRUE,
+  select,
+  drop = FALSE,
+  ...
+)
 }
 \arguments{
-\item{x}{Object to be subsetted (e.g. \code{data.frame}, \code{matrix},
-\code{Spatial*DataFrame}, etc.).}
+\item{x}{An object to be subsetted, i.e. a vector of atomic type ('logical',
+'integer', 'numeric', 'complex', 'character' and 'raw'), a factor, a
+\code{data.frame} or a \code{matrix}.}
 
-\item{col}{Name of the column which stores the grouping factor (without
-quotes).}
+\item{...}{Further arguments passed to or from other methods.}
 
-\item{n}{The reference number for the frequency of the grouping factor (must
-be a numeric of length 1).}
+\item{n}{An integer; either a single value or the same number of values than
+returned by \code{table(x)} / \code{table(x[, "col"])}.}
 
-\item{sign}{Any comparison sign (\code{>=} by default, \code{<=}, \code{>},
-\code{<}, or \code{==}).}
+\item{comp}{The sign of the inequality, one of \code{">="} (default),
+\code{">"}, \code{"<"} or \code{"<="}.}
 
-\item{select}{Expression, indicating columns to select (either name(s)
-without quote or numeric indicating the column number(s)).}
+\item{na.rm}{Logical; whether NAs should be removed (default) or not (in
+which case, they will be considered as a value of their own).}
 
-\item{drop}{Passed on to '[' indexing operator.}
+\item{col}{Name of the column which is used to compute frequencies (with or
+without quotes).}
+
+\item{select}{Expression, indicating columns to select from a data frame.}
+
+\item{drop}{Passed on to \code{[} indexing operator.}
 }
 \value{
-A subset of the object (of the same class).
+A subset of the same class as \code{x}.
 }
 \description{
-Subset an object based on the frequency of a column (factor or not).
+Subset vectors and tables (\code{data.frames} and \code{matrix}) based on the
+frequency of the values (of the vector or a column of the table), and a type
+of inequality (less than and greater than).
 }
 \examples{
-set.seed(1)
+
+## Simples examples and NAs:
+set.seed(42)
+bla <- rpois(100, 4)
+bla[(1:9)*10] <- NA
+bla
+table(bla, useNA = "ifany")
+nsubset(bla, 5)
+nsubset(bla, 14)
+nsubset(bla, 5, comp = "<")
+nsubset(bla, 5, na.rm = FALSE)
+
+## Factors and n provided for each value:
+set.seed(42)
+(bli <- factor(LETTERS[sample(1:10, size = 100, replace = TRUE)]))
+table(bli)
+factor(nsubset(bli, n = 7:16))
+
+## Data frames:
+set.seed(42)
 bla <- data.frame(value = rnorm(100), group = sample(letters[1:4],
     size = 100, replace = TRUE, prob = (1:4) * 10))
 table(bla$group)
 bli <- nsubset(bla, group, 25)
+head(bli)
 table(bli$group)
-blo <- nsubset(bla, group, 25, sign = ">", select = 1, drop = TRUE)
-head(blo)
-length(blo)
+nsubset(bla, group, 25, comp = ">", select = 1, drop = TRUE)
+nsubset(bla, group, 25, comp = ">", select = group, drop = TRUE)
+
+## Fast computation:
+set.seed(42)
+bla <- rpois(1e7, 4)
+table(bla)
+system.time(table(nsubset(bla, 1e7)))
+
+bla <- data.frame(value = rnorm(1e7), group = sample(letters[1:4],
+    size = 1e7, replace = TRUE, prob = (1:4) * 10))
+table(bla$group)
+system.time(bli <- nsubset(bla, group, 25))
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \href{mailto:mathieu@basille.org}{mathieu@basille.org}
 }

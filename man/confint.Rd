@@ -39,30 +39,30 @@ used for the groups. See \code{\link[base]{split}}.}
 
 \item{x}{A \code{data.frame} of class \code{confint}.}
 
-\item{mar}{The number of lines of margin, can be useful if the
-coefficient names do not fit in the left margin. See
-\code{\link[graphics]{par}} for more details.}
+\item{mar}{The number of lines of margin, can be useful if the coefficient
+names do not fit in the left margin. See \code{\link[graphics]{par}} for
+more details.}
 
 \item{col}{The color of each coefficient + CI; gray by default. If
-\code{"groups"}, the color of each (sorted) group; use a hcl
-palette by default.}
+\code{"groups"}, the color of each (sorted) group; use a hcl palette by
+default.}
 
 \item{main}{The title of the plot.}
 
 \item{pch}{The symbol to be used for the points. See
 \code{\link[graphics]{par}} for more details.}
 
-\item{add.signif}{Logical, whether to add an asterik for variables with
-CIs non-overlapping with zero.}
+\item{add.signif}{Logical, whether to add an asterik for variables with CIs
+non-overlapping with zero.}
 }
 \value{
 A data frame providing the CI and coefficients.
 }
 \description{
-Modified version of the \code{\link[stats]{confint}} function, which
-displays the coefficients in addition to the CIs, and allows for more
-control on display parameters. A \code{plot} argument and function allow to
-graph the coefficients and their CIs.
+Modified version of the \code{\link[stats]{confint}} function, which displays
+the coefficients in addition to the CIs, and allows for more control on
+display parameters. A \code{plot} argument and function allow to graph the
+coefficients and their CIs.
 }
 \examples{
 ## Example of linear model
@@ -93,5 +93,5 @@ confint(fit, order = TRUE, groups = c(3, 1, 1, 1, 2), level = 0.9,
     plot = TRUE, add.signif = TRUE)
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

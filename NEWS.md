@@ -3,7 +3,7 @@
 ## New features
 
 - `multiple`: Extract elements that appear multiple times.
-- `nselect`: Select values based on their frequency.
+- `nsubset` now handles vectors and tables.
 - `round_sum`: Rounding that preserve sum.
 
 ## Minor changes

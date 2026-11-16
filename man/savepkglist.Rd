@@ -31,8 +31,8 @@ one package per line.
 contain one package name per line, without quotes, and no empty line. If the
 packages are not installed, the function sends a warning.
 
-\code{.loadpkglist} automatically loads the \code{.Rpackages} file at
-startup (see the Note below).
+\code{.loadpkglist} automatically loads the \code{.Rpackages} file at startup
+(see the Note below).
 }
 \note{
 To automatically load a \code{.Rpackages} list at startup, add this in

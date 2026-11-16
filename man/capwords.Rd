@@ -2,14 +2,13 @@
 % Please edit documentation in R/capwords.R
 \name{capwords}
 \alias{capwords}
-\title{Capitalizing - every first letter of a word is changed to upper
-case}
+\title{Capitalizing - every first letter of a word is changed to upper case}
 \usage{
 capwords(s, strict = FALSE)
 }
 \arguments{
-\item{s}{A character vector, or an object that can be coerced to character
-by \code{as.character}.}
+\item{s}{A character vector, or an object that can be coerced to character by
+\code{as.character}.}
 
 \item{strict}{Logical: other letters than the first are converted to lower
 case}
@@ -19,9 +18,9 @@ A character vector of the same length and with the same attributes
 as \code{x} (after possible coercion).
 }
 \description{
-A simple function to capitalize a character string: the first letter of
-every word is changed to upper case. Optionally, all other letters are
-changed to lower case.
+A simple function to capitalize a character string: the first letter of every
+word is changed to upper case. Optionally, all other letters are changed to
+lower case.
 }
 \examples{
 capwords(c("using AIC for model selection"))

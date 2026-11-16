@@ -21,8 +21,8 @@ range.
 Returns the range extended by a given proportion.
 }
 \details{
-If the regular range returns a single value, the proportion is
-computed on this value itself (and not on the range).
+If the regular range returns a single value, the proportion is computed on
+this value itself (and not on the range).
 }
 \examples{
 extrange(0:10)
@@ -31,5 +31,5 @@ extrange(-10:10)
 extrange(rep(10, 3))
 }
 \author{
-Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
+Mathieu Basille <\email{mathieu@basille.org}>
 }
