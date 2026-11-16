@@ -1,0 +1,60 @@
+url: ~
+template:
+  bootstrap: 5
+
+reference:
+- title: Basic, but Hopefully Useful, Functions
+
+- subtitle: Data management
+  desc: >
+    Functions to handle data from vectors and data frames.
+  contents:
+  - colNAs
+  - extrange
+  - kcut
+  - multiple
+  - nsubset
+  - reclass
+  - table
+
+- subtitle: Statistics
+  desc: >
+    Functions for statistical utilities.
+  contents:
+  - confint
+  - cv
+  - se
+  - round_sum
+  - summaryIC
+
+- subtitle: Graphs
+  desc: >
+    Functions related to graphics.
+  contents:
+  - dynamitePlot
+  - getcolors
+  - togray
+
+- subtitle: Package management
+  desc: >
+    Functions for package management.
+  contents:
+  - install_selected
+  - q
+  - save.image
+  - loadpkglist
+  - savepkglist
+  - update_packages
+
+- subtitle: Utils
+  desc: >
+    Utilitary functions.
+  contents:
+  - capwords
+  - date_locale
+  - init_httpgd
+  - memUse
+  - mv
+  - manual
+  - session_info_md
+  - writeFunction
