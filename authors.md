@@ -25,13 +25,16 @@
 
 ## Citation
 
+Source:
+[`DESCRIPTION`](https://github.com/basille/basr/blob/master/DESCRIPTION)
+
 Basille M (2026). *basr: Basic, but Hopefully Useful, Functions*. R
-package version 1.1.0, <http://basille.github.io/basr/>.
+package version 1.1.0, <https://github.com/basille/basr>.
 
     @Manual{,
       title = {basr: Basic, but Hopefully Useful, Functions},
       author = {Mathieu Basille},
       year = {2026},
       note = {R package version 1.1.0},
-      url = {http://basille.github.io/basr/},
+      url = {https://github.com/basille/basr},
     }

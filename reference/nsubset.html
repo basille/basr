@@ -23,6 +23,7 @@ of inequality (less than and greater than)."></head><body>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/basille/basr/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
 
@@ -32,7 +33,7 @@ of inequality (less than and greater than)."></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Subset vectors, matrices and data frames based on value frequency</h1>
-
+      <small class="dont-index">Source: <a href="https://github.com/basille/basr/blob/master/R/nsubset.R" class="external-link"><code>R/nsubset.R</code></a></small>
       <div class="d-none name"><code>nsubset.Rd</code></div>
     </div>
 
@@ -225,7 +226,7 @@ without quotes).</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   52921   19180    6343    1909     516     154      45       9       2 </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/system.time.html" class="external-link">system.time</a></span><span class="op">(</span><span class="fu"><a href="table.html">table</a></span><span class="op">(</span><span class="fu">nsubset</span><span class="op">(</span><span class="va">bla</span>, <span class="fl">1e7</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    user  system elapsed </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   0.494   0.286   0.780 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   0.478   0.243   0.720 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">bla</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">1e7</span><span class="op">)</span>, group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>,</span></span>
 <span class="r-in"><span>    size <span class="op">=</span> <span class="fl">1e7</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span> <span class="op">*</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></span>
@@ -235,7 +236,7 @@ without quotes).</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  999413 2000466 2999466 4000655 </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/system.time.html" class="external-link">system.time</a></span><span class="op">(</span><span class="va">bli</span> <span class="op">&lt;-</span> <span class="fu">nsubset</span><span class="op">(</span><span class="va">bla</span>, <span class="va">group</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    user  system elapsed </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1.549   0.738   2.291 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1.553   0.667   2.226 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
