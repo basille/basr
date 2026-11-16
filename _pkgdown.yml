@@ -1,12 +1,10 @@
-url: ~
+url: http://basille.github.io/basr/
 template:
   bootstrap: 5
-
 reference:
 - title: Basic, but Hopefully Useful, Functions
-
 - subtitle: Data management
-  desc: >
+  desc: |
     Functions to handle data from vectors and data frames.
   contents:
   - colNAs
@@ -16,9 +14,8 @@ reference:
   - nsubset
   - reclass
   - table
-
 - subtitle: Statistics
-  desc: >
+  desc: |
     Functions for statistical utilities.
   contents:
   - confint
@@ -26,17 +23,15 @@ reference:
   - se
   - round_sum
   - summaryIC
-
 - subtitle: Graphs
-  desc: >
+  desc: |
     Functions related to graphics.
   contents:
   - dynamitePlot
   - getcolors
   - togray
-
 - subtitle: Package management
-  desc: >
+  desc: |
     Functions for package management.
   contents:
   - install_selected
@@ -45,9 +40,8 @@ reference:
   - loadpkglist
   - savepkglist
   - update_packages
-
 - subtitle: Utils
-  desc: >
+  desc: |
     Utilitary functions.
   contents:
   - capwords
@@ -58,3 +52,4 @@ reference:
   - manual
   - session_info_md
   - writeFunction
+
