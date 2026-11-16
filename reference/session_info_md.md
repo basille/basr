@@ -110,6 +110,7 @@ session_info_md(language = "FR")
 #> |memoise     |         |   2.0.1| 2021-11-26| [1]|   RSPM|
 #> |openssl     |         |   2.5.0| 2026-11-02| [1]|   RSPM|
 #> |otel        |         |   0.3.0| 2026-11-07| [1]|   RSPM|
+#> |pak         |         |  0.11.2| 2026-11-07| [1]|   RSPM|
 #> |pillar      |         |  1.11.1| 2025-09-17| [1]|   RSPM|
 #> |pkgbuild    |         |   1.4.8| 2025-05-26| [1]|   RSPM|
 #> |pkgconfig   |         |   2.0.3| 2019-09-22| [1]|   RSPM|
