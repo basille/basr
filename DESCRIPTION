@@ -18,7 +18,7 @@ Authors@R: c(
 Description: Collection of basic functions for a variety of usage (data,
     statistics, graphs, package management, utils), mostly for my own
     convenience.
-URL: https://github.com/basille/basr, http://basille.github.io/basr/
+URL: http://basille.github.io/basr/
 Suggests:
     devtools,
     httpgd,
