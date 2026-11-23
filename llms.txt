@@ -1,7 +1,8 @@
 # basr
 
-The package `basr` is a collection of basic functions that I find mostly
-useful for myself.
+The package `basr` is a collection of basic functions that I wrote and
+collected for my own convenience — hopefully they can be useful for a
+wider audience.
 
 ## Installation
 

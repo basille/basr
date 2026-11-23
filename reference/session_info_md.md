@@ -73,7 +73,7 @@ session_info_md(language = "FR")
 #> |collate   |C                                                              |
 #> |ctype     |C.UTF-8                                                        |
 #> |tz        |UTC                                                            |
-#> |date      |2026-11-16                                                     |
+#> |date      |2026-11-23                                                     |
 #> |pandoc    |3.8.3 @ /opt/hostedtoolcache/pandoc/3.8.3/x64/ (via rmarkdown) |
 #> |quarto    |NA                                                             |
 #> 
@@ -81,7 +81,7 @@ session_info_md(language = "FR")
 #> 
 #> |Package     | Attaché | Version|       Date| lib| Source|
 #> |:-----------|:-------:|-------:|----------:|---:|------:|
-#> |basr        |    *    |   1.1.0| 2026-11-16| [1]|  local|
+#> |basr        |    *    |   1.1.0| 2026-11-23| [1]|  local|
 #> |R6          |         |   2.6.1| 2025-02-15| [1]|   RSPM|
 #> |askpass     |         |   1.2.1| 2024-10-04| [1]|   RSPM|
 #> |bslib       |         |  0.12.0| 2026-08-04| [1]|   RSPM|
@@ -108,7 +108,7 @@ session_info_md(language = "FR")
 #> |lifecycle   |         |   1.0.5| 2026-01-08| [1]|   RSPM|
 #> |magrittr    |         |   2.0.5| 2026-04-04| [1]|   RSPM|
 #> |memoise     |         |   2.0.1| 2021-11-26| [1]|   RSPM|
-#> |openssl     |         |   2.5.0| 2026-11-02| [1]|   RSPM|
+#> |openssl     |         |   2.6.0| 2026-11-17| [1]|   RSPM|
 #> |otel        |         |   0.3.0| 2026-11-07| [1]|   RSPM|
 #> |pak         |         |  0.11.2| 2026-11-07| [1]|   RSPM|
 #> |pillar      |         |  1.11.1| 2025-09-17| [1]|   RSPM|
@@ -121,10 +121,10 @@ session_info_md(language = "FR")
 #> |rlang       |         |   1.3.0| 2026-07-05| [1]|   RSPM|
 #> |rmarkdown   |         |    2.32| 2026-09-01| [1]|   RSPM|
 #> |rstudioapi  |         |  0.19.0| 2026-06-11| [1]|   RSPM|
-#> |sass        |         |  0.4.10| 2025-04-11| [1]|   RSPM|
+#> |sass        |         |   0.5.0| 2026-11-20| [1]|   RSPM|
 #> |sessioninfo |         |   1.2.4| 2026-06-04| [1]|   RSPM|
-#> |systemfonts |         |   1.3.2| 2026-03-05| [1]|   RSPM|
-#> |textshaping |         |   1.0.5| 2026-03-06| [1]|   RSPM|
+#> |systemfonts |         |   1.3.4| 2026-11-21| [1]|   RSPM|
+#> |textshaping |         |   1.1.0| 2026-11-20| [1]|   RSPM|
 #> |tibble      |         |   3.3.1| 2026-01-11| [1]|   RSPM|
 #> |usethis     |         |   3.2.2| 2026-09-10| [1]|   RSPM|
 #> |vctrs       |         |   0.7.3| 2026-04-11| [1]|   RSPM|
