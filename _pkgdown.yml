@@ -39,7 +39,7 @@ reference:
   - save.image
   - loadpkglist
   - savepkglist
-  - update_packages
+  - update_all_packages
 - subtitle: Utils
   desc: |
     Utilitary functions.
