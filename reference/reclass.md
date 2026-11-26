@@ -79,7 +79,7 @@ reclass(bli, mat)
 blu <- rpois(1e6, 10)
 system.time(reclass(blu, c(3, 4), c(7, 3)))
 #>    user  system elapsed 
-#>   1.445   0.053   1.499 
+#>   1.543   0.046   1.589 
 
 ## Cases with NAs in x, from or to:
 bla[c(2, 4)] <- NA

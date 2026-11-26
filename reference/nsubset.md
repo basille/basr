@@ -186,7 +186,7 @@ table(bla)
 #>   52921   19180    6343    1909     516     154      45       9       2 
 system.time(table(nsubset(bla, 1e7)))
 #>    user  system elapsed 
-#>   0.468   0.298   0.766 
+#>   0.430   0.255   0.686 
 
 bla <- data.frame(value = rnorm(1e7), group = sample(letters[1:4],
     size = 1e7, replace = TRUE, prob = (1:4) * 10))
@@ -196,5 +196,5 @@ table(bla$group)
 #>  999413 2000466 2999466 4000655 
 system.time(bli <- nsubset(bla, group, 25))
 #>    user  system elapsed 
-#>   1.755   0.748   2.504 
+#>   1.620   0.685   2.305 
 ```
