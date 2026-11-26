@@ -21,7 +21,7 @@ Requires package \pkg{pak}.
 \dontrun{
 ## Simply update all user packages:
 require("pak")
-update_packages()}
+update_all_packages()}
 }
 \author{
 Mathieu Basille <\email{mathieu@basille.org}>

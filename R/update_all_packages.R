@@ -12,7 +12,7 @@
 ##' \dontrun{
 #' ## Simply update all user packages:
 #' require("pak")
-#' update_packages()}
+#' update_all_packages()}
 #' @importFrom utils installed.packages packageDescription
 update_all_packages <- function() {
     ## `pak` is required
