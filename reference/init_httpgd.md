@@ -41,6 +41,7 @@ Mathieu Basille \<\email{mathieu@basille.org}\>
 ``` r
 if (FALSE) { # \dontrun{
 ## Simply open a web graphic device and checks it in your browser:
+require("httpgd")
 init_httpgd()
 plot(1:10)} # }
 ```

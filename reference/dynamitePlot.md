@@ -80,8 +80,7 @@ disadvantages of dynamite plots here:
 
 ## Author
 
-Samuel Brown, modified by Mathieu Basille
-\<\email{mathieu@basille.org}\>
+Samuel Brown, modified by Mathieu Basille \<<mathieu@basille.org>\>
 
 ## Examples
 

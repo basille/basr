@@ -67,8 +67,7 @@ Overflow thread:
 
 ## Author
 
-Michael Hallquist, modified by Mathieu Basille
-\<\email{mathieu@basille.org}\>
+Michael Hallquist, modified by Mathieu Basille \<<mathieu@basille.org>\>
 
 ## Examples
 

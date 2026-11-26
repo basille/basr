@@ -476,6 +476,7 @@ Mathieu Basille \<<mathieu@basille.org>
 ``` r
 if (FALSE) { # \dontrun{
 ## Install all packages (except 'tidymodels'):
+require("pak")
 install_selected()
 
 ## Only install spatial packages:

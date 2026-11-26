@@ -20,7 +20,7 @@ A numeric vector.
 
 ## Author
 
-Mathieu Basille \<<mathieu@basille.org>\>
+Mathieu Basille \<\email{mathieu@basille.org}\>
 
 ## Examples
 

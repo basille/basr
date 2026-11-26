@@ -58,6 +58,9 @@ Mathieu Basille \<\email{mathieu@basille.org}\>
 
 ``` r
 ## Show session information formatted for Markdown in French:
+require("sessioninfo"); require("knitr")
+#> Loading required package: sessioninfo
+#> Loading required package: knitr
 session_info_md(language = "FR")
 #> ## Informations de session R
 #> 
@@ -73,7 +76,7 @@ session_info_md(language = "FR")
 #> |collate   |C                                                              |
 #> |ctype     |C.UTF-8                                                        |
 #> |tz        |UTC                                                            |
-#> |date      |2026-11-23                                                     |
+#> |date      |2026-11-26                                                     |
 #> |pandoc    |3.8.3 @ /opt/hostedtoolcache/pandoc/3.8.3/x64/ (via rmarkdown) |
 #> |quarto    |NA                                                             |
 #> 
@@ -81,13 +84,15 @@ session_info_md(language = "FR")
 #> 
 #> |Package     | Attaché | Version|       Date| lib| Source|
 #> |:-----------|:-------:|-------:|----------:|---:|------:|
-#> |basr        |    *    |   1.1.0| 2026-11-23| [1]|  local|
+#> |basr        |    *    |   1.1.0| 2026-11-26| [1]|  local|
+#> |knitr       |    *    |    1.52| 2026-09-06| [1]|   RSPM|
+#> |sessioninfo |    *    |   1.2.4| 2026-06-04| [1]|   RSPM|
 #> |R6          |         |   2.6.1| 2025-02-15| [1]|   RSPM|
 #> |askpass     |         |   1.2.1| 2024-10-04| [1]|   RSPM|
 #> |bslib       |         |  0.12.0| 2026-08-04| [1]|   RSPM|
 #> |cachem      |         |   1.1.0| 2024-05-16| [1]|   RSPM|
 #> |cli         |         |   3.6.6| 2026-04-09| [1]|   RSPM|
-#> |curl        |         |   8.1.0| 2026-10-14| [1]|   RSPM|
+#> |curl        |         |   8.2.0| 2026-11-23| [1]|   RSPM|
 #> |desc        |         |   1.4.3| 2023-12-10| [1]|   RSPM|
 #> |devtools    |         |   2.5.2| 2026-04-30| [1]|   RSPM|
 #> |digest      |         |  0.6.39| 2025-11-19| [1]|   RSPM|
@@ -101,10 +106,10 @@ session_info_md(language = "FR")
 #> |glue        |         |   1.8.1| 2026-04-17| [1]|   RSPM|
 #> |htmltools   |         |   0.5.9| 2025-12-04| [1]|   RSPM|
 #> |htmlwidgets |         |   1.6.4| 2023-12-06| [1]|   RSPM|
+#> |httpgd      |         |   2.1.4| 2026-03-04| [1]|   RSPM|
 #> |httr2       |         |   1.3.0| 2026-07-13| [1]|   RSPM|
 #> |jquerylib   |         |   0.1.4| 2021-04-26| [1]|   RSPM|
 #> |jsonlite    |         |   2.0.0| 2025-03-27| [1]|   RSPM|
-#> |knitr       |         |    1.52| 2026-09-06| [1]|   RSPM|
 #> |lifecycle   |         |   1.0.5| 2026-01-08| [1]|   RSPM|
 #> |magrittr    |         |   2.0.5| 2026-04-04| [1]|   RSPM|
 #> |memoise     |         |   2.0.1| 2021-11-26| [1]|   RSPM|
@@ -122,10 +127,10 @@ session_info_md(language = "FR")
 #> |rmarkdown   |         |    2.32| 2026-09-01| [1]|   RSPM|
 #> |rstudioapi  |         |  0.19.0| 2026-06-11| [1]|   RSPM|
 #> |sass        |         |   0.5.0| 2026-11-20| [1]|   RSPM|
-#> |sessioninfo |         |   1.2.4| 2026-06-04| [1]|   RSPM|
 #> |systemfonts |         |   1.3.4| 2026-11-21| [1]|   RSPM|
 #> |textshaping |         |   1.1.0| 2026-11-20| [1]|   RSPM|
 #> |tibble      |         |   3.3.1| 2026-01-11| [1]|   RSPM|
+#> |unigd       |         |   0.2.0| 2026-02-16| [1]|   RSPM|
 #> |usethis     |         |   3.2.2| 2026-09-10| [1]|   RSPM|
 #> |vctrs       |         |   0.7.3| 2026-04-11| [1]|   RSPM|
 #> |whisker     |         |   0.4.1| 2022-12-05| [1]|   RSPM|

@@ -35,7 +35,7 @@ A character string with the date in user format and locale.
 
 ## Author
 
-Mathieu Basille \<<mathieu@basille.org>\>
+Mathieu Basille \<\email{mathieu@basille.org}\>
 
 ## Examples
 
@@ -43,7 +43,7 @@ Mathieu Basille \<<mathieu@basille.org>\>
 ## Today written in French
 date_locale()
 #> Warning: OS reports request to set locale to "fr_FR.utf8" cannot be honored
-#> [1] "Monday 23 November 2026"
+#> [1] "Thursday 26 November 2026"
 
 ## Christmas 2000 written in French
 date_locale(as.Date("2000-12-25"))

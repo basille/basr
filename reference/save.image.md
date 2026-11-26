@@ -87,7 +87,7 @@ to save the list of attached packages.
 
 ## Author
 
-R Core Team, modified by Mathieu Basille \<\email{mathieu@basille.org}\>
+R Core Team, modified by Mathieu Basille \<<mathieu@basille.org>\>
 
 ## Examples
 

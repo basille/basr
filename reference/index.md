@@ -64,7 +64,7 @@ Functions for package management.
   [`attpkglist()`](http://basille.github.io/basr/reference/savepkglist.md)
   [`loadpkglist()`](http://basille.github.io/basr/reference/savepkglist.md)
   : Load or save the list of attached packages
-- [`update_packages()`](http://basille.github.io/basr/reference/update_packages.md)
+- [`update_all_packages()`](http://basille.github.io/basr/reference/update_all_packages.md)
   : Update user packages (CRAN and GitHub)
 
 ### Utils

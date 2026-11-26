@@ -34,7 +34,7 @@ on this value itself (and not on the range).
 
 ## Author
 
-Mathieu Basille \<<mathieu@basille.org>\>
+Mathieu Basille \<\email{mathieu@basille.org}\>
 
 ## Examples
 

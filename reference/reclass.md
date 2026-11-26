@@ -44,7 +44,7 @@ A vector with the same length as `x`.
 
 ## Author
 
-Mathieu Basille \<\email{mathieu@basille.org}\>
+Mathieu Basille \<<mathieu@basille.org>\>
 
 ## Examples
 
@@ -79,7 +79,7 @@ reclass(bli, mat)
 blu <- rpois(1e6, 10)
 system.time(reclass(blu, c(3, 4), c(7, 3)))
 #>    user  system elapsed 
-#>   1.648   0.046   1.694 
+#>   1.445   0.053   1.499 
 
 ## Cases with NAs in x, from or to:
 bla[c(2, 4)] <- NA

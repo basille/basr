@@ -46,5 +46,6 @@ Mathieu Basille \<\email{mathieu@basille.org}\>
 ``` r
 if (FALSE) { # \dontrun{
 ## Generate reference manual for the package in the current folder:
+require("devtools")
 manual()} # }
 ```
