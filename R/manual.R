@@ -14,6 +14,7 @@
 #' @examples
 #' \dontrun{
 #' ## Generate reference manual for the package in the current folder:
+#' require("devtools")
 #' manual()}
 #' @author Mathieu Basille <\email{mathieu@@basille.org}>
 manual <- function(pkg = ".", path = NULL, preview = TRUE, overwrite = FALSE) {

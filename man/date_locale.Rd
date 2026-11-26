@@ -32,5 +32,5 @@ date_locale()
 date_locale(as.Date("2000-12-25"))
 }
 \author{
-Mathieu Basille <\email{mathieu@basille.org}>
+Mathieu Basille \if{html}{\out{<\email{mathieu@basille.org}>}}
 }

@@ -35,7 +35,7 @@ export(summaryIC)
 export(table)
 export(togray)
 export(togrey)
-export(update_packages)
+export(update_all_packages)
 export(writeFunction)
 importFrom(grDevices,
   colorRampPalette,

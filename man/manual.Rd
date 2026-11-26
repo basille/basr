@@ -29,6 +29,7 @@ Requires package \pkg{devtools}.
 \examples{
 \dontrun{
 ## Generate reference manual for the package in the current folder:
+require("devtools")
 manual()}
 }
 \author{

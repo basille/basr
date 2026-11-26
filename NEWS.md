@@ -13,6 +13,7 @@
 - `togray` is synonymous of `togrey`.
 - `quit` is synonymous of `q`.
 - `q` has an explicit `savePackageList` argument, which is `TRUE` by default.
+- `update_all_packages` replaces `update_packages` to avoid conflicts.
 
 ## Bug fixes
 
@@ -38,13 +39,13 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.12
 
-## New feature
+## New features
 
 - `ncut`: Cut into classes of equal size
 
 # basr 0.11
 
-## New feature
+## New features
 
 - `summaryIC`: Now provide *IC weights in an additional column.
 
@@ -57,14 +58,14 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.10
 
-## New feature
+## New features
 
 - `nsubset`: Subset according to frequency of a column (WARNING: replaces
   `nselect`!).
 
 # basr 0.9
 
-## New feature
+## New features
 
 - `colNA`: Number of NAs by column.
 
@@ -78,26 +79,26 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.8
 
-## New feature
+## New features
 
 - `memUse`: Show memory usage of saved objects.
 
 # basr 0.7.6
 
-## New feature
+## New features
 
 - `reclass`: `from` can be a matrix of reclassification.
 
 # basr 0.7.5
 
-## New feature
+## New features
 
 - `plot.confint`: Now colorize CIs non-overlapping with zero + new argument
   `add.signif` to add an asterisk for these CIs.
 
 # basr 0.7.4
 
-## New feature
+## New features
 
 - `reclass`: New arguments `factor` and `...`.
 
@@ -107,7 +108,7 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.7.3
 
-## New feature
+## New features
 
 - `attpkglist`: List attached packages. Used by `savepkglist`
 - `.loadpkglist`: Load the `.Rpackages` file at startup
@@ -132,7 +133,7 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.7
 
-## New feature
+## New features
 
 - `togray`/`togrey`: Convert continuous variable to grey levels
 
@@ -145,13 +146,13 @@ Major cleanup for v1.0, with new functions and documentation.
 
 # basr 0.6
 
-## New feature
+## New features
 
 - `confint`: Confidence Intervals for Model Parameters
 
 # basr 0.5.3
 
-## Feature removed
+## Features removed
 
 - `pandoc`: Use now `knitr:::pandoc`
 

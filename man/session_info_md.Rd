@@ -41,6 +41,7 @@ Requires packages \pkg{sessioninfo} and \pkg{knitr}.
 }
 \examples{
 ## Show session information formatted for Markdown in French:
+require("sessioninfo"); require("knitr")
 session_info_md(language = "FR")
 }
 \author{

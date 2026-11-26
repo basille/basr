@@ -14,6 +14,7 @@
 #' @examples
 #' \dontrun{
 #' ## Simply open a web graphic device and checks it in your browser:
+#' require("httpgd")
 #' init_httpgd()
 #' plot(1:10)}
 init_httpgd <- function(width = getOption("httpgd.width", 720),

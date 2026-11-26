@@ -75,5 +75,5 @@ dynamitePlot(values, errors, names.arg = names, significance = sig,
 }
 \author{
 Samuel Brown, modified by Mathieu Basille
-\if{html}{\out{<\email{mathieu@basille.org}>}}
+<\email{mathieu@basille.org}>
 }

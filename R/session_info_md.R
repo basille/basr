@@ -20,6 +20,7 @@
 #' @returns Session information formatted for Markdown.
 #' @examples
 #' ## Show session information formatted for Markdown in French:
+#' require("sessioninfo"); require("knitr")
 #' session_info_md(language = "FR")
 #' @export
 session_info_md <- function(language = c("EN", "FR"), header_level = 2,

@@ -232,6 +232,7 @@
 #' @examples
 ##' \dontrun{
 #' ## Install all packages (except 'tidymodels'):
+#' require("pak")
 #' install_selected()
 #'
 #' ## Only install spatial packages:

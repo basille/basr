@@ -11,9 +11,10 @@
 #' @examples
 ##' \dontrun{
 #' ## Simply update all user packages:
+#' require("pak")
 #' update_packages()}
 #' @importFrom utils installed.packages packageDescription
-update_packages <- function() {
+update_all_packages <- function() {
     ## `pak` is required
     if (!requireNamespace("pak", quietly = TRUE)) {
         stop(
